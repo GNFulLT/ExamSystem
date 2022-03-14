@@ -314,6 +314,7 @@ namespace OnlineExamSystem
 
         }
 
+        //Tıklanmayıp Back Labele basınca hata veriyor hatayı engellemek için en başta boş olup olmadığını kontrol eder
         public void LabelToCenter()
         {
             LostFocusAnimation(null, null);

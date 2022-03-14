@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Core.Clusters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,15 +12,24 @@ namespace OnlineExamSystem
 {
     public class DatabaseHandler
     {
-        private static MongoClient client = new MongoClient("mongodb+srv://examsystembu:examsystembu@examsystem.7fumo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        private static MongoClient client = new MongoClient(System.Configuration.ConfigurationManager.ConnectionStrings["MongoDBCS"].ConnectionString);
         private const string DATABASE_NAME = "ExamSystem";
         private const string COLLECTION_NAME = "Users";
 
 
+        public DatabaseHandler()
+        {
+          
+       
+        }
+
         internal async Task<List<User>> GetUser(string username)
         {
+            
             return await Sync_GetUser(username);
+
         }
+
         private Task<List<User>> Sync_GetUser(string username)
         {
             return Task.Run(() => { 
@@ -33,6 +43,7 @@ namespace OnlineExamSystem
 
         internal async Task<List<User>> GetUserWithEmail(string email)
         {
+           
             return await Sync_GetUserWithEmail(email);
         }
 
@@ -63,5 +74,7 @@ namespace OnlineExamSystem
 
             });
         }
+
+       
     }
 }

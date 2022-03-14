@@ -512,15 +512,29 @@ namespace OnlineExamSystem
         {
             if (registerGroupBox.Visible == false)
                 return;
-            emailBoxRegister.Text = "";
-            usernameBoxRegister.Text = "";
-            nameBoxRegister.Text = "";
-            pass1BoxRegister.Text = "";
 
+            if(emailBoxRegister.Text != "")
+            {
+            emailBoxRegister.Text = "";
             emailBoxRegister.LabelToCenter();
+            }
+            if(usernameBoxRegister.Text != "")
+            {
+            usernameBoxRegister.Text = "";
             usernameBoxRegister.LabelToCenter();
+            }
+            if(nameBoxRegister.Text != "")
+            {
+            nameBoxRegister.Text = "";
             nameBoxRegister.LabelToCenter();
+            }
+            if(pass1BoxRegister.Text != "")
+            {
+            pass1BoxRegister.Text = "";
             pass1BoxRegister.LabelToCenter();
+
+            }
+
 
         }
         private void ResetForgotTextBoxes()
@@ -571,7 +585,7 @@ namespace OnlineExamSystem
         }
         
         private async void RegisterButton_Click(object sender,EventArgs e)
-        {         
+            {         
             if(usernameBoxRegister.Text == string.Empty || emailBoxRegister.Text == string.Empty || nameBoxRegister.Text == string.Empty
                 || pass1BoxRegister.Text == string.Empty)
             {
@@ -597,7 +611,7 @@ namespace OnlineExamSystem
             user.SetPassword(pass1BoxRegister.Text);
             user.Surname = Infos[Infos.Length-1].ToUpperFirstLetter();
             string name = "";
-            for(int i = 1; 0 < Infos.Length-1;i++)
+            for(int i = 1; i < Infos.Length-1;i++)
             {
                 if (i == Infos.Length - 1)
                 {
