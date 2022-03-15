@@ -56,6 +56,17 @@ namespace OnlineExamSystem
         public TabuES()
         {
             InitializeComponent();
+
+            pictureBox1.Controls.Add(exitButton);
+            pictureBox1.Controls.Add(minimizeButton);
+
+            exitButton.Left += 390;
+            minimizeButton.Left += 415;
+
+            exitButton.Click += ExitButton_Click;
+            minimizeButton.Click += MinimizeButton_Click;
+            this.Icon = new Icon(this.Icon, new Size(48,48));
+
             CheckStartablity();
             languageStrings = new Dictionary<string, LanguageString>();
             //Initializes
@@ -552,6 +563,14 @@ namespace OnlineExamSystem
             selectedErrorLabel.Visible = false;
             errorLabelTimer.Stop();
 
+        }
+        private void MinimizeButton_Click(object sender,EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void ExitButton_Click(object sender,EventArgs e)
+        {
+            Application.Exit();
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {

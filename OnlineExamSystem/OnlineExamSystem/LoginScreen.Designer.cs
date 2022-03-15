@@ -30,6 +30,7 @@ namespace OnlineExamSystem
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabuES));
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.loginGroupBox = new System.Windows.Forms.GroupBox();
             this.OkeyButton = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -40,6 +41,8 @@ namespace OnlineExamSystem
             this.forgotPassButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.forgotPictureDown = new System.Windows.Forms.PictureBox();
+            this.exitButton = new Guna.UI2.WinForms.Guna2Button();
+            this.minimizeButton = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.registerDownPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -114,6 +117,8 @@ namespace OnlineExamSystem
             // 
             this.registerGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.registerGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.registerGroupBox.Controls.Add(this.exitButton);
+            this.registerGroupBox.Controls.Add(this.minimizeButton);
             this.registerGroupBox.Controls.Add(this.pictureBox7);
             this.registerGroupBox.Controls.Add(this.registerDownPicture);
             this.registerGroupBox.Controls.Add(this.registerButton);
@@ -198,6 +203,49 @@ namespace OnlineExamSystem
             this.forgotPictureDown.TabIndex = 3;
             this.forgotPictureDown.TabStop = false;
             // 
+            // exitButton
+            // 
+            this.exitButton.Animated = true;
+            this.exitButton.AutoRoundedCorners = true;
+            this.exitButton.BorderColor = System.Drawing.Color.Transparent;
+            this.exitButton.BorderRadius = 15;
+            this.exitButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.exitButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.exitButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.exitButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.exitButton.FillColor = System.Drawing.Color.Transparent;
+            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.exitButton.ForeColor = System.Drawing.Color.Transparent;
+            this.exitButton.Image = global::OnlineExamSystem.Properties.Resources.closeButton;
+            this.exitButton.ImageSize = new System.Drawing.Size(30, 30);
+            this.exitButton.Location = new System.Drawing.Point(324, 19);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.PressedColor = System.Drawing.Color.BlueViolet;
+            this.exitButton.Size = new System.Drawing.Size(32, 32);
+            this.exitButton.TabIndex = 4;
+            this.exitButton.UseTransparentBackground = true;
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.Animated = true;
+            this.minimizeButton.AutoRoundedCorners = true;
+            this.minimizeButton.BorderRadius = 15;
+            this.minimizeButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.minimizeButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.minimizeButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.minimizeButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.minimizeButton.FillColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.minimizeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.minimizeButton.Image = global::OnlineExamSystem.Properties.Resources.minimizeButton;
+            this.minimizeButton.ImageSize = new System.Drawing.Size(30, 30);
+            this.minimizeButton.Location = new System.Drawing.Point(256, 19);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.PressedColor = System.Drawing.Color.BlueViolet;
+            this.minimizeButton.Size = new System.Drawing.Size(32, 32);
+            this.minimizeButton.TabIndex = 4;
+            this.minimizeButton.UseTransparentBackground = true;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::OnlineExamSystem.Properties.Resources.logo;
@@ -280,6 +328,7 @@ namespace OnlineExamSystem
             this.Controls.Add(this.loginGroupBox);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TabuES";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TabuES";
@@ -319,6 +368,8 @@ namespace OnlineExamSystem
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox forgotPictureDown;
         private Guna.UI2.WinForms.Guna2GradientButton forgotPassButton;
+        private Guna.UI2.WinForms.Guna2Button minimizeButton;
+        private Guna.UI2.WinForms.Guna2Button exitButton;
     }
 }
 
