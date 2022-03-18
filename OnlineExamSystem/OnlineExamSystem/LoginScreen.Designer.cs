@@ -33,34 +33,34 @@ namespace OnlineExamSystem
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TabuES));
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.loginGroupBox = new System.Windows.Forms.GroupBox();
-            this.OkeyButton = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.registerGroupBox = new System.Windows.Forms.GroupBox();
-            this.registerButton = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.forgotGroupBox = new System.Windows.Forms.GroupBox();
-            this.forgotPassButton = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.forgotPictureDown = new System.Windows.Forms.PictureBox();
-            this.exitButton = new Guna.UI2.WinForms.Guna2Button();
-            this.minimizeButton = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.registerDownPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.logoPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.OkeyButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.registerGroupBox = new System.Windows.Forms.GroupBox();
+            this.exitButton = new Guna.UI2.WinForms.Guna2Button();
+            this.minimizeButton = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.registerDownPicture = new System.Windows.Forms.PictureBox();
+            this.registerButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.forgotGroupBox = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.forgotPictureDown = new System.Windows.Forms.PictureBox();
+            this.forgotPassButton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginGroupBox.SuspendLayout();
-            this.registerGroupBox.SuspendLayout();
-            this.forgotGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.forgotPictureDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registerDownPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.registerGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registerDownPicture)).BeginInit();
+            this.forgotGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forgotPictureDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +85,47 @@ namespace OnlineExamSystem
             this.loginGroupBox.TabIndex = 5;
             this.loginGroupBox.TabStop = false;
             this.loginGroupBox.Enter += new System.EventHandler(this.loginGroupBox_Enter);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::OnlineExamSystem.Properties.Resources.password;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 283);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(52, 43);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::OnlineExamSystem.Properties.Resources.userName;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 208);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 43);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
+            // logoPicture
+            // 
+            this.logoPicture.Image = global::OnlineExamSystem.Properties.Resources.logo;
+            this.logoPicture.Location = new System.Drawing.Point(0, 11);
+            this.logoPicture.Name = "logoPicture";
+            this.logoPicture.Size = new System.Drawing.Size(409, 196);
+            this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoPicture.TabIndex = 3;
+            this.logoPicture.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::OnlineExamSystem.Properties.Resources.bgImage22;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 262);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(409, 295);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // OkeyButton
             // 
@@ -127,81 +168,6 @@ namespace OnlineExamSystem
             this.registerGroupBox.Size = new System.Drawing.Size(409, 557);
             this.registerGroupBox.TabIndex = 6;
             this.registerGroupBox.TabStop = false;
-            // 
-            // registerButton
-            // 
-            this.registerButton.Animated = true;
-            this.registerButton.AutoRoundedCorners = true;
-            this.registerButton.BorderRadius = 21;
-            this.registerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.registerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.registerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.registerButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.registerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.registerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(130)))));
-            this.registerButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(221)))), ((int)(((byte)(146)))));
-            this.registerButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.registerButton.Location = new System.Drawing.Point(108, 399);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(180, 45);
-            this.registerButton.TabIndex = 0;
-            this.registerButton.Text = "Register";
-            // 
-            // forgotGroupBox
-            // 
-            this.forgotGroupBox.BackColor = System.Drawing.Color.Transparent;
-            this.forgotGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.forgotGroupBox.Controls.Add(this.pictureBox5);
-            this.forgotGroupBox.Controls.Add(this.forgotPictureDown);
-            this.forgotGroupBox.Controls.Add(this.forgotPassButton);
-            this.forgotGroupBox.Location = new System.Drawing.Point(383, -14);
-            this.forgotGroupBox.Name = "forgotGroupBox";
-            this.forgotGroupBox.Size = new System.Drawing.Size(409, 557);
-            this.forgotGroupBox.TabIndex = 7;
-            this.forgotGroupBox.TabStop = false;
-            // 
-            // forgotPassButton
-            // 
-            this.forgotPassButton.Animated = true;
-            this.forgotPassButton.AutoRoundedCorners = true;
-            this.forgotPassButton.BorderRadius = 21;
-            this.forgotPassButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.forgotPassButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.forgotPassButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.forgotPassButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.forgotPassButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.forgotPassButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(130)))));
-            this.forgotPassButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(221)))), ((int)(((byte)(146)))));
-            this.forgotPassButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.forgotPassButton.ForeColor = System.Drawing.Color.White;
-            this.forgotPassButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.forgotPassButton.Location = new System.Drawing.Point(70, 263);
-            this.forgotPassButton.Name = "forgotPassButton";
-            this.forgotPassButton.Size = new System.Drawing.Size(180, 45);
-            this.forgotPassButton.TabIndex = 0;
-            this.forgotPassButton.Text = "Register";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::OnlineExamSystem.Properties.Resources.logo;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 11);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(409, 196);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // forgotPictureDown
-            // 
-            this.forgotPictureDown.Image = global::OnlineExamSystem.Properties.Resources.bgImage22;
-            this.forgotPictureDown.Location = new System.Drawing.Point(0, 263);
-            this.forgotPictureDown.Name = "forgotPictureDown";
-            this.forgotPictureDown.Size = new System.Drawing.Size(409, 295);
-            this.forgotPictureDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.forgotPictureDown.TabIndex = 3;
-            this.forgotPictureDown.TabStop = false;
             // 
             // exitButton
             // 
@@ -266,46 +232,80 @@ namespace OnlineExamSystem
             this.registerDownPicture.TabIndex = 3;
             this.registerDownPicture.TabStop = false;
             // 
-            // pictureBox4
+            // registerButton
             // 
-            this.pictureBox4.Image = global::OnlineExamSystem.Properties.Resources.password;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 283);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(52, 43);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.registerButton.Animated = true;
+            this.registerButton.AutoRoundedCorners = true;
+            this.registerButton.BorderRadius = 21;
+            this.registerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.registerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.registerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.registerButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.registerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.registerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(130)))));
+            this.registerButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(221)))), ((int)(((byte)(146)))));
+            this.registerButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.registerButton.ForeColor = System.Drawing.Color.White;
+            this.registerButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.registerButton.Location = new System.Drawing.Point(108, 399);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(180, 45);
+            this.registerButton.TabIndex = 0;
+            this.registerButton.Text = "Register";
             // 
-            // pictureBox3
+            // forgotGroupBox
             // 
-            this.pictureBox3.Image = global::OnlineExamSystem.Properties.Resources.userName;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 208);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(52, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
+            this.forgotGroupBox.BackColor = System.Drawing.Color.Transparent;
+            this.forgotGroupBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.forgotGroupBox.Controls.Add(this.pictureBox5);
+            this.forgotGroupBox.Controls.Add(this.forgotPictureDown);
+            this.forgotGroupBox.Controls.Add(this.forgotPassButton);
+            this.forgotGroupBox.Location = new System.Drawing.Point(383, -14);
+            this.forgotGroupBox.Name = "forgotGroupBox";
+            this.forgotGroupBox.Size = new System.Drawing.Size(409, 557);
+            this.forgotGroupBox.TabIndex = 7;
+            this.forgotGroupBox.TabStop = false;
             // 
-            // logoPicture
+            // pictureBox5
             // 
-            this.logoPicture.Image = global::OnlineExamSystem.Properties.Resources.logo;
-            this.logoPicture.Location = new System.Drawing.Point(0, 11);
-            this.logoPicture.Name = "logoPicture";
-            this.logoPicture.Size = new System.Drawing.Size(409, 196);
-            this.logoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoPicture.TabIndex = 3;
-            this.logoPicture.TabStop = false;
+            this.pictureBox5.Image = global::OnlineExamSystem.Properties.Resources.logo;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 11);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(409, 196);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
             // 
-            // pictureBox2
+            // forgotPictureDown
             // 
-            this.pictureBox2.Image = global::OnlineExamSystem.Properties.Resources.bgImage22;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 262);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(409, 295);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.forgotPictureDown.Image = global::OnlineExamSystem.Properties.Resources.bgImage22;
+            this.forgotPictureDown.Location = new System.Drawing.Point(0, 263);
+            this.forgotPictureDown.Name = "forgotPictureDown";
+            this.forgotPictureDown.Size = new System.Drawing.Size(409, 295);
+            this.forgotPictureDown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.forgotPictureDown.TabIndex = 3;
+            this.forgotPictureDown.TabStop = false;
+            // 
+            // forgotPassButton
+            // 
+            this.forgotPassButton.Animated = true;
+            this.forgotPassButton.AutoRoundedCorners = true;
+            this.forgotPassButton.BorderRadius = 21;
+            this.forgotPassButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.forgotPassButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.forgotPassButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.forgotPassButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.forgotPassButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.forgotPassButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(130)))));
+            this.forgotPassButton.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(221)))), ((int)(((byte)(146)))));
+            this.forgotPassButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.forgotPassButton.ForeColor = System.Drawing.Color.White;
+            this.forgotPassButton.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.forgotPassButton.Location = new System.Drawing.Point(70, 263);
+            this.forgotPassButton.Name = "forgotPassButton";
+            this.forgotPassButton.Size = new System.Drawing.Size(180, 45);
+            this.forgotPassButton.TabIndex = 0;
+            this.forgotPassButton.Text = "Register";
             // 
             // pictureBox1
             // 
@@ -334,16 +334,16 @@ namespace OnlineExamSystem
             this.Text = "TabuES";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.loginGroupBox.ResumeLayout(false);
-            this.registerGroupBox.ResumeLayout(false);
-            this.forgotGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.forgotPictureDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registerDownPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.registerGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registerDownPicture)).EndInit();
+            this.forgotGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.forgotPictureDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OnlineExamSystem
 {
@@ -17,5 +18,7 @@ namespace OnlineExamSystem
         {
             return s.Substring(0, 1).ToUpper() + s.Substring(1).ToLower();
         }
+
+        
     }
 }

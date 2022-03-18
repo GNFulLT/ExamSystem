@@ -21,6 +21,7 @@ namespace OnlineExamSystem
         public static PrivateFontCollection pfc = new PrivateFontCollection();
 
         //Login Screen
+        
         AnimatedTextBox usernameBoxLogin;
         AnimatedTextBox passBoxLogin;
         Label forgotPassLabel;
@@ -564,10 +565,11 @@ namespace OnlineExamSystem
             errorLabelTimer.Stop();
 
         }
+        
         private void MinimizeButton_Click(object sender,EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
+        }   
         private void ExitButton_Click(object sender,EventArgs e)
         {
             Application.Exit();

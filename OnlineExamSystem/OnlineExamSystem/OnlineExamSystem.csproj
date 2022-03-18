@@ -145,6 +145,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="ControlAnimations.cs" />
     <Compile Include="DatabaseHandler.cs" />
     <Compile Include="EmailHandler.cs" />
     <Compile Include="LanguageString.cs" />
