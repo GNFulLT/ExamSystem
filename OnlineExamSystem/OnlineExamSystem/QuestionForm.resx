@@ -173,6 +173,9 @@
   <data name="addpictureBtn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10.2pt</value>
   </data>
+  <data name="&gt;&gt;questionTxt.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
+  </data>
   <data name="&gt;&gt;lessondetailCmb.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
@@ -185,14 +188,17 @@
   <data name="exitBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 30</value>
   </data>
-  <data name="&gt;&gt;questionTxt.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
+  <data name="lblanswer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 59</value>
   </data>
   <data name="&gt;&gt;subjectdetailCmb.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="lblanswer2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblanswer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="questionPicture.Size" type="System.Drawing.Size, System.Drawing">
     <value>438, 366</value>
@@ -227,14 +233,8 @@
   <data name="&gt;&gt;lblanswer3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;lblanswer2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="addpictureBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>340, 45</value>
-  </data>
-  <data name="&gt;&gt;questionPicture.ZOrder" xml:space="preserve">
-    <value>10</value>
   </data>
   <data name="subjectdetailCmb.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -269,6 +269,9 @@
   <data name="wronganswer4Txt.Size" type="System.Drawing.Size, System.Drawing">
     <value>540, 30</value>
   </data>
+  <data name="correctanswerGruopbox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
   <data name="&gt;&gt;lblanswer2.Name" xml:space="preserve">
     <value>lblanswer2</value>
   </data>
@@ -293,14 +296,17 @@
   <data name="lblanswer4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="lblanswer2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="subjectdetailCmb.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
   </data>
   <data name="wronganswerGruopbox.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="&gt;&gt;lblanswer1.Parent" xml:space="preserve">
     <value>wronganswerGruopbox</value>
+  </data>
+  <data name="lblanswer3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 19</value>
   </data>
   <data name="&gt;&gt;lblanswer5.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -377,6 +383,9 @@
   <data name="&gt;&gt;lblanswer3.Parent" xml:space="preserve">
     <value>wronganswerGruopbox</value>
   </data>
+  <data name="wronganswer2Txt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 109</value>
+  </data>
   <data name="&gt;&gt;exitBtn.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2ControlBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
@@ -386,12 +395,12 @@
   <data name="&gt;&gt;wronganswer2Txt.Name" xml:space="preserve">
     <value>wronganswer2Txt</value>
   </data>
-  <data name="answerTxt.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;wronganswer1Txt.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
   <data name="wronganswer1Txt.Location" type="System.Drawing.Point, System.Drawing">
     <value>87, 59</value>
@@ -408,20 +417,8 @@
   <data name="&gt;&gt;addpictureBtn.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2GradientButton, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
-  <data name="lblanswer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 59</value>
-  </data>
-  <data name="exitBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;lessondetailCmb.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;exitBtn.Name" xml:space="preserve">
     <value>exitBtn</value>
-  </data>
-  <data name="&gt;&gt;wronganswerGruopbox.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2GroupBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
   <data name="lblanswer2.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 19</value>
@@ -435,9 +432,6 @@
   <data name="&gt;&gt;lblanswer5.Parent" xml:space="preserve">
     <value>correctanswerGruopbox</value>
   </data>
-  <data name="&gt;&gt;lblMessage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="confirmquestionBtn.Text" xml:space="preserve">
     <value>Confirm Question</value>
   </data>
@@ -447,8 +441,8 @@
   <data name="lblanswer4.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 19</value>
   </data>
-  <data name="lblanswer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 19</value>
+  <data name="questionTxt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="wronganswer2Txt.Size" type="System.Drawing.Size, System.Drawing">
     <value>540, 30</value>
@@ -459,17 +453,14 @@
   <data name="addpictureBtn.Text" xml:space="preserve">
     <value>Add Picture</value>
   </data>
+  <data name="&gt;&gt;lblanswer5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;lblanswer4.Parent" xml:space="preserve">
     <value>wronganswerGruopbox</value>
   </data>
-  <data name="&gt;&gt;questionTxt.Name" xml:space="preserve">
-    <value>questionTxt</value>
-  </data>
   <data name="answerTxt.Size" type="System.Drawing.Size, System.Drawing">
     <value>540, 30</value>
-  </data>
-  <data name="&gt;&gt;lblanswer4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;answerTxt.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -486,11 +477,17 @@
   <data name="wronganswer3Txt.Size" type="System.Drawing.Size, System.Drawing">
     <value>540, 30</value>
   </data>
+  <data name="correctanswerGruopbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 483</value>
+  </data>
   <data name="&gt;&gt;answerTxt.Name" xml:space="preserve">
     <value>answerTxt</value>
   </data>
   <data name="wronganswer4Txt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
+  </data>
+  <data name="lblanswer2.Text" xml:space="preserve">
+    <value>2)</value>
   </data>
   <data name="&gt;&gt;lblMessage.Parent" xml:space="preserve">
     <value>$this</value>
@@ -507,8 +504,8 @@
   <data name="&gt;&gt;unitdetailCmb.Name" xml:space="preserve">
     <value>unitdetailCmb</value>
   </data>
-  <data name="answerTxt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 56</value>
+  <data name="questionTxt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>661, 211</value>
   </data>
   <data name="&gt;&gt;wronganswer2Txt.Parent" xml:space="preserve">
     <value>wronganswerGruopbox</value>
@@ -519,11 +516,11 @@
   <data name="lblanswer1.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 19</value>
   </data>
+  <data name="answerTxt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
   <data name="&gt;&gt;lblanswer3.Name" xml:space="preserve">
     <value>lblanswer3</value>
-  </data>
-  <data name="questionTxt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
   </data>
   <data name="wronganswer3Txt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 9pt</value>
@@ -533,9 +530,6 @@
   </data>
   <data name="&gt;&gt;confirmquestionBtn.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lessondetailCmb.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="wronganswer1Txt.Size" type="System.Drawing.Size, System.Drawing">
     <value>540, 30</value>
@@ -552,38 +546,35 @@
   <data name="&gt;&gt;wronganswer4Txt.Parent" xml:space="preserve">
     <value>wronganswerGruopbox</value>
   </data>
-  <data name="questionTxt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>661, 211</value>
+  <data name="&gt;&gt;questionTxt.Name" xml:space="preserve">
+    <value>questionTxt</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
   </data>
-  <data name="lblanswer2.Text" xml:space="preserve">
-    <value>2)</value>
+  <data name="exitBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="questionPicture.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="wronganswer2Txt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 109</value>
+  <data name="answerTxt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 56</value>
   </data>
   <data name="confirmquestionBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>340, 45</value>
   </data>
-  <data name="correctanswerGruopbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 483</value>
+  <data name="&gt;&gt;lblMessage.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;wronganswerGruopbox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="answerTxt.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
+  <data name="&gt;&gt;lblanswer2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;lblanswer5.Name" xml:space="preserve">
     <value>lblanswer5</value>
-  </data>
-  <data name="&gt;&gt;wronganswer1Txt.Parent" xml:space="preserve">
-    <value>wronganswerGruopbox</value>
   </data>
   <data name="lblanswer4.Location" type="System.Drawing.Point, System.Drawing">
     <value>39, 209</value>
@@ -597,17 +588,20 @@
   <data name="&gt;&gt;lblanswer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblanswer5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="wronganswer1Txt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9pt</value>
+  </data>
+  <data name="&gt;&gt;wronganswer1Txt.Parent" xml:space="preserve">
+    <value>wronganswerGruopbox</value>
   </data>
   <data name="&gt;&gt;lessondetailCmb.Name" xml:space="preserve">
     <value>lessondetailCmb</value>
   </data>
-  <data name="wronganswer1Txt.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
+  <data name="&gt;&gt;wronganswerGruopbox.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2GroupBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
-  <data name="&gt;&gt;lblanswer2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;questionPicture.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="lblanswer4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -615,8 +609,8 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1400, 600</value>
   </data>
-  <data name="lessondetailCmb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 36</value>
+  <data name="lblanswer2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="unitdetailCmb.Size" type="System.Drawing.Size, System.Drawing">
     <value>231, 36</value>
@@ -624,23 +618,20 @@
   <data name="&gt;&gt;subjectdetailCmb.Type" xml:space="preserve">
     <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
-  <data name="&gt;&gt;wronganswer1Txt.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
+  <data name="&gt;&gt;lessondetailCmb.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="subjectdetailCmb.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt</value>
+  <data name="&gt;&gt;lblanswer4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="addpictureBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>982, 432</value>
   </data>
-  <data name="&gt;&gt;answerTxt.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
-  </data>
   <data name="&gt;&gt;lblMessage.Name" xml:space="preserve">
     <value>lblMessage</value>
   </data>
-  <data name="correctanswerGruopbox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;answerTxt.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.1, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4</value>
   </data>
   <data name="&gt;&gt;wronganswer3Txt.Parent" xml:space="preserve">
     <value>wronganswerGruopbox</value>
@@ -650,6 +641,9 @@
   </data>
   <data name="exitBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>1368, 0</value>
+  </data>
+  <data name="&gt;&gt;questionPicture.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="wronganswer3Txt.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -666,11 +660,17 @@
   <data name="correctanswerGruopbox.Size" type="System.Drawing.Size, System.Drawing">
     <value>661, 98</value>
   </data>
-  <data name="&gt;&gt;questionPicture.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="answerTxt.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;wronganswerGruopbox.Name" xml:space="preserve">
+    <value>wronganswerGruopbox</value>
   </data>
   <data name="lblanswer3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="lessondetailCmb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 36</value>
   </data>
   <data name="&gt;&gt;addpictureBtn.Name" xml:space="preserve">
     <value>addpictureBtn</value>
@@ -678,8 +678,8 @@
   <data name="lblanswer1.Text" xml:space="preserve">
     <value>1)</value>
   </data>
-  <data name="&gt;&gt;wronganswerGruopbox.Name" xml:space="preserve">
-    <value>wronganswerGruopbox</value>
+  <data name="&gt;&gt;lessondetailCmb.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="correctanswerGruopbox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 10.2pt</value>

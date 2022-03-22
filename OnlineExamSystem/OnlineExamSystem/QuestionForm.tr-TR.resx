@@ -146,7 +146,7 @@
     <value>NoControl</value>
   </data>
   <data name="correctanswerGruopbox.Text" xml:space="preserve">
-    <value>Doğru Cevaplar</value>
+    <value>Doğru Cevap</value>
   </data>
   <data name="questionPicture.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
