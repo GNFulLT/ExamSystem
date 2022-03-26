@@ -14,14 +14,13 @@ namespace OnlineExamSystem
 {
     public partial class TabuES : Form
     {
-        Dictionary<string,LanguageString> languageStrings;
+        Dictionary<string, LanguageString> languageStrings;
 
         private readonly Size BOX_SIZE = new Size(250, 45);
 
         public static PrivateFontCollection pfc = new PrivateFontCollection();
 
         //Login Screen
-        
         AnimatedTextBox usernameBoxLogin;
         AnimatedTextBox passBoxLogin;
         Label forgotPassLabel;
@@ -33,7 +32,7 @@ namespace OnlineExamSystem
         Label badPassLabelLogin;
         Label registeredLabelLogin;
         Label badEmailLabelRegister;
-        Label emptyInfoLabelRegister;  
+        Label emptyInfoLabelRegister;
         Label alreadyUserLabelRegister;
         Label alreadyEmailLabelRegister;
         Label selectedErrorLabel;
@@ -57,17 +56,6 @@ namespace OnlineExamSystem
         public TabuES()
         {
             InitializeComponent();
-
-            pictureBox1.Controls.Add(exitButton);
-            pictureBox1.Controls.Add(minimizeButton);
-
-            exitButton.Left += 390;
-            minimizeButton.Left += 415;
-
-            exitButton.Click += ExitButton_Click;
-            minimizeButton.Click += MinimizeButton_Click;
-            this.Icon = new Icon(this.Icon, new Size(48,48));
-
             CheckStartablity();
             languageStrings = new Dictionary<string, LanguageString>();
             //Initializes
@@ -102,6 +90,8 @@ namespace OnlineExamSystem
             guna2DragControl1.SetDrag(pictureBox5);
             guna2DragControl1.SetDrag(pictureBox7);
 
+            
+           
 
         }
         private static void InitializeFonts()
@@ -127,7 +117,9 @@ namespace OnlineExamSystem
         }
 
         private void InitializeGroupBoxes()
-        { 
+        {
+
+
             //Login Group Box
             loginGroupBox.Controls.Add(usernameBoxLogin);
             loginGroupBox.Controls.SetChildIndex(usernameBoxLogin, 0);
@@ -137,12 +129,12 @@ namespace OnlineExamSystem
             forgotPassLabel.Text = "";
             forgotPassLabel.Top = 150;
             forgotPassLabel.BackColor = Color.Transparent;
-            forgotPassLabel.Left = OkeyButton.Location.X+78;
+            forgotPassLabel.Left = OkeyButton.Location.X + 78;
             forgotPassLabel.AutoSize = true;
             forgotPassLabel.Cursor = Cursors.Hand;
             forgotPassLabel.UseCompatibleTextRendering = true;
             forgotPassLabel.ForeColor = Color.SteelBlue;
-            forgotPassLabel.Font = new Font(pfc.Families[2], 10,FontStyle.Regular);
+            forgotPassLabel.Font = new Font(pfc.Families[2], 10, FontStyle.Regular);
             forgotPassLabel.Click += ForgotPassLabel_Click;
             pictureBox2.Controls.Add(forgotPassLabel);
 
@@ -186,19 +178,19 @@ namespace OnlineExamSystem
             pictureBox2.Controls.Add(emptyUsernameLabelLogin);
 
             //Register Group Box
-            registerGroupBox.Controls.Add(nameBoxRegister);    
+            registerGroupBox.Controls.Add(nameBoxRegister);
             registerGroupBox.Controls.Add(emailBoxRegister);
             registerGroupBox.Controls.Add(usernameBoxRegister);
             registerGroupBox.Controls.Add(pass1BoxRegister);
             registerGroupBox.Controls.SetChildIndex(pass1BoxRegister, 0);
             registerDownPicture.Controls.Add(registerButton);
             registerButton.Top = 45;
-            registerButton.Left =110;
+            registerButton.Left = 110;
             registerButton.Click += RegisterButton_Click;
-            registerDownPicture.Controls.SetChildIndex(registerButton,0);
+            registerDownPicture.Controls.SetChildIndex(registerButton, 0);
 
 
-            emptyInfoLabelRegister = new Label();           
+            emptyInfoLabelRegister = new Label();
             alreadyUserLabelRegister = new Label();
             alreadyEmailLabelRegister = new Label();
             badEmailLabelRegister = new Label();
@@ -213,7 +205,7 @@ namespace OnlineExamSystem
             alreadyEmailLabelRegister.Visible = false;
             badEmailLabelRegister.Visible = false;
 
-            emptyInfoLabelRegister.Top = 20;    
+            emptyInfoLabelRegister.Top = 20;
             emptyInfoLabelRegister.Left = 75;
             alreadyUserLabelRegister.Location = emptyInfoLabelRegister.Location;
             alreadyEmailLabelRegister.Location = emptyInfoLabelRegister.Location;
@@ -261,13 +253,13 @@ namespace OnlineExamSystem
 
         private void InitializeTextBoxes()
         {
-            Font textBoxFont = new Font(pfc.Families[1],8);
+            Font textBoxFont = new Font(pfc.Families[1], 8);
             //AA
-            usernameBoxLogin = new AnimatedTextBox("",BOX_SIZE);
+            usernameBoxLogin = new AnimatedTextBox("", BOX_SIZE);
             usernameBoxLogin.Location = new Point(76, 208);
             usernameBoxLogin.SetFont(textBoxFont);
 
-            passBoxLogin = new AnimatedTextBox("",BOX_SIZE);
+            passBoxLogin = new AnimatedTextBox("", BOX_SIZE);
             passBoxLogin.Location = new Point(76, 283);
             passBoxLogin.SetFont(textBoxFont);
             passBoxLogin.PasswordChar = '*';
@@ -332,8 +324,8 @@ namespace OnlineExamSystem
             LanguageString s;
             languageStrings.TryGetValue("loginButtonString", out s);
             OkeyButton.Text = s.GetString(Globals.MySettings.LanguageOption);
-            
-           
+
+
             LanguageString registerButtonS;
             languageStrings.TryGetValue("registerButtonString", out registerButtonS);
             registerButton.Text = registerButtonS.GetString(Globals.MySettings.LanguageOption);
@@ -381,7 +373,7 @@ namespace OnlineExamSystem
             alreadyUserLabelRegister.Text = alreadyUserLabelRegisterS.GetString(Globals.MySettings.LanguageOption);
             alreadyUserLabelRegister.ForeColor = Color.Red;
             //AlreadyEmail
-            
+
             LanguageString alreadyEmailLabelRegisterS;
             languageStrings.TryGetValue("alreadyEmailLabelRegisterString", out alreadyEmailLabelRegisterS);
             alreadyEmailLabelRegister.Text = alreadyEmailLabelRegisterS.GetString(Globals.MySettings.LanguageOption);
@@ -397,19 +389,19 @@ namespace OnlineExamSystem
         {
             //Login Button
             LanguageString loginButtonString = new LanguageString();
-            loginButtonString.AddString("Giriş Yap",AppSettings.Language.Turkish);
+            loginButtonString.AddString("Giriş Yap", AppSettings.Language.Turkish);
             loginButtonString.AddString("Login", AppSettings.Language.English);
-            languageStrings.Add("loginButtonString",loginButtonString);
+            languageStrings.Add("loginButtonString", loginButtonString);
 
             //Register Button
             LanguageString registerButtonString = new LanguageString();
-            registerButtonString.AddString("Kayıt Ol",AppSettings.Language.Turkish);
+            registerButtonString.AddString("Kayıt Ol", AppSettings.Language.Turkish);
             registerButtonString.AddString("Register", AppSettings.Language.English);
-            languageStrings.Add("registerButtonString",registerButtonString);
+            languageStrings.Add("registerButtonString", registerButtonString);
 
             //Login UsernameBox
             LanguageString usernameBoxLoginString = new LanguageString();
-            usernameBoxLoginString.AddString("Kullanıcı Adı",AppSettings.Language.Turkish);
+            usernameBoxLoginString.AddString("Kullanıcı Adı", AppSettings.Language.Turkish);
             usernameBoxLoginString.AddString("Username", AppSettings.Language.English);
             languageStrings.Add("usernameBoxLoginString", usernameBoxLoginString);
 
@@ -421,7 +413,7 @@ namespace OnlineExamSystem
 
             //Forgot Pass Label
             LanguageString forgotPassLabelString = new LanguageString();
-            forgotPassLabelString.AddString("Şifremi Unuttum",AppSettings.Language.Turkish);
+            forgotPassLabelString.AddString("Şifremi Unuttum", AppSettings.Language.Turkish);
             forgotPassLabelString.AddString("Forgot Password", AppSettings.Language.English);
             languageStrings.Add("forgotPassLabelString", forgotPassLabelString);
 
@@ -508,8 +500,8 @@ namespace OnlineExamSystem
                 Globals.MySettings.GetSettings();
             }
         }
-      
-      
+
+
         private void SetErrorLabel(Label l)
         {
             errorLabelTimer.Stop();
@@ -525,25 +517,25 @@ namespace OnlineExamSystem
             if (registerGroupBox.Visible == false)
                 return;
 
-            if(emailBoxRegister.Text != "")
+            if (emailBoxRegister.Text != "")
             {
-            emailBoxRegister.Text = "";
-            emailBoxRegister.LabelToCenter();
+                emailBoxRegister.Text = "";
+                emailBoxRegister.LabelToCenter();
             }
-            if(usernameBoxRegister.Text != "")
+            if (usernameBoxRegister.Text != "")
             {
-            usernameBoxRegister.Text = "";
-            usernameBoxRegister.LabelToCenter();
+                usernameBoxRegister.Text = "";
+                usernameBoxRegister.LabelToCenter();
             }
-            if(nameBoxRegister.Text != "")
+            if (nameBoxRegister.Text != "")
             {
-            nameBoxRegister.Text = "";
-            nameBoxRegister.LabelToCenter();
+                nameBoxRegister.Text = "";
+                nameBoxRegister.LabelToCenter();
             }
-            if(pass1BoxRegister.Text != "")
+            if (pass1BoxRegister.Text != "")
             {
-            pass1BoxRegister.Text = "";
-            pass1BoxRegister.LabelToCenter();
+                pass1BoxRegister.Text = "";
+                pass1BoxRegister.LabelToCenter();
 
             }
 
@@ -558,21 +550,12 @@ namespace OnlineExamSystem
         }
 
         // Form Events -------------------------------------------------------------------------------------------------
-        
-        private void UsernameEmptyErrorLogin_Tick(object sender,EventArgs e)
+
+        private void UsernameEmptyErrorLogin_Tick(object sender, EventArgs e)
         {
             selectedErrorLabel.Visible = false;
             errorLabelTimer.Stop();
 
-        }
-        
-        private void MinimizeButton_Click(object sender,EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }   
-        private void ExitButton_Click(object sender,EventArgs e)
-        {
-            Application.Exit();
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -583,31 +566,31 @@ namespace OnlineExamSystem
         {
 
         }
-        private void ForgotPassLabel_Click(object sender,EventArgs e)
+        private void ForgotPassLabel_Click(object sender, EventArgs e)
         {
             selectedGroupBox.Visible = false;
             selectedGroupBox = forgotGroupBox;
             selectedGroupBox.Visible = true;
         }
-        private void RegisterLabel_Click(object sender,EventArgs e)
+        private void RegisterLabel_Click(object sender, EventArgs e)
         {
             selectedGroupBox.Visible = false;
             selectedGroupBox = registerGroupBox;
             selectedGroupBox.Visible = true;
         }
-        private void BackLabel_Click(object sender,EventArgs e)
+        private void BackLabel_Click(object sender, EventArgs e)
         {
             ResetRegisterTextBoxes();
             ResetForgotTextBoxes();
             selectedGroupBox.Visible = false;
             selectedGroupBox = loginGroupBox;
             selectedGroupBox.Visible = true;
-            
+
         }
-        
-        private async void RegisterButton_Click(object sender,EventArgs e)
-            {         
-            if(usernameBoxRegister.Text == string.Empty || emailBoxRegister.Text == string.Empty || nameBoxRegister.Text == string.Empty
+
+        private async void RegisterButton_Click(object sender, EventArgs e)
+        {
+            if (usernameBoxRegister.Text == string.Empty || emailBoxRegister.Text == string.Empty || nameBoxRegister.Text == string.Empty
                 || pass1BoxRegister.Text == string.Empty)
             {
                 SetErrorLabel(emptyInfoLabelRegister);
@@ -618,8 +601,8 @@ namespace OnlineExamSystem
                 SetErrorLabel(badEmailLabelRegister);
                 return;
             }
-             string[] Infos = nameBoxRegister.Text.Split(' ');
-            if(Infos.Length == 1)
+            string[] Infos = nameBoxRegister.Text.Split(' ');
+            if (Infos.Length == 1)
             {
                 SetErrorLabel(emptyInfoLabelRegister);
                 return;
@@ -630,9 +613,9 @@ namespace OnlineExamSystem
             user.Username = usernameBoxRegister.Text;
             user.Email = emailBoxRegister.Text;
             user.SetPassword(pass1BoxRegister.Text);
-            user.Surname = Infos[Infos.Length-1].ToUpperFirstLetter();
+            user.Surname = Infos[Infos.Length - 1].ToUpperFirstLetter();
             string name = "";
-            for(int i = 1; i < Infos.Length-1;i++)
+            for (int i = 1; i < Infos.Length - 1; i++)
             {
                 if (i == Infos.Length - 1)
                 {
@@ -647,18 +630,18 @@ namespace OnlineExamSystem
 
             List<User> user2 = await Globals.database.GetUser(user.Username);
             List<User> user3 = await Globals.database.GetUserWithEmail(user.Email);
-            if(user2.Count != 0)
+            if (user2.Count != 0)
             {
                 SetErrorLabel(alreadyUserLabelRegister);
                 return;
             }
-            if(user3.Count != 0)
+            if (user3.Count != 0)
             {
                 SetErrorLabel(alreadyEmailLabelRegister);
                 return;
             }
             Globals.database.InsertUser(user);
-            BackLabel_Click(null,null);
+            BackLabel_Click(null, null);
             SetErrorLabel(registeredLabelLogin);
         }
 
@@ -686,11 +669,11 @@ namespace OnlineExamSystem
             {
                 SetErrorLabel(badPassLabelLogin);
             }
-             //User Found 
+            //User Found 
             else
             {
                 User myUser = user[0];
-                if(myUser.Password != password)
+                if (myUser.Password != password)
                 {
                     SetErrorLabel(badPassLabelLogin);
 
@@ -707,7 +690,7 @@ namespace OnlineExamSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-          
+
 
         }
     }

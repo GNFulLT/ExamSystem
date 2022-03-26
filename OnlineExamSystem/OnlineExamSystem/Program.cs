@@ -13,7 +13,7 @@ namespace OnlineExamSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TabuES());
+            Application.Run(new Educator());
         }
         
     }
