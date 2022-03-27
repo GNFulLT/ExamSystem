@@ -1,0 +1,8 @@
+{
+  "LoginButtonText": "Login",
+  "LoginErrorText": "Username or password is invalid",
+  "RegisterEmptyBoxErrorText": "Any box can not be empty",
+  "UsernameTextBoxText": "Username",
+  "PasswordTextBoxText": "Password",
+  "CreateAccountText": "Create an account"
+}
