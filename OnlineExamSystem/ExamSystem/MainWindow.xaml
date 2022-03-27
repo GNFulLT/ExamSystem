@@ -26,19 +26,22 @@
                 <ColumnDefinition Width="410*"/>
                 <ColumnDefinition Width="765*"/>
             </Grid.ColumnDefinitions>
-            <Image Grid.Column="1" HorizontalAlignment="Left" 
+            <Image  Grid.Column="1" HorizontalAlignment="Left" 
                    Height="545" Margin="0,0,0,0" 
                    VerticalAlignment="Top" Width="765"
                    Source="loginScreenImage.jpg" Stretch="Fill"/>
-            <Image  Source="./Images/Logo.png" 
+            <Image MouseDown="Window_MouseDownEvent"
+                MouseMove="Window_MouseMoveEvent"
+                MouseUp="Window_MouseUpEvent"
+                 MouseLeave="Window_MouseUpEvent"
+                Panel.ZIndex="1" Source="./Images/Logo.png" 
                    HorizontalAlignment="Left"
-                   Height="131" Margin="128,10,0,0"
-                   VerticalAlignment="Top" Width="132"/>
-            <ContentControl Panel.ZIndex="1" Content="{Binding CurrentPanel}"></ContentControl>
+                   Height="131" Margin="143,10,0,0"
+                   VerticalAlignment="Top" Width="133"/>
+            <ContentControl Panel.ZIndex="2" Content="{Binding CurrentPanel}"></ContentControl>
             <Image Source="./Images/LoginScreenBackGround.png" Margin="10,348,10,-9"/>
             <Button   
                 Click="ExitButtonClick"
-                
                 Style="{StaticResource MaterialDesignIconButton}"
         Content="X"
                 FontSize="25"
@@ -47,8 +50,8 @@
                 Margin="721,10,0,0"
                 VerticalAlignment="Top" 
                 Width="34" Height="33">
-               
-                </Button>
+
+            </Button>
             <Button     
                 Click="MinimizeButtonClick"
                 Style="{StaticResource MaterialDesignIconButton}"

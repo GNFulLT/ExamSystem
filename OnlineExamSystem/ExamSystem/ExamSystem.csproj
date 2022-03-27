@@ -86,9 +86,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MVVM\ViewModel\LoadingContentBarViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\LoginScreenForgotEmailPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenLoginPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenRegisterPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\View\LoginScreenForgotEmailPanel.xaml.cs">
+      <DependentUpon>LoginScreenForgotEmailPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\LoginScreenLoginPanel.xaml.cs">
       <DependentUpon>LoginScreenLoginPanel.xaml</DependentUpon>
     </Compile>
@@ -115,11 +119,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MVVM\View\GradientButton.xaml">
+    <Page Include="MVVM\View\LoadingContentBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVVM\View\LoadingContentBar.xaml">
+    <Page Include="MVVM\View\LoginScreenForgotEmailPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,9 +143,6 @@
   <ItemGroup>
     <Compile Include="MVVM\RelayCommand.cs" />
     <Compile Include="MVVM\ILocalizable.cs" />
-    <Compile Include="MVVM\View\GradientButton.xaml.cs">
-      <DependentUpon>GradientButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MVVM\View\LoadingContentBar.xaml.cs">
       <DependentUpon>LoadingContentBar.xaml</DependentUpon>
       <SubType>UserControl</SubType>

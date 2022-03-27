@@ -8,5 +8,7 @@
   "NameSurnameTextBoxText": "Name/Surname",
   "RegisterButtonText": "Register",
   "CreateAccountText": "Create an account",
-  "BackText": "Back"
+  "BackText": "Back",
+  "ForgotEmailText": "Forgot email",
+  "ForgotEmailButtonText": "Send Password"
 }

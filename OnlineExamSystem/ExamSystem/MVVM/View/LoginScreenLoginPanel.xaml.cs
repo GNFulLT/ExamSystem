@@ -22,6 +22,7 @@ namespace ExamSystem.MVVM.View
     {
         public ICommand CreateAccountClickCmd;
         public ICommand LoginButtonClickCmd;
+        public ICommand ForgotEmailClickCmd;
 
         public LoginScreenLoginPanel()
         {
@@ -49,6 +50,11 @@ namespace ExamSystem.MVVM.View
         {
             if (LoginButtonClickCmd != null)
                 LoginButtonClickCmd.Execute(sender);
+        }
+        private void ForgotEmailClick(object sender,EventArgs e)
+        {
+            if (ForgotEmailClickCmd != null)
+                ForgotEmailClickCmd.Execute(sender);
         }
 
         

@@ -41,6 +41,30 @@ namespace ExamSystem
         {
             Application.Current.Shutdown();
         }
-        
+        private bool _isMouseDown = false;
+        private Point _lastLocation;
+        private void Window_MouseDownEvent(object sender,MouseEventArgs e)
+        {
+            _isMouseDown = true;
+            Opacity = 0.7;
+            _lastLocation = e.GetPosition(this);
+        }
+        private void Window_MouseUpEvent(object sender,MouseEventArgs e)
+        {
+            _isMouseDown = false;  
+            Opacity = 1;
+
+        }
+        private void Window_MouseMoveEvent(object sender,MouseEventArgs e)
+        {
+            if (_isMouseDown)
+            {
+                Point mousePosition = e.GetPosition(this);
+                Left += mousePosition.X - _lastLocation.X;
+                Top += mousePosition.Y - _lastLocation.Y;
+            }
+        }
+
+       
     }
 }

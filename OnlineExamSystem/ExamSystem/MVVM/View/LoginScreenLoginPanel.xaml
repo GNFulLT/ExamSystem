@@ -89,6 +89,13 @@
                    Margin="300,102,0,0" VerticalAlignment="Top"
                    Cursor="Hand"                   
                    />
+            <Label Content="{Binding ForgotEmailText}"
+                MouseLeftButtonUp="ForgotEmailClick"
+                HorizontalAlignment="Left" 
+                Foreground="SteelBlue"
+                Margin="11,102,0,0" VerticalAlignment="Top"
+                Cursor="Hand"                   
+                   />
 
         </Grid>
 

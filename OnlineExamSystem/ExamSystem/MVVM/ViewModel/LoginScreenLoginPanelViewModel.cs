@@ -60,6 +60,17 @@ namespace ExamSystem.MVVM.ViewModel
                 NotifyPropertyChanged();
             }
         }
+        private string _forgotEmailText;
+
+        public string ForgotEmailText
+        {
+            get { return _forgotEmailText; }
+            set {
+                _forgotEmailText = value;
+                NotifyPropertyChanged();
+            }
+        }
+
 
         public LoginScreenLoginPanelViewModel()
         {
@@ -68,6 +79,7 @@ namespace ExamSystem.MVVM.ViewModel
             UsernameTextBoxText = _localizationMap["UsernameTextBoxText"];
             PasswordTextBoxText = _localizationMap["PasswordTextBoxText"];
             CreateAccountText = _localizationMap["CreateAccountText"];
+            ForgotEmailText = _localizationMap["ForgotEmailText"];
         }
 
         

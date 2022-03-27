@@ -21,7 +21,6 @@ namespace ExamSystem.MVVM.View
     public partial class LoginScreenRegisterPanel : UserControl
     {
         public ICommand BackLabelClickCmd;
-
         public LoginScreenRegisterPanel()
         {
             InitializeComponent();
@@ -31,5 +30,10 @@ namespace ExamSystem.MVVM.View
             if (BackLabelClickCmd != null)
                 BackLabelClickCmd.Execute(sender);
         }
+        private void RegisterButtonClick(object sender,EventArgs e)
+        {
+            MessageBox.Show("Non Initiliazed");
+        }
+     
     }
 }

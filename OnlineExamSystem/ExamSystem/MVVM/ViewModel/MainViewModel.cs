@@ -15,9 +15,11 @@ namespace ExamSystem.MVVM.ViewModel
     {
         LoginScreenLoginPanel loginPanel;
         LoginScreenRegisterPanel registerPanel;
+        LoginScreenForgotEmailPanel forgotEmailPanel;
         private ICommand _createAccountClickCmd;
         private ICommand _backLabelClickCmd;
-        private ICommand _loginButtonClickCmd;
+        private ICommand _forgotEmailClickCmd;
+
         private object _currentPanel;
 
         public object CurrentPanel
@@ -32,25 +34,24 @@ namespace ExamSystem.MVVM.ViewModel
             //Panel Create
             loginPanel = new LoginScreenLoginPanel();
             registerPanel = new LoginScreenRegisterPanel();
+            forgotEmailPanel = new LoginScreenForgotEmailPanel();
 
             //Main Panel Command Handlers Created
             _createAccountClickCmd = new RelayCommand(OnCreateAccountClick);
             _backLabelClickCmd = new RelayCommand(OnBackLabelClick);
-            _loginButtonClickCmd = new RelayCommand(OnLoginButtonClick);
+            _forgotEmailClickCmd = new RelayCommand(OnForgotEmailLabelClick);
 
             //UserControls Command Handler gives commands to main command handlers
             registerPanel.BackLabelClickCmd = _backLabelClickCmd;
             loginPanel.CreateAccountClickCmd = _createAccountClickCmd;
-            loginPanel.LoginButtonClickCmd = _loginButtonClickCmd;
+            loginPanel.ForgotEmailClickCmd = _forgotEmailClickCmd;
+            forgotEmailPanel.BackLabelClickCmd = _backLabelClickCmd;
+
 
             _currentPanel = loginPanel;
         }
 
-        private void OnLoginButtonClick(object obj)
-        {
-            loginPanel.ShowLoadingBar();
-        }
-
+       
         private void OnBackLabelClick(object sender)
         {
             UserControl control = (UserControl)_currentPanel;
@@ -67,5 +68,15 @@ namespace ExamSystem.MVVM.ViewModel
             control = (UserControl)_currentPanel;
             control.Visibility = Visibility.Visible;
         }
+       
+        private void OnForgotEmailLabelClick(object sender)
+        {
+            UserControl control = (UserControl)_currentPanel;
+            control.Visibility = Visibility.Hidden;
+            CurrentPanel = forgotEmailPanel;
+            control = (UserControl)_currentPanel;
+            control.Visibility = Visibility.Visible;
+        }
+       
     }
 }

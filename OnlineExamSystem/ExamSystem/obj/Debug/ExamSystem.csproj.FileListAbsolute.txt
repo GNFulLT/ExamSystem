@@ -16,8 +16,6 @@ C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\Lo
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoadingContentBar.baml
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\App.baml
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\Themes\GradientButtonTheme.baml
-C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\GradientButton.g.cs
-C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\GradientButton.baml
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\MaterialDesignColors.dll
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\MaterialDesignThemes.Wpf.dll
@@ -43,3 +41,5 @@ C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\Lo
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\ExamSystem.Resources.resources
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenRegisterPanel.g.cs
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenRegisterPanel.baml
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenForgotEmailPanel.g.cs
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenForgotEmailPanel.baml

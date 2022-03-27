@@ -15,7 +15,7 @@
     <StackPanel>
         <Grid Margin="0,80,0,0" Height="309" Width="415">
             <TextBox 
-                
+                TabIndex="2"
                 x:Name="UsernameTextBox"
                 HorizontalAlignment="Left" 
                 Height="45" Margin="70,177,0,0"
@@ -33,7 +33,7 @@
                 Foreground="Black"
                 
                 />
-            <TextBox 
+            <TextBox TabIndex="1"
                 x:Name="EmailTextBox"
                 HorizontalAlignment="Left" 
                 Height="45" Margin="70,119,0,0"
@@ -52,7 +52,8 @@
                 
                 />
             <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="{Binding PasswordTextBoxText}"
-                FontSize="14"
+               TabIndex="3"
+                         FontSize="14"
                 BorderBrush="SteelBlue"
                 Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
                 Margin="70,244,70,18"
@@ -70,7 +71,7 @@
                          
                          
                          />
-            <TextBox 
+            <TextBox TabIndex="0"
                 x:Name="NameSurnameTextBox"
                 HorizontalAlignment="Left" 
                 Height="45" Margin="70,59,0,0"
@@ -92,7 +93,8 @@
 
         </Grid>
         <Grid Height="156">
-            <Button x:Name="RegisternButton"
+            <Button x:Name="RegisterButton"
+                TabIndex="4"    Click="RegisterButtonClick"
                 Style="{StaticResource MaterialDesignRaisedButton}"
                 Height="48" 
                 Margin="104,20,98,80"
@@ -120,7 +122,7 @@
             <Label Content="{Binding BackText}"
                 MouseLeftButtonUp="BackLabelClick"
                 HorizontalAlignment="Left" 
-                  
+                  TabIndex="5"
                 Foreground="SteelBlue"
                 Margin="339,122,0,0" VerticalAlignment="Top"
                 Cursor="Hand"                   

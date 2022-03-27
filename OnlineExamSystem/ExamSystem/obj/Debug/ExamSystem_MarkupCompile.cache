@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\App.xaml
-692219673
+6-32896054
 
-19-585038084
+20-1333344303
 27-466732343
-MainWindow.xaml;MVVM\View\GradientButton.xaml;MVVM\View\LoadingContentBar.xaml;MVVM\View\LoginScreenLoginPanel.xaml;MVVM\View\LoginScreenRegisterPanel.xaml;Themes\GradientButtonTheme.xaml;
+MainWindow.xaml;MVVM\View\LoadingContentBar.xaml;MVVM\View\LoginScreenForgotEmailPanel.xaml;MVVM\View\LoginScreenLoginPanel.xaml;MVVM\View\LoginScreenRegisterPanel.xaml;Themes\GradientButtonTheme.xaml;
 
 False
 
