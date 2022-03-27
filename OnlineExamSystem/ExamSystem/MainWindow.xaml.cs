@@ -1,7 +1,11 @@
-﻿using System;
+﻿using ExamSystem.MVVM;
+using ExamSystem.MVVM.View;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,11 +24,23 @@ namespace ExamSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
         public MainWindow()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-us");
             InitializeComponent();
-         
         }
-       
+
+        private void MinimizeButtonClick(object sender,EventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+        
+        private void ExitButtonClick(object sender,EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        
     }
 }

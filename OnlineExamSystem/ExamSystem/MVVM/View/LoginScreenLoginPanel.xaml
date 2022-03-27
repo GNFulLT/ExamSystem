@@ -13,9 +13,10 @@
         </viewModel:LoginScreenLoginPanelViewModel>
     </UserControl.DataContext>
 
+
     <StackPanel Width="415" Height="545">
         <Grid Margin="0 80 0 80" Height="249">
-            <TextBox  Foreground="Black" 
+            <TextBox x:Name="UsernameTextBox" Foreground="Black" 
                       materialDesign:TextFieldAssist.UnderlineBrush=
                       "DarkViolet" 
                       BorderBrush="SteelBlue"
@@ -24,13 +25,13 @@
                       materialDesign:HintAssist.Background="Transparent"
                       materialDesign:HintAssist.Foreground="DarkViolet"
                      materialDesign:HintAssist.Hint="{Binding  UsernameTextBoxText}"
-                     Margin="70,76,70,123" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
+                     Margin="70,98,70,101" Style="{StaticResource MaterialDesignFloatingHintTextBox}"></TextBox>
 
-            <PasswordBox materialDesign:HintAssist.Hint="{Binding  PasswordTextBoxText}"
+            <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="{Binding  PasswordTextBoxText}"
                          FontSize="14"
                          BorderBrush="SteelBlue"
                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
-                         Margin="70,192,70,10"
+                         Margin="70,214,70,-12"
                            materialDesign:HintAssist.HintOpacity="0.5"
                       materialDesign:HintAssist.Background="Transparent"
                       materialDesign:HintAssist.Foreground="DarkViolet"
@@ -45,18 +46,21 @@
                          
                          
                          />
-            <Image Source="../../Images/PasswordTextBoxIcon.png" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Margin="320,203,0,0"/>
-            <Image Source="/ExamSystem;component/Images/UsernameTextBoxIcon.png" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Margin="320,90,0,0"/>
+            <Image Source="../../Images/PasswordTextBoxIcon.png" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="25" Margin="320,225,0,-3"/>
+            <Image Source="/ExamSystem;component/Images/UsernameTextBoxIcon.png" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="25" Margin="320,112,0,0"/>
 
 
         </Grid>
         <Grid Height="136">
-            <Button x:Name="LoginButton"
+            <Button x:Name="LoginButton" Click="LoginButtonClick"
                 Style="{StaticResource MaterialDesignRaisedButton}"
+
                 Height="48" 
                 Margin="104,0,104,80"
-                BorderThickness="0">
-
+                BorderThickness="0"
+                    materialDesign:ButtonAssist.CornerRadius="20"
+                    >
+                
 
                 <Button.Background>
                     <LinearGradientBrush>
@@ -79,6 +83,7 @@
                                      VerticalAlignment="Top"
                                      Width="100"/>
             <Label Content="{Binding CreateAccountText}"
+                 MouseLeftButtonUp="CreateAccountClick"
               HorizontalAlignment="Left" 
                    Foreground="SteelBlue"
                    Margin="300,102,0,0" VerticalAlignment="Top"

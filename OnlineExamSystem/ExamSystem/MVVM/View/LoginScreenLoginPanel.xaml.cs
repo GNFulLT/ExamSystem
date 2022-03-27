@@ -20,11 +20,16 @@ namespace ExamSystem.MVVM.View
     /// </summary>
     public partial class LoginScreenLoginPanel : UserControl
     {
+        public ICommand CreateAccountClickCmd;
+        public ICommand LoginButtonClickCmd;
+
         public LoginScreenLoginPanel()
         {
+
             InitializeComponent();
             HiddenLoadingBar();
         }
+
         public void ShowLoadingBar()
         {
             LoadingBar.EnableCycling();
@@ -35,5 +40,17 @@ namespace ExamSystem.MVVM.View
             LoadingBar.StopCycling();
             LoadingBar.Visibility = Visibility.Hidden;
         }
+        private void CreateAccountClick(object sender,RoutedEventArgs e)
+        {
+            if (CreateAccountClickCmd != null)
+                CreateAccountClickCmd.Execute(sender);
+        }
+        private void LoginButtonClick(object sender,EventArgs e)
+        {
+            if (LoginButtonClickCmd != null)
+                LoginButtonClickCmd.Execute(sender);
+        }
+
+        
     }
 }

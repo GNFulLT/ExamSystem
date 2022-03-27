@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using ExamSystem.Core;
 namespace ExamSystem.MVVM.ViewModel
 {
@@ -20,7 +21,6 @@ namespace ExamSystem.MVVM.ViewModel
                 NotifyPropertyChanged();
             }
         }
-
         private string _loginButtonText;
 
 
@@ -61,17 +61,16 @@ namespace ExamSystem.MVVM.ViewModel
             }
         }
 
-
         public LoginScreenLoginPanelViewModel()
         {
             _localizationMap = Localization.GetDefaultDictionary();
-             _loginButtonText = _localizationMap["LoginButtonText"];
-            _usernameTextBoxText = _localizationMap["UsernameTextBoxText"];
-            _passwordTextBoxText = _localizationMap["PasswordTextBoxText"];
-            _createAccountText = _localizationMap["CreateAccountText"];
-
+            LoginButtonText = _localizationMap["LoginButtonText"];
+            UsernameTextBoxText = _localizationMap["UsernameTextBoxText"];
+            PasswordTextBoxText = _localizationMap["PasswordTextBoxText"];
+            CreateAccountText = _localizationMap["CreateAccountText"];
         }
 
+        
         public LoginScreenLoginPanelViewModel(ReadOnlyDictionary<string, string> localization)
         {
                 _localizationMap = localization;

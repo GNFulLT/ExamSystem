@@ -41,3 +41,5 @@ C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\Microsoft.Xa
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenLoginPanel.g.cs
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenLoginPanel.baml
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\ExamSystem.Resources.resources
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenRegisterPanel.g.cs
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\LoginScreenRegisterPanel.baml
