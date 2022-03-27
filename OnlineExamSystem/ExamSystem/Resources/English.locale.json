@@ -1,0 +1,14 @@
+{
+  "LoginButtonText": "Login",
+  "LoginErrorText": "Username or password is invalid",
+  "RegisterEmptyBoxErrorText": "Any box can not be empty",
+  "UsernameTextBoxText": "Username",
+  "PasswordTextBoxText": "Password",
+  "EmailTextBoxText": "Email",
+  "NameSurnameTextBoxText": "Name/Surname",
+  "RegisterButtonText": "Register",
+  "CreateAccountText": "Create an account",
+  "BackText": "Back",
+  "ForgotEmailText": "Forgot email",
+  "ForgotEmailButtonText": "Send Password"
+}
