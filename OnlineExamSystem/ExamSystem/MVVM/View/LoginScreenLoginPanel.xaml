@@ -96,6 +96,11 @@
                 Margin="11,102,0,0" VerticalAlignment="Top"
                 Cursor="Hand"                   
                    />
+            <Label 
+                Foreground="Green"
+                FontSize="10"
+                Content="{Binding RegisteredText}" 
+                Margin="70,-43,47,157"/>
 
         </Grid>
 

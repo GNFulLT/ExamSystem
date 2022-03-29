@@ -86,7 +86,7 @@ namespace ExamSystem.Core.Services.AuthenticationServices
 
                 var filter = Builders<Account>.Filter.Eq("username",username);
 
-                var list = collection.Find(filter).ToList();
+                var list = collection.Find(x => x.Username == username).ToList();
 
                 if (list.Count <= 0)
                     return null;

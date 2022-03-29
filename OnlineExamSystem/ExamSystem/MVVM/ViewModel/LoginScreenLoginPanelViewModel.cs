@@ -70,6 +70,16 @@ namespace ExamSystem.MVVM.ViewModel
                 NotifyPropertyChanged();
             }
         }
+        private string _registeredText;
+
+        public string RegisteredText
+        {
+            get { return _registeredText; }
+            set { _registeredText = value;
+                NotifyPropertyChanged();
+            }
+        }
+
 
 
         public LoginScreenLoginPanelViewModel()
@@ -87,6 +97,17 @@ namespace ExamSystem.MVVM.ViewModel
         {
                 _localizationMap = localization;
         }
+
+        public void SetRegisteredText()
+        {
+            RegisteredText = _localizationMap["RegisteredText"];
+        }
+
+        public void ClearRegisteredText()
+        {
+            RegisteredText = "";
+        }
+
        
     }
 }

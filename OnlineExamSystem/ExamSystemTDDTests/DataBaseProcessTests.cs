@@ -52,7 +52,7 @@ namespace ExamSystemTDDTests
             var resultEmailTaken = result & RegistrationResult.UsernameAlreadyExists;
             Assert.AreEqual(resultEmailTaken, RegistrationResult.UsernameAlreadyExists);
         }
-
+        //Works Fine
         [Test]
         public void LoginWithTruePassword()
         {
@@ -65,6 +65,7 @@ namespace ExamSystemTDDTests
             Assert.IsNotNull(result);
 
         }
+        //Works Fine
         [Test]
         public void LoginWithBadPassword()
         {

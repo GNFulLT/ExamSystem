@@ -79,3 +79,4 @@ C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\System.Secur
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\ExamSystem_Content.g.cs
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.AssemblyReference.cache
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\Themes\HintStyle.baml

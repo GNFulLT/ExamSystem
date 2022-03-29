@@ -1,18 +1,15 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExamSystem.Core.Services.AuthenticationServices
 {
-    [BsonIgnoreExtraElements]
     public class AccountInfo
     {
         private string _name;
 
-        [BsonElement("name")]
         public string Name
         {
             get { return _name; }
@@ -21,12 +18,69 @@ namespace ExamSystem.Core.Services.AuthenticationServices
 
         private string _surname;
 
-        [BsonElement("surname")]
         public string Surname
         {
             get { return _surname; }
             set { _surname = value; }
         }
 
+        public class AccountInfoSerializer : SerializerBase<AccountInfo>, IBsonDocumentSerializer, IBsonSerializer
+        {
+            public override void Serialize(BsonSerializationContext context, BsonSerializationArgs args, AccountInfo value)
+            {
+
+                context.Writer.WriteStartDocument();
+
+                context.Writer.WriteName("name");
+                context.Writer.WriteString(value.Name);
+
+                context.Writer.WriteName("surname");
+                context.Writer.WriteString(value.Surname);
+
+                context.Writer.WriteEndDocument();
+
+            }
+
+
+
+
+            public override AccountInfo Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+            {
+                BsonDocument d = BsonSerializer.Deserialize<BsonDocument>(context.Reader);
+
+
+                AccountInfo accountInfo = new AccountInfo()
+                {
+                    Name = d["name"].AsString,
+                    Surname = d["surname"].AsString
+                };
+                return accountInfo;
+
+            }
+            public bool TryGetMemberSerializationInfo(string memberName, out BsonSerializationInfo serializationInfo)
+            {
+                switch (memberName)
+                {
+                    case "Name":
+                        serializationInfo = new BsonSerializationInfo("name", new StringSerializer(), typeof(string));
+                        return true;
+                    case "Surname":
+                        serializationInfo = new BsonSerializationInfo("surname", new StringSerializer(), typeof(string));
+                        return true;
+                    default:
+                        serializationInfo = null;
+                        return false;
+                }
+            }
+        }
+        public class AccountInfoSerializationProvider : IBsonSerializationProvider
+        {
+            public IBsonSerializer GetSerializer(Type type)
+            {
+                if (typeof(Account) != type) return new AccountInfoSerializer();
+
+                return null;
+            }
+        }
     }
 }

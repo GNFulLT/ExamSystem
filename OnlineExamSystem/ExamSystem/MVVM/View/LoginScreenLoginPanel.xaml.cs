@@ -23,12 +23,32 @@ namespace ExamSystem.MVVM.View
         public ICommand CreateAccountClickCmd;
         public ICommand LoginButtonClickCmd;
         public ICommand ForgotEmailClickCmd;
+        public ICommand RegisteredTextCmd;
 
         public LoginScreenLoginPanel()
         {
 
             InitializeComponent();
             HiddenLoadingBar();
+            RegisteredTextCmd = new RelayCommand(RegisteredTextAnimation);
+        }
+
+        System.Windows.Forms.Timer t1 = new System.Windows.Forms.Timer();
+        private void RegisteredTextAnimation(object sender)
+        {
+            if (t1.Enabled)
+                t1.Stop();
+            var viewModel = DataContext as ExamSystem.MVVM.ViewModel.LoginScreenLoginPanelViewModel;
+            viewModel.SetRegisteredText();
+            t1.Interval = Globals.GlobalHintAssistTime;
+            t1.Tick += RegisteredText_Tick;
+            t1.Start();
+        }
+        private void RegisteredText_Tick(object sender,EventArgs e)
+        {
+            t1.Stop();
+            var viewModel = DataContext as ExamSystem.MVVM.ViewModel.LoginScreenLoginPanelViewModel;
+            viewModel.ClearRegisteredText();
         }
 
         public void ShowLoadingBar()
