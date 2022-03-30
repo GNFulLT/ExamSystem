@@ -157,7 +157,7 @@ namespace ExamSystem.MVVM.View
 
         private void Username_InputHandle(object sender, TextCompositionEventArgs e)
         {
-            UsernameValidationRule rule = new UsernameValidationRule();
+           UsernameValidationRule rule = new UsernameValidationRule();
            ValidationResult res =   rule.Validate(e.Text, CultureInfo.DefaultThreadCurrentCulture);
 
             if (!res.IsValid)

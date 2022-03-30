@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Input;
 using ExamSystem.Core;
 namespace ExamSystem.MVVM.ViewModel
@@ -80,6 +81,22 @@ namespace ExamSystem.MVVM.ViewModel
             }
         }
 
+        private string _textBoxCanNotBeEmptyText;
+
+        public string TextBoxCanNotBeEmptyText
+        {
+            get { return _textBoxCanNotBeEmptyText; }
+            set { _textBoxCanNotBeEmptyText = value;
+                NotifyPropertyChanged();
+            }
+        }
+        private string _loginErrorText;
+
+        public string LoginErrorText
+        {
+            get { return _loginErrorText; }
+            set { _loginErrorText = value; }
+        }
 
 
         public LoginScreenLoginPanelViewModel()
@@ -90,9 +107,14 @@ namespace ExamSystem.MVVM.ViewModel
             PasswordTextBoxText = _localizationMap["PasswordTextBoxText"];
             CreateAccountText = _localizationMap["CreateAccountText"];
             ForgotEmailText = _localizationMap["ForgotEmailText"];
+            TextBoxCanNotBeEmptyText = _localizationMap["TextBoxCanNotBeEmptyText"];
+            LoginErrorText = _localizationMap["LoginErrorText"];
         }
 
-        
+
+       
+
+
         public LoginScreenLoginPanelViewModel(ReadOnlyDictionary<string, string> localization)
         {
                 _localizationMap = localization;

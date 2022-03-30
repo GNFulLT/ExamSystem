@@ -16,6 +16,6 @@
   "UsernameAlreadyInUseText": "Username is already in use",
   "UsernameAndEmailAlreadyInUseText": "Username and email is already in use",
   "EmailRegexInvalid": "Email is invalid",
-  "PasswordInvalid" : "Password doesn't provide requirements",
+  "PasswordInvalid": "Password doesn't provide requirements",
   "RegisteredText": "Registered Succesfully"
 }
