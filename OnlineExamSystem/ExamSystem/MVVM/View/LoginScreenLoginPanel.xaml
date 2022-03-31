@@ -17,7 +17,11 @@
     <StackPanel Width="415" Height="545">
         <Grid Margin="0 80 0 80" Height="249">
             <TextBox x:Name="UsernameTextBox" Foreground="Black" 
-                      materialDesign:TextFieldAssist.UnderlineBrush=
+                    PreviewKeyDown="UsernameTextBox_PreviewKeyDown"
+                     PreviewTextInput="UsernameTextBox_PreviewTextInput"
+                     
+                     
+                     materialDesign:TextFieldAssist.UnderlineBrush=
                       "DarkViolet" 
                       BorderBrush="SteelBlue"
                       FontSize="14"
@@ -96,6 +100,21 @@
                 Margin="11,102,0,0" VerticalAlignment="Top"
                 Cursor="Hand"                   
                    />
+            <Label 
+                Foreground="Green"
+                FontSize="12"
+                Content="{Binding RegisteredText}" 
+                Margin="70,-49,47,152"/>
+        <Label x:Name="ErrorLabel"
+               Margin ="70,-49,47,152" 
+               Foreground="Red" FontSize="12"
+               Visibility="Hidden"
+               Content="{Binding TextBoxCanNotBeEmptyText}"/>
+            <Label x:Name="ErrorLabel2"
+               Margin ="70,-49,47,152" 
+               Foreground="Red" FontSize="12"
+               Visibility="Hidden"
+               Content="{Binding LoginErrorText}"/>
 
         </Grid>
 
