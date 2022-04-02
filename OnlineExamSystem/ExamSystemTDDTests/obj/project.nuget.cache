@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "YbYoGUSL9ijZRn+18l308kYw1FsVbgxkaIDRKHVD29zWlUOTWyfCh/2WSW8PYxFS75duJOx9MOOu8NsMDfCXMg==",
+  "dgSpecHash": "qlQ5xX+MSbUQRKBFKyPhiiO28w8ygtRmigMvvwWJWvdameMOmb5J6nT6ghCYC8T19c9ceTz9YX3djxvzKyatJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ugurbey\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
-    "C:\\Users\\ugurbey\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
-    "C:\\Users\\ugurbey\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
-    "C:\\Users\\ugurbey\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\nunit3testadapter\\3.16.1\\nunit3testadapter.3.16.1.nupkg.sha512"
   ],
   "logs": []
 }

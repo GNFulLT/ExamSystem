@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {}
+    "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {
+    "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
         "projectName": "ExamSystemTDDTests",
-        "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
-        "packagesPath": "C:\\Users\\ugurbey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystemTDDTests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ugurbey\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net472": {
             "targetAlias": "net472",
             "projectReferences": {
-              "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj": {
-                "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj"
+              "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj"
               }
             }
           }
@@ -61,15 +57,15 @@
               "version": "[3.16.1, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj": {
+    "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
         "projectName": "ExamSystem",
-        "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem-WPF\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

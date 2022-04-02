@@ -36,6 +36,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.4.3.0\lib\net462\ControlzEx.dll</HintPath>
@@ -179,11 +183,25 @@
     <Compile Include="Core\Services\AuthenticationServices\IAuthenticationService.cs" />
     <Compile Include="Core\Services\DatabaseServices\IDataBaseService.cs" />
     <Compile Include="Core\Services\IDataBaseObject.cs" />
+    <Compile Include="Core\Services\ValidationRules\CanNotBeEmptyValidationRule.cs" />
+    <Compile Include="Core\Services\ValidationRules\EmailValidationRule.cs" />
+    <Compile Include="Core\Services\ValidationRules\PasswordValidationRule.cs" />
+    <Compile Include="Core\Services\ValidationRules\UsernameValidationRule.cs" />
+    <Compile Include="Globals.cs" />
     <Compile Include="MVVM\ViewModel\LoadingContentBarViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenForgotEmailPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenLoginPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenRegisterPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\View\EducatorView\EducatorMainWindow.xaml.cs">
+      <DependentUpon>EducatorMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\EducatorView\EducatorMessageboxWindow.xaml.cs">
+      <DependentUpon>EducatorMessageboxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\EducatorView\EducatorQuestionWindow.xaml.cs">
+      <DependentUpon>EducatorQuestionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\LoginScreenForgotEmailPanel.xaml.cs">
       <DependentUpon>LoginScreenForgotEmailPanel.xaml</DependentUpon>
     </Compile>
@@ -213,6 +231,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\EducatorView\EducatorMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\EducatorView\EducatorMessageboxWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\EducatorView\EducatorQuestionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\LoadingContentBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -230,6 +260,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\GradientButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\HintStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -305,6 +339,8 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
+    <Resource Include="LogoIco.jpg" />
+    <Resource Include="Logo.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
