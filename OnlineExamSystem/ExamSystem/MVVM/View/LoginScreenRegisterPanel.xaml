@@ -15,6 +15,9 @@
     <StackPanel>
         <Grid Margin="0,80,0,0" Height="309" Width="415">
             <TextBox 
+                PreviewTextInput="Username_InputHandle"
+                PreviewKeyDown="UsernameTextBox_PreviewKeyDown"
+             materialDesign:HintAssist.HelperText="{Binding UsernameBoxErrorText}"
                 TabIndex="2"
                 x:Name="UsernameTextBox"
                 HorizontalAlignment="Left" 
@@ -34,6 +37,8 @@
                 
                 />
             <TextBox TabIndex="1"
+               materialDesign:HintAssist.HelperText="{Binding EmailBoxErrorText}"
+
                 x:Name="EmailTextBox"
                 HorizontalAlignment="Left" 
                 Height="45" Margin="70,119,0,0"
@@ -51,8 +56,11 @@
                 Foreground="Black"
                 
                 />
-            <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="{Binding PasswordTextBoxText}"
+            <PasswordBox x:Name="PasswordTextBox"
+             materialDesign:HintAssist.Hint="{Binding PasswordTextBoxText}"
                TabIndex="3"
+            materialDesign:HintAssist.HelperText="{Binding PasswordBoxErrorText}"
+         
                          FontSize="14"
                 BorderBrush="SteelBlue"
                 Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" 
@@ -72,14 +80,16 @@
                          
                          />
             <TextBox TabIndex="0"
+ materialDesign:HintAssist.HelperText="{Binding NameSurnameBoxErrorText}"
                 x:Name="NameSurnameTextBox"
+                    
                 HorizontalAlignment="Left" 
                 Height="45" Margin="70,59,0,0"
                 TextWrapping="Wrap" 
                 VerticalAlignment="Top" Width="275"
                 Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
                 materialDesign:TextFieldAssist.UnderlineBrush=
-                      "DarkViolet" 
+                 "DarkViolet" 
                 BorderBrush="SteelBlue"
                 FontSize="14"
                 materialDesign:HintAssist.HintOpacity="0.5"
@@ -88,7 +98,9 @@
                 materialDesign:HintAssist.Foreground="DarkViolet"
                 Foreground="Black"
                 
-                />
+               >
+
+            </TextBox>
 
 
         </Grid>
@@ -102,7 +114,7 @@
                  materialDesign:ButtonAssist.CornerRadius="20"
 
                     >
-
+               
 
                 <Button.Background>
                     <LinearGradientBrush>
@@ -127,6 +139,13 @@
                 Margin="339,122,0,0" VerticalAlignment="Top"
                 Cursor="Hand"                   
                    />
+            <local:LoadingContentBar x:Name="LoadingBar" 
+                HorizontalAlignment="Left"
+                Height="79"
+                Margin="157,77,0,0" 
+                VerticalAlignment="Top"
+                Width="100"/>       
+
         </Grid>
     </StackPanel>
 </UserControl>

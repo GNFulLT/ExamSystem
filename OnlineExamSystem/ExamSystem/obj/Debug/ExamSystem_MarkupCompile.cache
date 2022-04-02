@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\
+C:\Users\HP\Desktop\ExamSystem-WPF\OnlineExamSystem\ExamSystem\obj\Debug\
 ExamSystem
 none
 false
 DEBUG;TRACE
-C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\App.xaml
-6-32896054
+C:\Users\HP\Desktop\ExamSystem-WPF\OnlineExamSystem\ExamSystem\App.xaml
+101436789470
+191296106726
+40-1752689455
+147-1024716406
+MainWindow.xaml;MVVM\View\EducatorView\EducatorMainWindow.xaml;MVVM\View\EducatorView\EducatorMessageboxWindow.xaml;MVVM\View\EducatorView\EducatorQuestionWindow.xaml;MVVM\View\LoadingContentBar.xaml;MVVM\View\LoginScreenForgotEmailPanel.xaml;MVVM\View\LoginScreenLoginPanel.xaml;MVVM\View\LoginScreenRegisterPanel.xaml;Themes\GradientButtonTheme.xaml;Themes\HintStyle.xaml;
 
-20-1333344303
-27-466732343
-MainWindow.xaml;MVVM\View\LoadingContentBar.xaml;MVVM\View\LoginScreenForgotEmailPanel.xaml;MVVM\View\LoginScreenLoginPanel.xaml;MVVM\View\LoginScreenRegisterPanel.xaml;Themes\GradientButtonTheme.xaml;
-
-False
+True
 

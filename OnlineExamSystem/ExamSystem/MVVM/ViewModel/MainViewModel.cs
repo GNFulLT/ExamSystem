@@ -19,7 +19,7 @@ namespace ExamSystem.MVVM.ViewModel
         private ICommand _createAccountClickCmd;
         private ICommand _backLabelClickCmd;
         private ICommand _forgotEmailClickCmd;
-
+        private ICommand _registeredSuccesfullyCmd;
         private object _currentPanel;
 
         public object CurrentPanel
@@ -35,18 +35,19 @@ namespace ExamSystem.MVVM.ViewModel
             loginPanel = new LoginScreenLoginPanel();
             registerPanel = new LoginScreenRegisterPanel();
             forgotEmailPanel = new LoginScreenForgotEmailPanel();
-
+            
             //Main Panel Command Handlers Created
             _createAccountClickCmd = new RelayCommand(OnCreateAccountClick);
             _backLabelClickCmd = new RelayCommand(OnBackLabelClick);
             _forgotEmailClickCmd = new RelayCommand(OnForgotEmailLabelClick);
+            _registeredSuccesfullyCmd = new RelayCommand(OnRegisteredSuccesfully);
 
             //UserControls Command Handler gives commands to main command handlers
             registerPanel.BackLabelClickCmd = _backLabelClickCmd;
             loginPanel.CreateAccountClickCmd = _createAccountClickCmd;
             loginPanel.ForgotEmailClickCmd = _forgotEmailClickCmd;
             forgotEmailPanel.BackLabelClickCmd = _backLabelClickCmd;
-
+            registerPanel.RegisteredSuccesfullyCmd = _registeredSuccesfullyCmd;
 
             _currentPanel = loginPanel;
         }
@@ -76,6 +77,12 @@ namespace ExamSystem.MVVM.ViewModel
             CurrentPanel = forgotEmailPanel;
             control = (UserControl)_currentPanel;
             control.Visibility = Visibility.Visible;
+        }
+
+        private void OnRegisteredSuccesfully(object sender)
+        {
+            _backLabelClickCmd.Execute(sender);
+            loginPanel.RegisteredTextCmd.Execute(sender);
         }
        
     }
