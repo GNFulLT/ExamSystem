@@ -36,7 +36,7 @@ namespace ExamSystem.Core
                 Dictionary<string, string> defaultLocalization = ReadDefaultLocalization();
                 foreach (var defaultLocalizationEntry in defaultLocalization)
                 {
-                    //If current localization doesn't have this entry then we add it from the default localization
+                    //If current localization doesn't have this entry, we add it from the default localization
                     if (!_localization.ContainsKey(defaultLocalizationEntry.Key))
                     {
                         _localization.Add(defaultLocalizationEntry.Key, defaultLocalizationEntry.Value);
