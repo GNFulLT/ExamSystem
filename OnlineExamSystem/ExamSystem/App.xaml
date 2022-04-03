@@ -4,7 +4,12 @@
              xmlns:local="clr-namespace:ExamSystem"
              xmlns:viewModel="clr-namespace:ExamSystem.MVVM.ViewModel"
              xmlns:view="clr-namespace:ExamSystem.MVVM.View"
-             StartupUri="MainWindow.xaml">
+             xmlns:educatorView="clr-namespace:ExamSystem.MVVM.View.EducatorView"
+
+             StartupUri="MainWindow.xaml"
+         
+             
+             >
     <Application.Resources>
         <ResourceDictionary>
         <ResourceDictionary.MergedDictionaries>

@@ -1,0 +1,81 @@
+﻿<Window x:Class="ExamSystem.MVVM.View.EducatorView.EducatorMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamSystem.MVVM.View.EducatorView"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:educatorViewModel="clr-namespace:ExamSystem.MVVM.ViewModel.EducatorViewModel"
+        mc:Ignorable="d"
+        Title="EducatorMainPanel" Height="680" Width="1280" 
+        WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+    <Window.DataContext>
+        <educatorViewModel:EducatorMainWindowViewModel>
+
+        </educatorViewModel:EducatorMainWindowViewModel>
+    </Window.DataContext>
+    <StackPanel>
+        <Grid Height="130" VerticalAlignment="Top" Background="#F5F5F5">
+            <Image Source="/Images/Logo.png" 
+                   HorizontalAlignment="Left" Margin="50 0" />
+            <Button Background="{x:Null}" BorderBrush="{x:Null}" Width="45" Height="45" Margin="1134,0,9.6,95">
+                <materialDesign:PackIcon Kind="WindowMinimize" Foreground="BlueViolet" Margin="-15 0 0 0" Cursor="Hand"></materialDesign:PackIcon>
+            </Button>
+            <Button Background="{x:Null}" BorderBrush="{x:Null}" Width="45" Height="45" Margin="1230,0,9.6,95" Cursor="Hand">
+                <materialDesign:PackIcon Kind="ExitToApp" Foreground="BlueViolet" Width="25" Height="25" Margin="-15 0 0 0" Cursor="Hand"></materialDesign:PackIcon>
+            </Button>
+            <TextBlock Text="User Name Surname" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#606363" FontSize="18" Margin="200 0" />
+        </Grid>
+        <StackPanel Height="420" 
+                    VerticalAlignment="Top" 
+                    Background="#F5F5F5">
+
+
+
+            <Rectangle Fill="SteelBlue"
+                       HorizontalAlignment="Center" 
+                       Height="5"  VerticalAlignment="Top"
+                       Margin="0 10 0 0" Width="800" Opacity="0.5" />
+            <Grid Margin="10" Height="380">
+              
+
+                <ListBox x:Name="ListBox" ItemsSource="{Binding QuestionCollection}" 
+                                   HorizontalContentAlignment="Stretch"
+                                Width="980"
+                         >
+                </ListBox>
+            </Grid>
+
+            <Rectangle Fill="SteelBlue" HorizontalAlignment="Center" Height="5"  VerticalAlignment="Bottom" Margin="0 0 0 10" Width="800" Opacity="0.5" />
+        </StackPanel>
+        <Grid Height="130" VerticalAlignment="Top" Background="#F5F5F5">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Click="CreateQuestion_Click" Height="45" Width="260" BorderThickness="0"  materialDesign:ButtonAssist.CornerRadius="26" Margin="0 0 25 0">
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#3399FF" Offset="0.0"></GradientStop>
+                            <GradientStop Color="#0182FF" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Foreground="WhiteSmoke" Text="Create Question" FontSize="18" Margin="40 0 5 0"/>
+                        <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20 0 0 0"/>
+                    </StackPanel>
+                </Button>
+                <Button Height="45" Width="260" BorderThickness="0"  materialDesign:ButtonAssist.CornerRadius="26">
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#3399FF" Offset="0.0"></GradientStop>
+                            <GradientStop Color="#0182FF" Offset="1"></GradientStop>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Foreground="WhiteSmoke" Text="Create Special Question" FontSize="18"/>
+                        <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="25" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 5 0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Window>

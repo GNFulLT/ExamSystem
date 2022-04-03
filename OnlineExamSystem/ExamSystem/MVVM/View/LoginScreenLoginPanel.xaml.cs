@@ -101,8 +101,12 @@ namespace ExamSystem.MVVM.View
                 }
                 if (canLogin)
                 {
-                if (LoginButtonClickCmd != null)
-                        LoginButtonClickCmd.Execute(sender);
+                  if (LoginButtonClickCmd != null)
+                  {
+                     Globals.SetLoginedAccount(acc);
+                     LoginButtonClickCmd.Execute(sender);
+
+                    }
                 }
                    
             }

@@ -78,5 +78,13 @@ C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\System.Secur
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\ExamSystem_Content.g.cs
-C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.AssemblyReference.cache
 C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\Themes\HintStyle.baml
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\EducatorMainWindow.g.cs
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\EducatorMessageboxWindow.g.cs
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\EducatorQuestionWindow.g.cs
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\EducatorMainWindow.baml
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\EducatorMessageboxWindow.baml
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\EducatorQuestionWindow.baml
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\QuestionPanel.g.cs
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\MVVM\View\EducatorView\QuestionPanel.baml
+C:\Users\ugurbey\Desktop\ExamSystem\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.AssemblyReference.cache

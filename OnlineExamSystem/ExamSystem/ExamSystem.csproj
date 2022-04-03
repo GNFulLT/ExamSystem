@@ -188,11 +188,29 @@
     <Compile Include="Core\Services\ValidationRules\PasswordValidationRule.cs" />
     <Compile Include="Core\Services\ValidationRules\UsernameValidationRule.cs" />
     <Compile Include="Globals.cs" />
+    <Compile Include="MVVM\Model\Question\Question.cs" />
+    <Compile Include="MVVM\Model\Question\QuestionInfo.cs" />
+    <Compile Include="MVVM\Model\Question\QuestionInfoWrapper.cs" />
+    <Compile Include="MVVM\Model\Question\Section.cs" />
+    <Compile Include="MVVM\Model\Question\Unit.cs" />
+    <Compile Include="MVVM\ViewModel\EducatorViewModel\EducatorMainWindowViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoadingContentBarViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenForgotEmailPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenLoginPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenRegisterPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\View\EducatorView\EducatorMainWindow.xaml.cs">
+      <DependentUpon>EducatorMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\EducatorView\EducatorMessageboxWindow.xaml.cs">
+      <DependentUpon>EducatorMessageboxWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\EducatorView\EducatorQuestionWindow.xaml.cs">
+      <DependentUpon>EducatorQuestionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\EducatorView\QuestionPanel.xaml.cs">
+      <DependentUpon>QuestionPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\LoginScreenForgotEmailPanel.xaml.cs">
       <DependentUpon>LoginScreenForgotEmailPanel.xaml</DependentUpon>
     </Compile>
@@ -222,6 +240,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\EducatorView\EducatorMainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVVM\View\EducatorView\EducatorMessageboxWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVVM\View\EducatorView\EducatorQuestionWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MVVM\View\EducatorView\QuestionPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\LoadingContentBar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -294,7 +328,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Localization\" />
-    <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\loginScreenImage.jpg" />
