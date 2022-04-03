@@ -13,5 +13,10 @@ namespace ExamSystem
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            StartupUri = new Uri("/ExamSystem;component/MVVM/View/EducatorView/EducatorMainWindow.xaml",UriKind.Relative);
+            base.OnStartup(e);
+        }
     }
 }
