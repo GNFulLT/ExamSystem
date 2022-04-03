@@ -26,7 +26,7 @@ namespace ExamSystem.Core
             List<string> availableLocalizations = GetAvailableLocalizations();
             if (!availableLocalizations.Any(x => x == localization))
             {
-                //There is no available localization, we create and implement the default localization
+                //If there is no available localization implement defulat localization
                 _localization = ReadDefaultLocalization();
                 Config.Set("Localization", DEFAULT_LOCALIZATION);
             }
@@ -36,7 +36,7 @@ namespace ExamSystem.Core
                 Dictionary<string, string> defaultLocalization = ReadDefaultLocalization();
                 foreach (var defaultLocalizationEntry in defaultLocalization)
                 {
-                    //If current localization doesn't have this entry, we add it from the default localization
+                    //If current localization doesn't have any entry,add it from the default localization
                     if (!_localization.ContainsKey(defaultLocalizationEntry.Key))
                     {
                         _localization.Add(defaultLocalizationEntry.Key, defaultLocalizationEntry.Value);
