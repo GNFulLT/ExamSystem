@@ -6,5 +6,8 @@
 - TDD (NUnit Tests)
 - Wrappers C++
 - MongoDB Cloud Database
+- Multi-Language Implement Example
 
 This application works with MongoDB Atlas Database and use NoSql. Includes MVVM, TDD pattern and tried to conform to the SOLID principles as much as possible.
+## Design Tools
+- [MaterialDesignInXaml](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
