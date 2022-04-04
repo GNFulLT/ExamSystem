@@ -68,7 +68,15 @@ namespace ExamSystem.MVVM.Model.Question
             {
                 context.Writer.WriteStartDocument();
                 context.Writer.WriteName("_id");
+                if(value.Id == ObjectId.Empty)
+                {
                 context.Writer.WriteObjectId(ObjectId.GenerateNewId());
+                }
+                else
+                {
+                context.Writer.WriteObjectId(value.Id);
+
+                }
                 context.Writer.WriteName("_unitId");
                 context.Writer.WriteObjectId(value.Unit.Id);
                 context.Writer.WriteName("sectionName");

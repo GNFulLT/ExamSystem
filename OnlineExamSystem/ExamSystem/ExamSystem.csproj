@@ -189,6 +189,7 @@
     <Compile Include="Core\Services\ValidationRules\EmailValidationRule.cs" />
     <Compile Include="Core\Services\ValidationRules\PasswordValidationRule.cs" />
     <Compile Include="Core\Services\ValidationRules\UsernameValidationRule.cs" />
+    <Compile Include="Core\UnitSectionProvider.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="MVVM\Model\Question\Question.cs" />
     <Compile Include="MVVM\Model\Question\QuestionInfo.cs" />
