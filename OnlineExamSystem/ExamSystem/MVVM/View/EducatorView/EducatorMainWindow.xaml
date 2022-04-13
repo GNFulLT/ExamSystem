@@ -40,13 +40,15 @@
             <Grid Margin="10" Height="380">
               
 
-                <ListBox x:Name="ListBox" ItemsSource="{Binding QuestionCollection}" 
-                                   HorizontalContentAlignment="Stretch"
-                                Width="980"
+                <ListBox x:Name="ListBox" 
+              ItemsSource="{Binding QuestionCollection}" 
+              HorizontalContentAlignment="Stretch"
+              Width="980"
                          >
                 </ListBox>
+                
             </Grid>
-
+           
             <Rectangle Fill="SteelBlue" HorizontalAlignment="Center" Height="5"  VerticalAlignment="Bottom" Margin="0 0 0 10" Width="800" Opacity="0.5" />
         </StackPanel>
         <Grid Height="130" VerticalAlignment="Top" Background="#F5F5F5">

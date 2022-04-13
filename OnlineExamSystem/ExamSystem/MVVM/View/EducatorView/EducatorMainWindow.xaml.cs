@@ -23,7 +23,6 @@ namespace ExamSystem.MVVM.View.EducatorView
     public partial class EducatorMainWindow : Window
     {
 
-        int index;
         EducatorMainWindowViewModel viewModel;
         ICommand createdQuestion;
 

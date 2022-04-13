@@ -15,7 +15,6 @@ namespace ExamSystem.Core.Services.AuthenticationServices
         public Task<Account> Create(Account entity)
         {
             return Task.Run(() => {
-
                 var collection = GetCollection();
                 collection.InsertOne(entity);
                 return entity;

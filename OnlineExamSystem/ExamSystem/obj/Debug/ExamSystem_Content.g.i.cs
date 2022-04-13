@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("localization/english.locale.json")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("core/compression/snappy/lib/win/snappy32.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("core/compression/snappy/lib/win/snappy64.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("core/compression/zstandard/lib/win/libzstd.dll")]
