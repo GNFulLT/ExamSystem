@@ -133,7 +133,7 @@ namespace ExamSystem.Controls
         {
             var control = d as Pagination;
             int newC =(int) e.NewValue;
-            control.SetValue(CountPerPageProperty, (int)Math.Ceiling(newC * 1.0 / control.CountPerPage));
+            control.SetValue(PageCountPropertyKey, (int)Math.Ceiling(newC * 1.0 / control.CountPerPage));
             control.UpdatePagers();
         }
 

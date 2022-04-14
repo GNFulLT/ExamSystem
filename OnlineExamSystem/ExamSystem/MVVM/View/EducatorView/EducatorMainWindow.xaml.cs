@@ -23,15 +23,11 @@ namespace ExamSystem.MVVM.View.EducatorView
     public partial class EducatorMainWindow : Window
     {
 
-        EducatorMainWindowViewModel viewModel;
-        ICommand createdQuestion;
 
         public EducatorMainWindow()
         {
             
             InitializeComponent();
-            createdQuestion = new RelayCommand(showCreatedQuestion);
-            viewModel = this.DataContext as EducatorMainWindowViewModel;
 
         }
 
@@ -40,12 +36,8 @@ namespace ExamSystem.MVVM.View.EducatorView
             Question s = new Question();
             s.Unit = new Unit();
             s.Unit.UnitName = "Biyoloji";
-            viewModel.QuestionCollection.Add(new QuestionPanel(s));
         }
 
-        private void CreateQuestion_Click(object sender, RoutedEventArgs e)
-        {
-            createdQuestion.Execute(sender);
-        }
+        
     }
 }
