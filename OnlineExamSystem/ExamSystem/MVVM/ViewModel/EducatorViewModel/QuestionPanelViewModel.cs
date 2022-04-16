@@ -39,5 +39,7 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
         {
             _localizationMap = Localization.GetDefaultDictionary();
         }
+
+       
     }
 }

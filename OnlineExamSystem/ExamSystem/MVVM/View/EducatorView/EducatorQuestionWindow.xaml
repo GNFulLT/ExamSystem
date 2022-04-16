@@ -5,42 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamSystem.MVVM.View.EducatorView"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:viewModel="clr-namespace:ExamSystem.MVVM.ViewModel.EducatorViewModel"
         mc:Ignorable="d"
        Title="EducatorQuestionPanel" Height="600" Width="1400" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FFCCCCCC">
+    <Window.DataContext>
+        <viewModel:EducatorQuestionWindowViewModel>
+
+        </viewModel:EducatorQuestionWindowViewModel>
+    </Window.DataContext>
+
     <StackPanel>
         <Grid Width="675" Height="581" HorizontalAlignment="Left" Margin="10,10,0,10">
             <Border BorderThickness="1" Background="White" Margin="0,0,10,365" CornerRadius="10">
-                <RichTextBox HorizontalAlignment="Left" Height="210" Width="650" Margin="10" VerticalAlignment="Top" Background="White" FontFamily="Arial" FontSize="9" Foreground="#FF5F5859"></RichTextBox>
+                <RichTextBox
+ HorizontalAlignment="Left" Height="210" Width="650" Margin="10" VerticalAlignment="Top" Background="White" FontFamily="Arial" FontSize="9" Foreground="#FF5F5859">
+                    <RichTextBox.Document>
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text="{Binding QuestionText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></Run>
+                            </Paragraph>
+                        </FlowDocument>
+
+                    </RichTextBox.Document>
+
+                </RichTextBox>
             </Border>
-            <GroupBox Header="Wrong Answers" HorizontalAlignment="Left" Height="220" Margin="5,230,10,0" VerticalAlignment="Top" Width="665" Background="#FFE1E1E1" FontFamily="Arial" Foreground="White">
+            <GroupBox Header="Wrong Answers" HorizontalAlignment="Left" Height="184" Margin="5,230,0,0" VerticalAlignment="Top" Width="665" Background="#FFE1E1E1" FontFamily="Arial" Foreground="White">
                 <Grid>
-                    <TextBox Height="25" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
-                    <Label Content="1)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,-130,600,10" Foreground="#FF5F5859"/>
-                    <TextBox Height="25" Margin="0,45,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
-                    <Label Content="2)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,-130,600,-70" Foreground="#FF5F5859"/>
-                    <TextBox Height="25" Margin="0,85,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
-                    <Label Content="3)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,-130,600,-150" Foreground="#FF5F5859"/>
-                    <TextBox Height="25" Margin="0,125,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
-                    <Label Content="4)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,-130,600,-230" Foreground="#FF5F5859"/>
+                    <TextBox Text="{Binding WrongAnswer0,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <Label Content="1)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,10,600,104" Foreground="#FF5F5859"/>
+                    <TextBox Text="{Binding WrongAnswer1,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="0,45,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <Label Content="2)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,50,600,64" Foreground="#FF5F5859"/>
+                    <TextBox Height="25" Text="{Binding WrongAnswer2,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0,85,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <Label Content="3)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,90,600,24" Foreground="#FF5F5859"/>
                 </Grid>
             </GroupBox>
             <GroupBox Header="Correct Answers" HorizontalAlignment="Left" Height="110" Margin="5,465,10,0" VerticalAlignment="Top" Width="665" Background="#FFE1E1E1" FontFamily="ARİAL" Foreground="White">
                 <Grid>
-                    <TextBox Height="25" Margin="0,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <TextBox Text="{Binding CorrectAnswer0,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="0,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
                     <Label Content="1)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,10,600,10" Foreground="#FF5F5859"/>
                 </Grid>
             </GroupBox>
         </Grid>
         <Grid Width="230" Height="581" HorizontalAlignment="Left" Margin="690,-600,0,0" >
             <Grid Width="200">
-                <ComboBox HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="180" Background="White" Foreground="#FF5F5859" BorderBrush="#FF5F5859"/>
-                <ComboBox HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="180" Background="White" BorderBrush="#FF5F5859" Foreground="#FF5F5859"/>
-                <ComboBox HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="180" Background="White" BorderBrush="#FF5F5859" Foreground="#FF5F5859"/>
+     <ComboBox 
+         ItemsSource="{Binding LessonMap}"
+   DisplayMemberPath="Key" 
+        SelectedValue="{Binding Lesson}"
+  SelectedValuePath="Value" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" Width="180" Background="White" Foreground="#FF5F5859" BorderBrush="#FF5F5859"/>
+     <ComboBox 
+         
+         ItemsSource="{Binding UnitMap}" 
+              DisplayMemberPath="Key" 
+               SelectedValuePath="Value"
+                SelectedValue="{Binding Unit}"
+               HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="180" Background="White" Foreground="#FF5F5859" BorderBrush="#FF5F5859"/>
+     <ComboBox 
+         HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="180" Background="White" BorderBrush="#FF5F5859" Foreground="#FF5F5859"/>
             </Grid>
         </Grid>
         <Grid Width="453" Height="581" HorizontalAlignment="Left" Margin="920,-600,0,0">
             <Border BorderThickness="1" Background="White" Margin="0,25,0,180" CornerRadius="10">
-                <Image Width="440" Height="365"></Image>
+                <Image Source="{Binding ImageUri,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="440" Height="365"></Image>
             </Border>
             <Button Height="45" Width="260" BorderThickness="0" materialDesign:ButtonAssist.CornerRadius="26" Margin="40 310 25 0">
                 <Button.Background>
@@ -53,7 +80,10 @@
                     <TextBlock Foreground="WhiteSmoke" Text="Add Picture" FontSize="18" Margin="20 0 5 0"/>
                 </StackPanel>
             </Button>
-            <Button Height="45" Width="260" BorderThickness="0" materialDesign:ButtonAssist.CornerRadius="26" Margin="40 460 25 0">
+            <Button 
+                Click="ConfirmButton_Click"
+                Command="{Binding ClearInsideCommand}"
+                Height="45" Width="260" BorderThickness="0" materialDesign:ButtonAssist.CornerRadius="26" Margin="40 460 25 0">
                 <Button.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#3399FF" Offset="0.0"></GradientStop>

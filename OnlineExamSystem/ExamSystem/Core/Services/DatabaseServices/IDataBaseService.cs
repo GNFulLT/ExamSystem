@@ -8,7 +8,7 @@ namespace ExamSystem.Core.Services.DatabaseServices
 {
     public interface IDataBaseService<T> where T:IDataBaseObject
     {
-            
+        
         Task<T> Get(ObjectId id);
 
         Task<T> Create(T entity);

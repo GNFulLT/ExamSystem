@@ -22,9 +22,6 @@ namespace ExamSystem.MVVM.View.EducatorView
     /// </summary>
     public partial class QuestionPanel : UserControl
     {
-        QuestionPanelViewModel _viewModel;
-
-        
         Question question;
 
         public QuestionPanel()
@@ -34,17 +31,10 @@ namespace ExamSystem.MVVM.View.EducatorView
         }
         public QuestionPanel(Question question) : this()
         {
-            _viewModel = DataContext as QuestionPanelViewModel;
             this.question = question;
-            _viewModel.UnitText = question.Unit.UnitName;
-
+            UnitNameLabel.Content = question.Unit;
         }
 
-        private void DataContext_Changed(object sender, DependencyPropertyChangedEventArgs e)
-        {
-            _viewModel = DataContext as QuestionPanelViewModel;
-            _viewModel.UnitText = question.Unit.UnitName;
-
-        }
+      
     }
 }

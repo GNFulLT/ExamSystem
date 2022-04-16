@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YbYoGUSL9ijZRn+18l308kYw1FsVbgxkaIDRKHVD29zWlUOTWyfCh/2WSW8PYxFS75duJOx9MOOu8NsMDfCXMg==",
+  "dgSpecHash": "7W6uedKnAhDKVMQL//WsjfVJLjuZPCuFrGsp7xKMfnbAWFGBpxQ4Vu3xpwwe+JIUL2IEwfh/F50s8a1ZCwZT0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+  "projectFilePath": "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ugurbey\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\ugurbey\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",

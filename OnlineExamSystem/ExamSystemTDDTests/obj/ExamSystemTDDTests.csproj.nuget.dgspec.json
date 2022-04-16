@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {}
+    "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {
+    "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+        "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
         "projectName": "ExamSystemTDDTests",
-        "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+        "projectPath": "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
         "packagesPath": "C:\\Users\\ugurbey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystemTDDTests\\obj\\",
+        "outputPath": "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystemTDDTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net472": {
             "targetAlias": "net472",
             "projectReferences": {
-              "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj": {
-                "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj"
+              "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
+                "projectPath": "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj"
               }
             }
           }
@@ -65,11 +65,11 @@
         }
       }
     },
-    "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj": {
+    "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj",
+        "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
         "projectName": "ExamSystem",
-        "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystem\\ExamSystem\\ExamSystem\\ExamSystem.csproj",
+        "projectPath": "C:\\Users\\ugurbey\\Desktop\\lastExamSystyem\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

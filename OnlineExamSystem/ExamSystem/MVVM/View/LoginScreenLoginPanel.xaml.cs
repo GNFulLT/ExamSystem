@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.ServiceModel.Dispatcher;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -71,6 +72,7 @@ namespace ExamSystem.MVVM.View
             if (CreateAccountClickCmd != null)
                 CreateAccountClickCmd.Execute(sender);
         }
+        //These should be inside a AsyncCommand
         private async void LoginButtonClick(object sender,EventArgs e)
         {
             ShowLoadingBar();
@@ -92,8 +94,7 @@ namespace ExamSystem.MVVM.View
                 AccountService accService = new AccountService();
                 PasswordHasher_HMACSHA512 passHasher = new PasswordHasher_HMACSHA512();
                 AuthenticationService authentication = new AuthenticationService(accService, passHasher);
-
-                Account acc =  await authentication.Login(username, pass);
+                Account acc = await authentication.Login(username, pass);
                 if (acc == null)
                 {
                     UsernameOrPasswordWrong();

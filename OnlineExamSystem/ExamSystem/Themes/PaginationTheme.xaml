@@ -1,0 +1,205 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:ExamSystem.Controls"
+                    >
+
+    <Style x:Key="PageButtonStyleKey" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Background" Value="#323E4E"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BorderBrush" Value="#3E4756"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border CornerRadius="0" 
+                            Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid Background="#00000000">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            </ContentPresenter>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Background" Value="#55323E4E"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="PageListBoxStyleKey" TargetType="{x:Type ListBox}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="BorderBrush" Value="#007ACC"/>
+        <Setter Property="Foreground" Value="#141414"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true">
+                        <ScrollViewer Focusable="false" Padding="{TemplateBinding Padding}">
+                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PageListBoxItemStyleKey" 
+           TargetType="{x:Type ListBoxItem}">
+        <Setter Property="MinWidth" Value="15"/>
+        <Setter Property="MinHeight" Value="20"/>
+        <Setter Property="Background" Value="#323E4E"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#3E4756"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Padding" Value="3,0"/>
+        <Setter Property="Margin" Value="3,0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border SnapsToDevicePixels="true"
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}"  
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter x:Name="contentPresenter" 
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding .}" Value="···">
+                <Setter Property="IsEnabled" Value="False"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </DataTrigger>
+            <Trigger Property="IsSelected" Value="true">
+                <Setter Property="Background" Value="#3A8EE6"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Opacity" Value="0.5"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+   
+
+    <Style TargetType="{x:Type controls:Pagination}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:Pagination}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Margin="0,0,15,0" VerticalAlignment="Center"
+                                      >
+                                <Run Text="{Binding Count,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                <Run Text="{Binding CountLocalization, RelativeSource={RelativeSource TemplatedParent}}"/>
+                            </TextBlock>
+
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,0,15,0" >
+
+                                <TextBox x:Name="PART_CountPerPageTextBox" TextAlignment="Center" Width="40" VerticalContentAlignment="Center"
+                                         Padding="0,0" MinWidth="0" Background="#00000000"
+                                         FontSize="{TemplateBinding FontSize}"
+                                         ></TextBox>
+                            </StackPanel>
+
+                            <Button Grid.Column="2" Width="30" Margin="0,0,3,0"
+                                    Command="{x:Static controls:Pagination.PrevCommand}"
+                                    Style="{StaticResource PageButtonStyleKey}"
+                                    MinHeight="20"
+                                    >
+                                <Path Width="7" Height="10" Stretch="Fill" 
+                                      Fill="{Binding Foreground,RelativeSource={RelativeSource AncestorType=Button}}"
+                                      Data="M242.9 512l448 448 90.2-90.3L423.4 512l357.7-357.7L690.9 64z"/>
+                            </Button>
+
+                            <ListBox x:Name="PART_ListBox" Grid.Column="3"
+                                     SelectedIndex="0"
+                                     ItemsSource="{TemplateBinding Pages}"
+                                     ItemContainerStyle="{StaticResource PageListBoxItemStyleKey}"
+                                     Style="{StaticResource PageListBoxStyleKey}"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                     ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <UniformGrid Rows="1"/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                            </ListBox>
+
+                            <Button Grid.Column="4" Width="30" Margin="0,0,15,0"
+                                    Command="{x:Static controls:Pagination.NextCommand}"
+                                    Style="{StaticResource PageButtonStyleKey}"
+                                   MinHeight="20"
+                                    >
+                                <Path Width="7" Height="10" Stretch="Fill" 
+                                      Fill="{Binding Foreground,RelativeSource={RelativeSource AncestorType=Button}}"
+                                      Data="M377.3568 102.40000001l335.122286 335.12045699L786.94582899 512l-74.46674299 74.468571L377.3568 921.59999999l-74.475886-74.46857099L638.005029 512l-335.124115-335.1296L377.3568 102.40000001z"/>
+                            </Button>
+
+                            <StackPanel Grid.Column="5" Orientation="Horizontal">
+
+                                <TextBox x:Name="PART_JumpPageTextBox" TextAlignment="Center" Width="40" VerticalContentAlignment="Center"
+                                         Padding="0,0" MinWidth="0" Background="#00000000"
+                                         FontSize="{TemplateBinding FontSize}" />
+                                <TextBlock VerticalAlignment="Center" Text="{Binding JumpLocalization,RelativeSource={RelativeSource TemplatedParent}}"
+></TextBlock>
+                            </StackPanel>
+         
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+           
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

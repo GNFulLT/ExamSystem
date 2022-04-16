@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,16 +24,11 @@ namespace ExamSystem.MVVM.View.EducatorView
     public partial class EducatorMainWindow : Window
     {
 
-        int index;
-        EducatorMainWindowViewModel viewModel;
-        ICommand createdQuestion;
 
         public EducatorMainWindow()
         {
             
             InitializeComponent();
-            createdQuestion = new RelayCommand(showCreatedQuestion);
-            viewModel = this.DataContext as EducatorMainWindowViewModel;
 
         }
 
@@ -41,12 +37,11 @@ namespace ExamSystem.MVVM.View.EducatorView
             Question s = new Question();
             s.Unit = new Unit();
             s.Unit.UnitName = "Biyoloji";
-            viewModel.QuestionCollection.Add(new QuestionPanel(s));
         }
 
-        private void CreateQuestion_Click(object sender, RoutedEventArgs e)
+        private void Button_Click()
         {
-            createdQuestion.Execute(sender);
+
         }
     }
 }

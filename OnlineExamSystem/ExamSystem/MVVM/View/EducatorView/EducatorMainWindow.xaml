@@ -4,11 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamSystem.MVVM.View.EducatorView"
+       xmlns:page="clr-namespace:ExamSystem.Controls"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:educatorViewModel="clr-namespace:ExamSystem.MVVM.ViewModel.EducatorViewModel"
         mc:Ignorable="d"
         Title="EducatorMainPanel" Height="680" Width="1280" 
         WindowStartupLocation="CenterScreen" WindowStyle="None">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../../Themes/PaginationTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
 
     <Window.DataContext>
         <educatorViewModel:EducatorMainWindowViewModel>
@@ -38,20 +47,38 @@
                        Height="5"  VerticalAlignment="Top"
                        Margin="0 10 0 0" Width="800" Opacity="0.5" />
             <Grid Margin="10" Height="380">
-              
 
-                <ListBox x:Name="ListBox" ItemsSource="{Binding QuestionCollection}" 
-                                   HorizontalContentAlignment="Stretch"
-                                Width="980"
-                         >
-                </ListBox>
+
+                <ListBox x:Name="ListBox" 
+              ItemsSource=
+             "{Binding UnseenQuestions}"
+                         HorizontalContentAlignment="Stretch"
+              Width="980" Margin="136,8,136,44"
+                         />
+                <page:Pagination 
+                    Height="30"
+            Margin="226,355,226,-5" Width="800"
+                    Count="{Binding Count,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                    CountPerPage="{Binding CountPerPage,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                    Current="{Binding Current,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                    CountLocalization="{Binding CountText}"
+                    JumpLocalization="{Binding JumpText}"
+                    
+                    />
+
             </Grid>
 
             <Rectangle Fill="SteelBlue" HorizontalAlignment="Center" Height="5"  VerticalAlignment="Bottom" Margin="0 0 0 10" Width="800" Opacity="0.5" />
         </StackPanel>
         <Grid Height="130" VerticalAlignment="Top" Background="#F5F5F5">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Button Click="CreateQuestion_Click" Height="45" Width="260" BorderThickness="0"  materialDesign:ButtonAssist.CornerRadius="26" Margin="0 0 25 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="31*"/>
+                <ColumnDefinition Width="36*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="364,42">
+                <Button 
+        Command="{Binding CreateQuestionClickCommand}"
+                    Height="45" Width="260" BorderThickness="0"  materialDesign:ButtonAssist.CornerRadius="26" Margin="0 0 25 0">
                     <Button.Background>
                         <LinearGradientBrush>
                             <GradientStop Color="#3399FF" Offset="0.0"></GradientStop>
