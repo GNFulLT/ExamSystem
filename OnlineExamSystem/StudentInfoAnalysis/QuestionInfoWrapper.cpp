@@ -55,7 +55,7 @@ extern "C"	_declspec(dllexport) int GetGlobaRightlCount(QuestionInfo * info) {
 extern "C"	_declspec(dllexport) void SetGlobalCount(QuestionInfo * info,int value) {
 	info->SetGlobalCount(value);
 }
-extern "C"	_declspec(dllexport) void SetGlobaRightlCount(QuestionInfo * info,int value) {
+extern "C"	_declspec(dllexport) void SetGlobalRightCount(QuestionInfo * info,int value) {
 	info->SetGlobalRightCount(value);
 }extern "C"	_declspec(dllexport) void SetDifficulty(QuestionInfo * info,int value) {
 	info->SetDifficultyMultiplier(value);

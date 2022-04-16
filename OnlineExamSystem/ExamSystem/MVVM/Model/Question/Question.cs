@@ -18,6 +18,8 @@ namespace ExamSystem.MVVM.Model.Question
 
         public Unit Unit { get; set; }
 
+        public string ImageUri { get; set; }
+
         public QuestionInfo QuestionInfo { get; set; }
 
         public Question()

@@ -1,4 +1,5 @@
 ﻿using ExamSystem.MVVM.Model.Question;
+using ExamSystem.MVVM.ViewModel.EducatorViewModel;
 using System.Windows;
 
 
@@ -13,6 +14,11 @@ namespace ExamSystem.MVVM.View.EducatorView
         {
             InitializeComponent();
             this.ShowInTaskbar = false;
+            EducatorQuestionWindowViewModel vw = this.DataContext as EducatorQuestionWindowViewModel;
+            vw.OnQuestionCreated += (Question q) =>
+            {
+                OnQuestionCreated(q);
+            };
         }
 
         public delegate void QuestionCreated(Question q);
@@ -21,8 +27,6 @@ namespace ExamSystem.MVVM.View.EducatorView
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            
-
             this.Hide();
         }
     }

@@ -23,12 +23,13 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
             }
         }
 
-        private ICommand _createQuestionCommand;
+        private ICommand _createQuestionClickCommand;
 
-        public ICommand CreateQuestionCommand
+        public ICommand CreateQuestionClickCommand
         {
-            get { return _createQuestionCommand; }
-            set { _createQuestionCommand = value;
+            get { return _createQuestionClickCommand; }
+            set {
+                _createQuestionClickCommand = value;
                 NotifyPropertyChanged();
             }
         }
@@ -153,10 +154,10 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
             }
         }
 
+
         public EducatorQuestionWindowViewModel()
         {
-            ClearInsideCommand = new RelayCommand(OnClearInside);
-            CreateQuestionCommand = new RelayCommand(OnCreatedQuestion);
+            CreateQuestionClickCommand = new RelayCommand(OnCreateQuestionClick);
             if (LicenseUsageMode.Designtime != LicenseManager.UsageMode)
             {
                 UnitSectionProvider.InitializeMaps();
@@ -183,11 +184,15 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
                 return;
             }
         }
-        
 
+        public delegate void QuestionCreated(Question q);
 
-        public void OnClearInside(object sender)
+        public event QuestionCreated OnQuestionCreated;
+
+        public void OnCreateQuestionClick(object sender)
         {
+            Question q = CreateQuestion();
+            OnQuestionCreated(q);
             QuestionText = string.Empty;
             WrongAnswer0 = string.Empty;
             WrongAnswer1 = string.Empty;
@@ -199,9 +204,28 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
             ImageUri = string.Empty;
 
         }
-        public void OnCreatedQuestion(object sender)
+        public Question CreateQuestion()
         {
-
+            Question question = new Question
+            {
+                Lesson = Lesson,
+                Unit = Unit,
+                Section = Section,
+                ImageUri = ImageUri,
+                QuestionInfo = new QuestionInfo
+                {
+                    QuestionText = QuestionText,
+                    CorrectAnswer0 = CorrectAnswer0,
+                    WrongAnswer0 = WrongAnswer0,
+                    WrongAnswer1 = WrongAnswer1,
+                    WrongAnswer2 = WrongAnswer2,
+                    GlobalCount = 0,
+                    GlobalRightCount = 0,
+                    DifficultyMultiplier = QuestionInfo.Difficulty.Medium
+                }
+               
+            };
+            return question;
         }
 
     }

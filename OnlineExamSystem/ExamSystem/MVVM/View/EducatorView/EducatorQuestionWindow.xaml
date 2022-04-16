@@ -67,7 +67,8 @@
         </Grid>
         <Grid Width="453" Height="581" HorizontalAlignment="Left" Margin="920,-600,0,0">
             <Border BorderThickness="1" Background="White" Margin="0,25,0,180" CornerRadius="10">
-                <Image Source="{Binding ImageUri,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="440" Height="365"></Image>
+                <Image
+   Source="{Binding ImageUri,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="440" Height="365"></Image>
             </Border>
             <Button Height="45" Width="260" BorderThickness="0" materialDesign:ButtonAssist.CornerRadius="26" Margin="40 310 25 0">
                 <Button.Background>
@@ -82,7 +83,7 @@
             </Button>
             <Button 
                 Click="ConfirmButton_Click"
-                Command="{Binding ClearInsideCommand}"
+         Command="{Binding CreateQuestionClickCommand}"
                 Height="45" Width="260" BorderThickness="0" materialDesign:ButtonAssist.CornerRadius="26" Margin="40 460 25 0">
                 <Button.Background>
                     <LinearGradientBrush>

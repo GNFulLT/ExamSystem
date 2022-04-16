@@ -138,7 +138,7 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
             CountText = _localization["EW"+nameof(CountText)];
             JumpText = _localization["EW" + nameof(JumpText)];
             CreateQuestionClickCommand = new RelayCommand(OnCreateQuestionButtonClick);
-
+            questionWindow.OnQuestionCreated += OnQuestionCreated;
         }
 
         private void OnCreateQuestionButtonClick(object sender)
@@ -149,14 +149,10 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
         }
 
 
-        private void OnCreateQuestionButtonClick2(object sender)
+        private void OnQuestionCreated(Question q)
         {
-            Question s = new Question();
-            s.Unit = new Unit();
-            s.Unit.UnitName = "Biyoloji";
-            QuestionPanel panel = new QuestionPanel(s);
-            QuestionCollection.Add(panel);
-            Count++;
+            //When Question Created 
+            Question a = q;
         }
 
         private void RefreshPage()
