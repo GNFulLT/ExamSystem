@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -112,8 +113,15 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
             }
         }
 
+        private bool _isQuestionWindowOpen = false;
 
+        public bool IsQuestionWindowOpen
+        {
+            get { return _isQuestionWindowOpen; }
+            set{ _isQuestionWindowOpen = value; }
+        }
 
+        private EducatorQuestionWindow questionWindow = new EducatorQuestionWindow();
 
         public EducatorMainWindowViewModel()
         {
@@ -130,9 +138,18 @@ namespace ExamSystem.MVVM.ViewModel.EducatorViewModel
             CountText = _localization["EW"+nameof(CountText)];
             JumpText = _localization["EW" + nameof(JumpText)];
             CreateQuestionClickCommand = new RelayCommand(OnCreateQuestionButtonClick);
+
         }
 
         private void OnCreateQuestionButtonClick(object sender)
+        {
+            if (IsQuestionWindowOpen)
+                return;
+            questionWindow.Show();
+        }
+
+
+        private void OnCreateQuestionButtonClick2(object sender)
         {
             Question s = new Question();
             s.Unit = new Unit();

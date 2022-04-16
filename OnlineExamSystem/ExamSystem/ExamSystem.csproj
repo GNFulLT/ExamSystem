@@ -26,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -183,6 +184,7 @@
     <Compile Include="Controls\Window1ViewModel.cs" />
     <Compile Include="Core\Hashers\IPasswordHasher.cs" />
     <Compile Include="Core\Hashers\PasswordHasher_HMACSHA512.cs" />
+    <Compile Include="Core\IMeasurable.cs" />
     <Compile Include="Core\Services\AuthenticationServices\Account.cs" />
     <Compile Include="Core\Services\AuthenticationServices\AccountInfo.cs" />
     <Compile Include="Core\Services\DataBaseHandler.cs" />
@@ -191,6 +193,7 @@
     <Compile Include="Core\Services\DatabaseServices\IAccountService.cs" />
     <Compile Include="Core\Services\AuthenticationServices\IAuthenticationService.cs" />
     <Compile Include="Core\Services\DatabaseServices\IDataBaseService.cs" />
+    <Compile Include="Core\Services\DatabaseServices\LessonService.cs" />
     <Compile Include="Core\Services\DatabaseServices\SectionService.cs" />
     <Compile Include="Core\Services\DatabaseServices\UnitService.cs" />
     <Compile Include="Core\Services\IDataBaseObject.cs" />
@@ -200,12 +203,14 @@
     <Compile Include="Core\Services\ValidationRules\UsernameValidationRule.cs" />
     <Compile Include="Core\UnitSectionProvider.cs" />
     <Compile Include="Globals.cs" />
+    <Compile Include="MVVM\Model\Question\Lesson.cs" />
     <Compile Include="MVVM\Model\Question\Question.cs" />
     <Compile Include="MVVM\Model\Question\QuestionInfo.cs" />
     <Compile Include="MVVM\Model\Question\QuestionInfoWrapper.cs" />
     <Compile Include="MVVM\Model\Question\Section.cs" />
     <Compile Include="MVVM\Model\Question\Unit.cs" />
     <Compile Include="MVVM\ViewModel\EducatorViewModel\EducatorMainWindowViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\EducatorViewModel\EducatorQuestionWindowViewModel.cs" />
     <Compile Include="MVVM\ViewModel\EducatorViewModel\QuestionPanelViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoadingContentBarViewModel.cs" />
     <Compile Include="MVVM\ViewModel\LoginScreenForgotEmailPanelViewModel.cs" />

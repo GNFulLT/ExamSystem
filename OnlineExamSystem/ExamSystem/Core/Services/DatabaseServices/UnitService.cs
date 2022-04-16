@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,19 +14,46 @@ namespace ExamSystem.Core.Services.DatabaseServices
     public class UnitService : IDataBaseService<Unit>
     {
         private const string COLLECTION_NAME = "Units";
-
-        public Task<ReadOnlyDictionary<string,Unit>> GetUnitDictionary()
+#if DEBUG
+        int count = 0;
+#endif
+        public Task<ReadOnlyDictionary<Lesson,Dictionary<string,Unit>>> GetUnitDictionary()
         {
-            return Task.Run(() => {
-                Dictionary<string, Unit> dict = new Dictionary<string, Unit>();
+            return Task.Run(() =>
+            {
+#if DEBUG
+                if (count == 1)
+                {
+                    throw new Exception("GetLessonDictionary used two times?");
+                }
+                count++;
+#endif
+                var dict = new Dictionary<Lesson, Dictionary<string, Unit>>();
+                UnitSectionProvider.InitializeMaps();
+                var lesDict = UnitSectionProvider.LessonMap;
                 var collection = GetCollection();
                 var list = collection.AsQueryable();
+                foreach(var item in lesDict)
+                {
+                    dict.Add(item.Value, new Dictionary<string, Unit>());
+                }
                 foreach(var item in list)
                 {
-                    dict.Add(item.UnitName, item);
+                    Dictionary<string, Unit> dict2;
+                    bool exist = dict.TryGetValue(item.Lesson, out dict2);
+                    if (exist)
+                    {
+                        dict2.Add(item.UnitName, item);
+                    }
+                    else
+                    {
+                        dict2 = new Dictionary<string, Unit>();
+                        dict2.Add(item.UnitName, item);
+                        dict.Add(item.Lesson, dict2);
+                    }
                 }
 
-                    return new ReadOnlyDictionary<string,Unit>(dict);
+                return new ReadOnlyDictionary<Lesson, Dictionary<string, Unit>>(dict);
             });
         }
 
@@ -34,7 +62,7 @@ namespace ExamSystem.Core.Services.DatabaseServices
             return Task.Run(() =>
             {
                 var collection = GetCollection();
-
+                
                 List<Unit> t = collection.Find(x => x.UnitName == entity.UnitName).ToList();
                 if (t.Count > 0)
                     return entity;

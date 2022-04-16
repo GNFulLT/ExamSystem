@@ -13,11 +13,20 @@ namespace ExamSystem.Core.Services.DatabaseServices
     public class SectionService : IDataBaseService<Section>
     {
         private const string COLLECTION_NAME = "Sections";
-
+#if DEBUG
+        int count = 0;
+#endif
         public Task<ReadOnlyDictionary<Unit,Dictionary<string,Section>>> GetSectionDictionary()
         {
             return Task.Run(() => {
-              var dict =  new Dictionary<Unit, Dictionary<string, Section>>();
+#if DEBUG
+                if (count == 1)
+                {
+                    throw new Exception("GetLessonDictionary used two times?");
+                }
+                count++;
+#endif
+                var dict =  new Dictionary<Unit, Dictionary<string, Section>>();
 
                 var collection = GetCollection();
                 var list = collection.AsQueryable();
@@ -36,10 +45,12 @@ namespace ExamSystem.Core.Services.DatabaseServices
                         dict.Add(item.Unit, dict2);
                     }
                 }
-
+             
                 return new ReadOnlyDictionary<Unit, Dictionary<string, Section>>(dict);
             });
         }
+        //Test for benchmarking
+#if DEBUG
         public Task<Section> GetTest()
         {
             return Task.Run(() =>
@@ -57,7 +68,7 @@ namespace ExamSystem.Core.Services.DatabaseServices
                 return list[0];
             });
         }
-
+#endif
         public Task<Section> Create(Section entity)
         {
             return Task.Run(() =>

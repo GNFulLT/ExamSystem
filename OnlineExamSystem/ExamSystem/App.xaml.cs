@@ -24,6 +24,7 @@ namespace ExamSystem
             /*StartupUri = new Uri("/ExamSystem;component/MainWindow.xaml", UriKind.Relative);
             StartupUri = new Uri("/ExamSystem;component/Controls/Window1.xaml", UriKind.Relative);*/
             StartupUri = new Uri("/ExamSystem;component/MVVM/View/EducatorView/EducatorMainWindow.xaml", UriKind.Relative);
+
             base.OnStartup(e);
         }
     }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -38,6 +39,9 @@ namespace ExamSystem.MVVM.View.EducatorView
             s.Unit.UnitName = "Biyoloji";
         }
 
-        
+        private void Button_Click()
+        {
+
+        }
     }
 }

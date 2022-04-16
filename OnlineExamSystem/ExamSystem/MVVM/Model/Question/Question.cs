@@ -12,6 +12,7 @@ namespace ExamSystem.MVVM.Model.Question
     {
         public ObjectId Id { get; set; }
 
+        public Lesson Lesson { get; set; }
 
         public Section Section { get; set; }
 

@@ -14,7 +14,7 @@ namespace ExamSystem.MVVM.Model.Question
 {
     [BsonSerializer(typeof(SectionSerializer))]
     [BsonIgnoreExtraElements]
-    public class Section:IDataBaseObject
+    public class Section:IDataBaseObject,IComparable<Section>
     {
         private ObjectId _id;
         public ObjectId Id { get { return _id; } set {
@@ -55,6 +55,19 @@ namespace ExamSystem.MVVM.Model.Question
         public override string ToString()
         {
             return SectionName;
+        }
+
+        public int CompareTo(Section other)
+        {
+            if (this.Id == other.Id)
+            {
+                return 0;
+            }
+            else if (this.Id < other.Id)
+            {
+                return -1;
+            }
+            return 1;
         }
 
         public Section()

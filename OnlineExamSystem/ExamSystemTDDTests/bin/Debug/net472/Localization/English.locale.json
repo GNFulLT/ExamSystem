@@ -17,5 +17,7 @@
   "UsernameAndEmailAlreadyInUseText": "Username and email is already in use",
   "EmailRegexInvalid": "Email is invalid",
   "PasswordInvalid": "Password doesn't provide requirements",
-  "RegisteredText": "Registered Succesfully"
+  "RegisteredText": "Registered Succesfully",
+  "EWCountText": "Count",
+  "EWJumpText": ". to"
 }

@@ -25,21 +25,35 @@ namespace ExamSystemTDDTests
             SectionService service = new SectionService();
 
             UnitService service2 = new UnitService();
-            Task<ReadOnlyDictionary<string, Unit>> t1 = service2.GetUnitDictionary();
-            ReadOnlyDictionary<string, Unit> res = t1.Result;
+            Task<ReadOnlyDictionary<Lesson, Dictionary<string, Unit>>> t1 = service2.GetUnitDictionary();
+            ReadOnlyDictionary<Lesson, Dictionary<string, Unit>> res = t1.Result;
 
-            Unit unit = res["Biyoloji"];
-
-            Section section = new Section {
-                Unit = unit,
-            SectionName = "Sinirsel Sistem",
-            GlobalCount = 0,
-            GlobalRightCount = 0
-            };
-            Task<Section> t2 = service.Create(section);
-            Section sc = t2.Result;
-            Assert.IsNotNull(sc);
+           
         }
+        //Works
+        [Test]
+        public void CreateLessonTest()
+        {
+            LessonService service = new LessonService();
+            Lesson les = new Lesson { GlobalCount = 0, GlobalRightCount = 0, LessonName = "Matematik" };
+            Task<Lesson> t1 = service.Create(les);
+            Lesson l = t1.Result;
+            Assert.IsNotNull(l);
+        }
+
+
+        [Test]
+        public void GetDictionaryLessonTest()
+        {
+            LessonService service = new LessonService();
+
+            Task<ReadOnlyDictionary<string, Lesson>> t1 = service.GetLessonDictionary();
+            ReadOnlyDictionary<string, Lesson> res = t1.Result;
+
+            Assert.IsNotNull(res);
+        }
+
+
         //Works Greatly
         [Test]
         public void GetDictionarySectionTest()
@@ -47,8 +61,8 @@ namespace ExamSystemTDDTests
             SectionService service = new SectionService();
 
             UnitService service2 = new UnitService();
-            Task<ReadOnlyDictionary<string, Unit>> t1 = service2.GetUnitDictionary();
-            ReadOnlyDictionary<string, Unit> res = t1.Result;
+            Task<ReadOnlyDictionary<Lesson, Dictionary<string,Unit>>> t1 = service2.GetUnitDictionary();
+            ReadOnlyDictionary<Lesson, Dictionary<string, Unit>> res = t1.Result;
             Task<ReadOnlyDictionary<Unit,Dictionary<string,Section>>> t2 = service.GetSectionDictionary();
             var dict = t2.Result;
             Assert.IsNotNull(dict);
@@ -68,21 +82,29 @@ namespace ExamSystemTDDTests
         public void CreateUnitTest()
         {
             UnitService service = new UnitService();
+            LessonService s1 = new LessonService();
+            Task<ReadOnlyDictionary<string, Lesson>> t1 = s1.GetLessonDictionary();
+            ReadOnlyDictionary<string, Lesson> res = t1.Result;
+            
+
+            
             Unit unit = new Unit {
-                UnitName = "Matematik",
+                Lesson = res["Matematik"],
+                UnitName = "Dikdörtgen",
                 GlobalCount = 0,
                 GlobalRightCount = 0
             };
-            Task<Unit> t1 = service.Create(unit);
-            Assert.IsNotNull(t1.Result);
+
+            Task<Unit> t2 = service.Create(unit);
+            Assert.IsNotNull(t2.Result);
         }
 
         [Test]
         public void UnitDictionaryTest()
         {
             UnitService service = new UnitService();
-            Task<ReadOnlyDictionary<string, Unit>> t1 = service.GetUnitDictionary();
-            ReadOnlyDictionary<string, Unit> res = t1.Result;
+            Task<ReadOnlyDictionary<Lesson,Dictionary<string,Unit>>> t1 = service.GetUnitDictionary();
+            ReadOnlyDictionary<Lesson, Dictionary<string, Unit>> res = t1.Result;
             Assert.IsNotNull(res);
         }
     }
