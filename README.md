@@ -114,3 +114,14 @@ And if we have a class that is not in ExamSystem.Core.Utilities namespace we can
 
 `                if (!infos[i].Namespace.Contains("ExamSystem.Core.Utilities") && !infos[i].Namespace.Contains("ExamSystem.Core.{NameSpace}"))
 `
+
+## Basic Login Security
+Inside of DatabaseServices or EtcServices that is derived from DatabaseService, don't used dynamic queries using string concatenation. So there is no chance to injection. In registration input handler prevents to write any special characters. In login side normally you can't write any special character to username textbox but copy paste can bypass that. These xss codes, injections are tried : 
+{'&ne':'1'}
+{"$ne": null}
+{"$ne": undefined}
+{"$gt": undefined}
+{"$gt": null}
+'; while(true){}'
+etc... and all variations of these(without { or } or use ' instead ")
+
