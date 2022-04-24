@@ -110,7 +110,7 @@ List<TypeInfo> infos = currentAssembly.DefinedTypes.ToList();
             }
 ```
 
-And if we have a class that is not in ExamSystem.Core.Utilities namespace we can just specify it by use these : 
+And if we have a class that is not in ExamSystem.Core.Utilities namespace we can just specify it by use that : 
 
 `                if (!infos[i].Namespace.Contains("ExamSystem.Core.Utilities") && !infos[i].Namespace.Contains("ExamSystem.Core.{NameSpace}"))
 `
