@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="ExamSystem.WpfNetCore.Views.LoginPanel.LoginScreenRegisterPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExamSystem.WpfNetCore.Views.LoginPanel"
+             mc:Ignorable="d" 
+             d:DesignHeight="545" d:DesignWidth="415"
+             xmlns:customControls="clr-namespace:ExamSystem.WpfNetCore.CustomControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                              xmlns:converters="clr-namespace:ExamSystem.WpfNetCore.Converters"
+
+             >
+    <UserControl.Resources>
+        <converters:BoolToVis x:Key="BoolToVis"/>
+    </UserControl.Resources>
+    <StackPanel>
+        <Grid Margin="0,80,0,0" Height="309" Width="415">
+            <TextBox 
+                PreviewTextInput="Username_InputHandle"
+                PreviewKeyDown="UsernameTextBox_PreviewKeyDown"
+             materialDesign:HintAssist.HelperText="{Binding CurrentUsernameHelperText}"
+                TabIndex="2"
+                x:Name="UsernameTextBox"
+                HorizontalAlignment="Left" 
+                Height="45" Margin="70,177,0,0"
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" Width="275"
+                Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                 materialDesign:TextFieldAssist.UnderlineBrush=
+                      "DarkViolet" 
+                      BorderBrush="SteelBlue"
+                      FontSize="14"
+                      materialDesign:HintAssist.HintOpacity="0.5"
+                      materialDesign:HintAssist.Background="Transparent"
+                     materialDesign:HintAssist.Hint="{Binding UsernameHintText}"
+                materialDesign:HintAssist.Foreground="DarkViolet"
+                Foreground="Black"
+                Text="{Binding UsernameTextBoxText}"
+                />
+            <TextBox TabIndex="1"
+               materialDesign:HintAssist.HelperText="{Binding CurrentEmailHelperText}"
+
+                x:Name="EmailTextBox"
+                HorizontalAlignment="Left" 
+                Height="45" Margin="70,119,0,0"
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" Width="275"
+                Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                materialDesign:TextFieldAssist.UnderlineBrush=
+                      "DarkViolet" 
+                BorderBrush="SteelBlue"
+                FontSize="14"
+                materialDesign:HintAssist.HintOpacity="0.5"
+                materialDesign:HintAssist.Background="Transparent"
+                materialDesign:HintAssist.Hint="{Binding EmailHintText}"
+                materialDesign:HintAssist.Foreground="DarkViolet"
+                Foreground="Black"
+                Text="{Binding EmailTextBoxText}"
+                />
+           
+
+            <TextBox TabIndex="0"
+ materialDesign:HintAssist.HelperText="{Binding CurrentNameSurnameHelperText}"
+                HorizontalAlignment="Left" 
+                Height="45" Margin="70,59,0,0"
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" Width="275"
+                Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                materialDesign:TextFieldAssist.UnderlineBrush=
+                 "DarkViolet" 
+                BorderBrush="SteelBlue"
+                FontSize="14"
+                materialDesign:HintAssist.HintOpacity="0.5"
+                materialDesign:HintAssist.Background="Transparent"
+                materialDesign:HintAssist.Hint="{Binding NameSurnameHintText}"
+                materialDesign:HintAssist.Foreground="DarkViolet"
+                Foreground="Black"
+                Text="{Binding NameSurnameTextBoxText}"
+               >
+
+            </TextBox>
+
+
+        </Grid>
+
+        <Grid Height="156">
+            <customControls:BindablePasswordBox 
+                Password="{Binding PasswordTextBoxText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                TabIndex="3"
+                HorizontalAlignment="Center" 
+                HelperText="{Binding CurrentPasswordHelperText}" Margin="0,-85,0,180"
+                HintText="{Binding PasswordHintText}"
+                >
+
+            </customControls:BindablePasswordBox>
+
+            <Button x:Name="RegisterButton"
+                TabIndex="4"   
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                Height="48" 
+                Margin="104,20,98,80"
+                BorderThickness="0"
+                 materialDesign:ButtonAssist.CornerRadius="20"
+                Command="{Binding RegisterButtonClickedCommand}"
+                    >
+
+
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#2fdd2e" Offset="0.0"/>
+                        <GradientStop Color="#34c282" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <Grid>
+                    <TextBlock Foreground="WhiteSmoke" 
+                 Text="{Binding RegisterText}"
+                               Margin="0,0,-13,0"/>
+                </Grid>
+
+
+            </Button>
+            <Label Content="{Binding BackText}"
+                HorizontalAlignment="Left" 
+                  TabIndex="5"
+                Foreground="SteelBlue"
+                Margin="339,122,0,0" VerticalAlignment="Top"
+                Cursor="Hand"                   
+                   >
+                <Label.InputBindings>
+                    <MouseBinding Command="{Binding BackLabelClickedCommand}" MouseAction="LeftClick"></MouseBinding>
+                </Label.InputBindings>
+            </Label>
+
+
+            <customControls:LoadingContentBar 
+                Visibility="{Binding IsCycleShow,Converter={StaticResource BoolToVis}}"
+                HorizontalAlignment="Left"
+                Height="79"
+                Margin="157,77,0,0" 
+                VerticalAlignment="Top"
+                Width="100"/>
+
+        </Grid>
+    </StackPanel>
+</UserControl>

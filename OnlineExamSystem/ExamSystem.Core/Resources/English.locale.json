@@ -1,0 +1,23 @@
+{
+  "UsernameHintText": "Username",
+  "PasswordHintText": "Password",
+  "LoginButtonText": "Login",
+  "CreateAccountText": "Create an account",
+  "RegisteredText": "Registered Succesfully",
+  "ForgotEmailText": "Forgot email",
+  "TextBoxCanNotBeEmptyText": "Any textbox can not be empty",
+  "LoginErrorText": "Username or password is invalid",
+  "EmailHintText": "Email",
+  "NameSurnameHintText": "Name/Surname",
+  "BackText": "Back",
+  "RegisterText": "Register",
+  "NameSurnameHelperText": "Syntax : Name Surname",
+  "EmailHelperText": "Email is invalid type",
+  "EmailHelperText2": "Email is already in use",
+  "UsernameHelperText": "Username is already in use",
+  "PasswordHelperText": "Password Min Length : ",
+  "ForgotEmailButtonText": "Send Password"
+
+
+
+}

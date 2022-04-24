@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="ExamSystem.WpfNetCore.Views.LoginPanel.LoginScreenForgotPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExamSystem.WpfNetCore.Views.LoginPanel"
+             mc:Ignorable="d" 
+             d:DesignHeight="545" d:DesignWidth="415"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             >
+    <StackPanel Width="415" Height="545">
+        <Grid Margin="0 80 0 0" Height="250" Width="415">
+            <TextBox 
+                x:Name="EmailTextBox"
+                HorizontalAlignment="Left" 
+                Height="45" Margin="70,86,0,0"
+                TextWrapping="Wrap" 
+                VerticalAlignment="Top" Width="275"
+                Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                materialDesign:TextFieldAssist.UnderlineBrush=
+                      "DarkViolet" 
+                BorderBrush="SteelBlue"
+                FontSize="14"
+                materialDesign:HintAssist.HintOpacity="0.5"
+                materialDesign:HintAssist.Background="Transparent"
+                materialDesign:HintAssist.Hint="Email"
+                materialDesign:HintAssist.Foreground="DarkViolet"
+                Foreground="Black"
+                Text="{Binding EmailTextBoxText}"
+                />
+
+        </Grid>
+        <Grid Margin="0 80 0 0" Height="136" Width="415">
+            <Button x:Name="ForgotEmailButton" 
+                Style="{StaticResource MaterialDesignRaisedButton}"
+
+                Height="48" 
+                Margin="104,3,104,85"
+                BorderThickness="0"
+                materialDesign:ButtonAssist.CornerRadius="20"
+                    >
+
+
+                <Button.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#2fdd2e" Offset="0.0"/>
+                        <GradientStop Color="#34c282" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+
+
+                <Grid>
+                    <TextBlock Foreground="WhiteSmoke" 
+                               Text="{Binding ForgotEmailButtonText}" 
+                               Margin="0,0,-13,0"/>
+                </Grid>
+
+
+            </Button>
+            <Label Content="{Binding BackText}"
+                HorizontalAlignment="Left" 
+                  
+                Foreground="SteelBlue"
+                Margin="35,102,0,0" VerticalAlignment="Top"
+                Cursor="Hand"                   
+                   >
+                <Label.InputBindings>
+                    <MouseBinding Command="{Binding BackLabelClickedCommand}" MouseAction="LeftClick"></MouseBinding>
+                </Label.InputBindings>
+            </Label>
+        </Grid>
+
+
+
+    </StackPanel>
+</UserControl>
