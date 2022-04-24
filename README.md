@@ -20,9 +20,9 @@ To be able to debug or run in visual studio, you will need to have .NET Standart
 ## Project overview
 ExamSystem is a project that easily configure for another platforms or frameworks with supporting MVVM design pattern. ExamSystem mainly contains two seperate parts. These are : 
 ### ExamSystem.Core
-This is where holds viewmodels models and utilities. This application's targeted framework is class library so it shares its contents with any project that referenced this.
+This is which holds viewmodels models and utilities. This application's targeted framework is class library so it shares its contents with any project that referenced this.
 ### ExamSystem.{Platform}
-This is where holds views,custom controls and converters (if any view needs it). It fetch the binding contents from ExamSystem.Core so you just need to build your view that depend on a specific platform and bind the content to viewmodel that stands in ExamSystem.Core. 
+This is which holds views,custom controls and converters (if any view needs it). It fetch the binding contents from ExamSystem.Core so you just need to build your view that depend on a specific platform and bind the content to viewmodel that stands in ExamSystem.Core. 
 
 ## Obligations That ExamSystem.{Platform} have to conform to
 
