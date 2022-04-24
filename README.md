@@ -26,9 +26,17 @@ This is which holds views,custom controls and converters (if any view needs it).
 
 ## Obligations That ExamSystem.{Platform} have to conform to
 
-Every Page, Window or what equivalent is for these have to have ViewFor Attribute. Its usage is :
+Every Page, Window or what equivalent is for these have to have ViewFor Attribute and must take its viewmodel as a paramater. Datacontext must be specified in ctor. An example:
 
-`[ViewFor(TypeOfView,TyeOfViewModel)]`
+```
+[ViewFor(typeof(CustomView),typeof(CustomViewModel))]
+   public partial class CustomView : Window{
+   public CustomView(CustomViewModel viewModel){
+               InitializeComponent();
+               DataContext = viewModel;
+   }
+   }
+```
 
 With this attribute, project knows what should i get a instance for this viewmodel. There will be thrown an exception if this attribute is not used.
 
