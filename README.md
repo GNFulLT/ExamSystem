@@ -58,7 +58,7 @@ With LocalableProperty Attribute, We specify a property that we want to use text
 `[LocalableProperty($"{specifiedName}")]`
 
 ## Handling ExamSystem.Core Problems
-.NET Standarts doesn't have any Command, CommandManager, ValidationRules classess. So we need to implement them with own declarations. You can found custom these classes in ExamSystem.Core spacename.
+.NET Standarts doesn't have any Command, CommandManager, ValidationRules classess. So we need to implement them with own declarations. You can found custom these classes in ExamSystem.Core namespace.
 
 ## Handling automatically ContainerBuilder.Register for dependency injection.
 It uses O(n) time complexity approach with using Dictionaries. Simple codes here : 
