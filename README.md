@@ -60,6 +60,28 @@ Application.Current.MainWindow = strapper.Resolve<LoginScreenView>();
             Application.Current.MainWindow.Show();
 `
 
+The final step is give the informations to Navigation static class and make it be able to change current window and make it responsive to ExamSystem.{Platform}. To achieve this we are implementing necessary property and event inside of application startup method. On Application_Startup
+```
+//Some codes
+Current.MainWindow = strapper.Resolve<CurrentView>();
+            Current.MainWindow.Show();
+            //Implementing Navigation Static Class
+            Navigation.CurrentWindow = MainWindow;
+            Navigation.CurrentWindowChangeRequested += OnCurrentWindowChangedRequest;
+   }
+   
+   private void OnCurrentWindowChangedRequest(object newWindow)
+        {
+            if (newWindow is not Window)
+                throw new Exception("Requested object is not a window");
+            Window dump = Current.MainWindow;
+            Current.MainWindow = newWindow as Window;
+            Current.MainWindow.Show();
+            dump.Close();
+        }
+```
+We can achieve this with different approaches and i think it will be better(Creating custom App class and linking them etc.) but this approach is very straightforward and is acceptable for this project. 
+
 ## Handling Localization
 With LocalableProperty Attribute, We specify a property that we want to use text that stands in {LANG}.localization.json with LocalableProperty Attribute. After that when we use generic methods that Localization.SetDefaultLocalization or Localization.SetLocalization(), its implement text to property which has LocalableProperty Attribute automatically. Lastly we can specify name of json key property by change the attribute ctor paramater.
 
