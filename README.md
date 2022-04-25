@@ -18,7 +18,7 @@ To be able to debug or run in visual studio, you will need to have .NET Standart
 - AutoFac
 - PropertyChanged.Fody
 ## Project overview
-ExamSystem is a project that easily configure for another platforms or frameworks with supporting MVVM design pattern. ExamSystem mainly contains two seperate parts. These are : 
+ExamSystem is a project that can easily configure for other platforms or frameworks while protecting the supporting MVVM design pattern. ExamSystem mainly contains two seperate parts. These are : 
 ### ExamSystem.Core
 This is which holds viewmodels models and utilities. This application's targeted framework is class library so it shares its contents with any project that referenced this.
 ### ExamSystem.{Platform}
