@@ -80,7 +80,7 @@ Current.MainWindow = strapper.Resolve<CurrentView>();
             dump.Close();
         }
 ```
-We can achieve this with different approaches and i think it will be better(Creating custom App class and linking them etc.) but this approach is very straightforward and is acceptable for this project. 
+We can achieve this with different approaches and i think it will be better(Creating custom App class and linking them etc.) but this approach is very straightforward and is acceptable for this project. Below this line, The encountered problems while developing this project and approaches to solve these are described.
 
 ## Handling Localization
 With LocalableProperty Attribute, We specify a property that we want to use text that stands in {LANG}.localization.json with LocalableProperty Attribute. After that when we use generic methods that Localization.SetDefaultLocalization or Localization.SetLocalization(), its implement text to property which has LocalableProperty Attribute automatically. Lastly we can specify name of json key property by change the attribute ctor paramater.
