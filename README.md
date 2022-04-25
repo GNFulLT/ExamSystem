@@ -38,7 +38,7 @@ Every Page, Window or what equivalent is for these have to have ViewFor Attribut
    }
 ```
 
-With this attribute, project knows what should i get a instance for this viewmodel. There will be thrown an exception if this attribute is not used.
+With this attribute, project knows what should i get an instance for this viewmodel. There will be thrown an exception if this attribute is not used.
 
 Every ExamSystem.{Platform} have to write their own startup method and have a Bootstrapper class that is inherited from ExamSystem.Core.Bootstrapper after than it needs to send its current assembly and the TypeOfView that is type of startup screen as a paramater to the ctor. Example usage :
 
