@@ -56,7 +56,7 @@ And in startup method, create a Bootstrapper object. Initialization processes ar
 And finally after creating strapper we need to Resolve startup view and show it
 
 `
-Application.Current.MainWindow = strapper.Resolve<LoginScreenView>();
+Application.Current.MainWindow = strapper.Resolve<CurrentView>();
             Application.Current.MainWindow.Show();
 `
 
