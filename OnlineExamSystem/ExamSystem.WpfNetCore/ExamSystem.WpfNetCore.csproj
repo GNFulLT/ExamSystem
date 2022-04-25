@@ -30,4 +30,8 @@
     <Resource Include="Images\UsernameTextBoxIcon.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\EducatorPanel\" />
+  </ItemGroup>
+
 </Project>

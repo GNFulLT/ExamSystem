@@ -6,7 +6,6 @@ namespace ExamSystem.Core
 {
     public class ViewModel : INotifyPropertyChanged
     {
-        public static Type Parent;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

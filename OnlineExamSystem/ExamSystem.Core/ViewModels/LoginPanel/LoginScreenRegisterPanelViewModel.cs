@@ -1,5 +1,6 @@
 ﻿using ExamSystem.Core.SubModels;
 using ExamSystem.Core.Utilities.Localization;
+using ExamSystem.Core.Utilities.NavigationSource;
 using ExamSystem.Core.Utilities.Services.AuthenticationServices;
 using ExamSystem.Core.Utilities.ValidationRules;
 using System;
@@ -16,6 +17,7 @@ namespace ExamSystem.Core.ViewModels.LoginPanel
 
         public LoginScreenRegisterPanelViewModel()
         {
+            
             Localization.SetDefaultLocalization(this);
         }
 
@@ -150,7 +152,7 @@ namespace ExamSystem.Core.ViewModels.LoginPanel
         #region Commands
         public ICommand BackLabelClickedCommand => new RelayCommand((sender) =>
         {
-            
+
             BackLabelClicked?.Invoke(sender);
         });
         public ICommand RegisterButtonClickedCommand => new RelayCommand(async (sender) =>

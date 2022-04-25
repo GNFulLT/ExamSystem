@@ -13,6 +13,9 @@
     <Compile Update="CustomControls\LoadingContentBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EducatorScreenView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\LoginPanel\LoginScreenForgotPanelView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="CustomControls\LoadingContentBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomControls\Themes\PaginationTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EducatorScreenView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginPanel\LoginScreenForgotPanelView.xaml">

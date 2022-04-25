@@ -14,11 +14,11 @@ namespace ExamSystem.Core.ViewModels
 
         public MainWindowViewModel()
         {
-             LoginPanelViewModel = new LoginScreenLoginPanelViewModel();
+             LoginPanelViewModel =  Resolver.Resolve<LoginScreenLoginPanelViewModel>();
 
-             RegisterPanelViewModel = new LoginScreenRegisterPanelViewModel();
+             RegisterPanelViewModel = Resolver.Resolve<LoginScreenRegisterPanelViewModel>();
 
-            ForgotEmailPanelViewModel = new LoginScreenForgotPanelViewModel();
+            ForgotEmailPanelViewModel = Resolver.Resolve<LoginScreenForgotPanelViewModel>();
 
             LoginPanel = Activator.CreateInstance(LoginScreenLoginPanelViewModel.Parent, LoginPanelViewModel);
 

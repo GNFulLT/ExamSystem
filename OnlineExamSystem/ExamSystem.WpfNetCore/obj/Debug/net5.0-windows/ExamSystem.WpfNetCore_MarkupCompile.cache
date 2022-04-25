@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\App.xaml
-6749040132
+8-88028053
 
-10226427860
+12257010331
 205-217206351
-CustomControls\BindablePasswordBox.xaml;CustomControls\LoadingContentBar.xaml;Views\LoginPanel\LoginScreenForgotPanelView.xaml;Views\LoginPanel\LoginScreenLoginPanelView.xaml;Views\LoginPanel\LoginScreenRegisterPanelView.xaml;Views\LoginScreenView.xaml;
+CustomControls\BindablePasswordBox.xaml;CustomControls\LoadingContentBar.xaml;CustomControls\Themes\PaginationTheme.xaml;Views\EducatorScreenView.xaml;Views\LoginPanel\LoginScreenForgotPanelView.xaml;Views\LoginPanel\LoginScreenLoginPanelView.xaml;Views\LoginPanel\LoginScreenRegisterPanelView.xaml;Views\LoginScreenView.xaml;
 
 False
 
