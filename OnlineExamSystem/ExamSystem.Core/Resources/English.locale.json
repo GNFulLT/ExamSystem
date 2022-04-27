@@ -16,7 +16,11 @@
   "EmailHelperText2": "Email is already in use",
   "UsernameHelperText": "Username is already in use",
   "PasswordHelperText": "Password Min Length : ",
-  "ForgotEmailButtonText": "Send Password"
+  "ForgotEmailButtonText": "Send Password",
+  "ConfirmQuestionTextButtonText": "Confirm Question",
+  "AddPictureTextBoxText": "Add Picture",
+  "WrongAnswersHeaderText": "Wrong Answers",
+  "CorrectAnswerHeaderText": "Correct Answer"
 
 
 

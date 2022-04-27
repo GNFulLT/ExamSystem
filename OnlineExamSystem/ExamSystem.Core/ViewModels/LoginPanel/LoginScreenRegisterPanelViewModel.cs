@@ -148,7 +148,6 @@ namespace ExamSystem.Core.ViewModels.LoginPanel
         public string PasswordHelperText { get; set; }
         #endregion
 
-
         #region Commands
         public ICommand BackLabelClickedCommand => new RelayCommand((sender) =>
         {

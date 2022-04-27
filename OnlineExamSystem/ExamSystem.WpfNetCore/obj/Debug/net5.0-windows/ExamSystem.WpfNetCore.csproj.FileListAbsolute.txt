@@ -66,3 +66,5 @@ C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\CustomControls\Themes\PaginationTheme.baml
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\EducatorScreenView.g.cs
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\EducatorScreenView.baml
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\EducatorPanel\EducatorPanelQuestionWindowView.g.cs
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\EducatorPanel\EducatorPanelQuestionWindowView.baml

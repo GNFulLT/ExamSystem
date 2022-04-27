@@ -9,8 +9,8 @@ namespace ExamSystem.Core.Utilities.Localization
 {
     public static class Localization
     {
-        public const string LOCALIZATION_FOLDER = "Localization";
-        public const string DEFAULT_LOCALIZATION = "English";
+        private const string LOCALIZATION_FOLDER = "Localization";
+        private const string DEFAULT_LOCALIZATION = "English";
 
         private static Dictionary<string, string> _localization;
         private static Dictionary<string, string> _defaultLocalization;

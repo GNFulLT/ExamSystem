@@ -24,11 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\EducatorPanel\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libzstd.so" />
   </ItemGroup>
 
