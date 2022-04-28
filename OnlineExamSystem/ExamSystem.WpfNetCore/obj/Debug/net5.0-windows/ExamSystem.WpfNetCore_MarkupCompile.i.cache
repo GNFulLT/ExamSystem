@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\
+C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\
 ExamSystem.WpfNetCore
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-C:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\App.xaml
+C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.WpfNetCore\App.xaml
 91429177438
 
 15-1196264924
-2051609346552
+205-1779927598
 CustomControls\BindablePasswordBox.xaml;CustomControls\LoadingContentBar.xaml;CustomControls\Themes\PaginationTheme.xaml;Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml;Views\EducatorScreenView.xaml;Views\LoginPanel\LoginScreenForgotPanelView.xaml;Views\LoginPanel\LoginScreenLoginPanelView.xaml;Views\LoginPanel\LoginScreenRegisterPanelView.xaml;Views\LoginScreenView.xaml;
 
 True
