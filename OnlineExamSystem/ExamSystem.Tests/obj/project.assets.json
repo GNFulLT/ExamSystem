@@ -4859,28 +4859,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ugurbey\\.nuget\\packages\\": {},
-    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\ExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
       "projectName": "ExamSystem.Tests",
-      "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
-      "packagesPath": "C:\\Users\\ugurbey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Tests\\obj\\",
+      "projectPath": "C:\\Users\\lenovo\\Desktop\\ExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lenovo\\Desktop\\ExamSystem\\ExamSystem.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ugurbey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -4893,8 +4890,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj": {
-              "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj"
+            "C:\\Users\\lenovo\\Desktop\\ExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj": {
+              "projectPath": "C:\\Users\\lenovo\\Desktop\\ExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj"
             }
           }
         }

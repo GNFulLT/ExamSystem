@@ -20,7 +20,9 @@
   "ConfirmQuestionTextButtonText": "Confirm Question",
   "AddPictureTextBoxText": "Add Picture",
   "WrongAnswersHeaderText": "Wrong Answers",
-  "CorrectAnswerHeaderText": "Correct Answer"
+  "CorrectAnswerHeaderText": "Correct Answer",
+  "CountText": "Count",
+  "JumpText": ".to"
 
 
 

@@ -50,9 +50,8 @@
                          HorizontalContentAlignment="Stretch"
               Width="980" Margin="136,8,136,44"
                          />
-                <customControls:Pagination 
-                    Height="30"
-            Margin="226,355,226,-5" Width="800"
+                <customControls:Pagination
+            Margin="179,341,191,-5"
                     Count="{Binding Count,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                     CountPerPage="{Binding CountPerPage,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                     Current="{Binding Current,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
@@ -73,7 +72,7 @@
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="364,42">
                 <Button 
         Command="{Binding CreateQuestionClickedCommand}"
-                    Height="45" Width="260" BorderThickness="0"  materialDesign:ButtonAssist.CornerRadius="26" Margin="0 0 25 0">
+                    Height="45" Width="241" BorderThickness="0"  materialDesign:ButtonAssist.CornerRadius="26" Margin="0 0 25 0" Cursor="Hand">
                     <Button.Background>
                         <LinearGradientBrush>
                             <GradientStop Color="#3399FF" Offset="0.0"></GradientStop>
