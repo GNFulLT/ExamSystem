@@ -1,4 +1,4 @@
-﻿using ExamSystem.Core.Models;
+﻿    using ExamSystem.Core.Models;
 using ExamSystem.Core.Utilities.Localization;
 using ExamSystem.Core.Utilities.Providers;
 using System;
@@ -16,10 +16,12 @@ namespace ExamSystem.Core.ViewModels.EducatorPanel
         public EducatorPanelQuestionWindowViewModel()
         {
             UnitSectionProvider.InitializeMaps();
+            QuestionProvider.InitializeMaps();
+
             Localization.SetDefaultLocalization(this);
             LessonMap = UnitSectionProvider.LessonMap;
 
-           
+            ClearInside();
         }
 
         #region Properties
@@ -38,6 +40,8 @@ namespace ExamSystem.Core.ViewModels.EducatorPanel
         public ReadOnlyDictionary<string, Lesson> LessonMap { get; set; }
 
         public ReadOnlyDictionary<string, Unit> UnitMap { get; set; }
+
+        public ReadOnlyDictionary<string, Section> SectionMap { get; set; }
 
         private Lesson _lesson;
 
@@ -73,6 +77,7 @@ namespace ExamSystem.Core.ViewModels.EducatorPanel
             {
                 _section = value;
                 NotifyPropertyChanged();
+                
             }
         }
         #endregion
@@ -106,8 +111,21 @@ namespace ExamSystem.Core.ViewModels.EducatorPanel
         {
             if (unit == null)
             {
+                SectionMap = null;
                 return;
             }
+            SectionMap = UnitSectionProvider.GetSectionDictionary(unit);
+        }
+        private void ClearInside()
+        {
+
+            CorrectAnswer0 = string.Empty;
+            WrongAnswer0 = string.Empty;
+            WrongAnswer1 = string.Empty;
+            WrongAnswer2 = string.Empty;
+            QuestionText = string.Empty;
+            ImageUri = string.Empty;
+            Lesson = null;
         }
         #endregion
 
@@ -115,6 +133,25 @@ namespace ExamSystem.Core.ViewModels.EducatorPanel
         public ICommand ExitButtonClickedCommand => new RelayCommand((sender) =>
         {
             ExitButtonClicked?.Invoke();
+        });
+        public ICommand QuestionCreateButtonClickedCommand => new RelayCommand((sender) =>
+        {
+        if (QuestionText == string.Empty || WrongAnswer0 == string.Empty || WrongAnswer1 == string.Empty || WrongAnswer2 == string.Empty
+            || CorrectAnswer0 == string.Empty || Lesson == null || Section == null || Unit == null)
+            {
+                return;
+            }
+            Question question = new Question(Section);
+            question.ImageUri = ImageUri;
+            question.QuestionInfo.QuestionText = QuestionText;
+            question.QuestionInfo.CorrectAnswer0 = CorrectAnswer0;
+            question.QuestionInfo.WrongAnswer0 = WrongAnswer0;
+            question.QuestionInfo.WrongAnswer1 = WrongAnswer1;
+            question.QuestionInfo.WrongAnswer2 = WrongAnswer2;
+
+            ClearInside();
+
+            QuestionCreated?.Invoke(question);
         });
         #endregion
 

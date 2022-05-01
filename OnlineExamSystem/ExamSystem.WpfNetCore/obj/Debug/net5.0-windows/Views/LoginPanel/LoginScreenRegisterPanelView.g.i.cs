@@ -82,8 +82,8 @@ namespace ExamSystem.WpfNetCore.Views.LoginPanel {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;V1.0.0.0;component/views/loginpanel/loginscreenregisterpan" +
-                    "elview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;component/views/loginpanel/loginscreenregisterpanelview.xa" +
+                    "ml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\LoginPanel\LoginScreenRegisterPanelView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

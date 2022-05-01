@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CGYJ50qbP0RqLuDrfeXhpz0hyWn35IBSej6BccIihjQeBMM5PfueefIXwwPZv/RfjPc1IZ39MUss55NoMMq0qw==",
+  "dgSpecHash": "i54zgbORJER03oD98DzcUp7Ai5Dm4DgjLmNhSaiQPNuUuLBiJAQAakpVUWan/P4uT4HqZBamTII2EV/pemGp6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ugurbey\\Documents\\GitHub\\ExamSystem\\OnlineExamSystem\\ExamSystem.WpfNetCore\\ExamSystem.WpfNetCore.csproj",
+  "projectFilePath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.WpfNetCore\\ExamSystem.WpfNetCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ugurbey\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\ugurbey\\.nuget\\packages\\dnsclient\\1.6.0\\dnsclient.1.6.0.nupkg.sha512",

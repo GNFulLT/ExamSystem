@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamSystem.Core", "ExamSystem.Core\ExamSystem.Core.csproj", "{78CD1F80-8EFC-4C7E-902C-53FD9DB2499F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{36F1B129-92E3-497B-BA0A-6EAE3D552A1E} = {36F1B129-92E3-497B-BA0A-6EAE3D552A1E}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExamSystem.WpfNetCore", "ExamSystem.WpfNetCore\ExamSystem.WpfNetCore.csproj", "{7500F2FA-02FE-4F18-B122-F9B34EEA62AA}"
 EndProject

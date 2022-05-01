@@ -9,6 +9,8 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         WindowStartupLocation="CenterScreen" WindowStyle="None"
         xmlns:customControls="clr-namespace:ExamSystem.WpfNetCore.CustomControls"
+                AllowsTransparency="True"
+
         >
     <Window.Resources>
         <ResourceDictionary>
@@ -21,15 +23,19 @@
 
     <StackPanel>
         <Grid Height="130" VerticalAlignment="Top" Background="#F5F5F5">
-            <Image Source="/Images/Logo.png" 
+            <Image MouseDown="Window_MouseDownEvent"
+                   MouseMove="Window_MouseMoveEvent"
+                   MouseUp="Window_MouseUpEvent"
+                   MouseLeave="Window_MouseUpEvent"
+                Source="/Images/Logo.png" 
                    HorizontalAlignment="Left" Margin="50 0" />
-            <Button Background="{x:Null}" BorderBrush="{x:Null}" Width="45" Height="45" Margin="1134,0,9.6,95">
+            <Button Background="{x:Null}" Click="Button_Click_1" BorderBrush="{x:Null}" Width="45" Height="45" Margin="1134,0,9.6,95">
                 <materialDesign:PackIcon Kind="WindowMinimize" Foreground="BlueViolet" Margin="-15 0 0 0" Cursor="Hand"></materialDesign:PackIcon>
             </Button>
-            <Button Background="{x:Null}" BorderBrush="{x:Null}" Width="45" Height="45" Margin="1230,0,9.6,95" Cursor="Hand">
-                <materialDesign:PackIcon Kind="ExitToApp" Foreground="BlueViolet" Width="25" Height="25" Margin="-15 0 0 0" Cursor="Hand"></materialDesign:PackIcon>
+            <Button Background="{x:Null}" Click="Button_Click" BorderBrush="{x:Null}" Width="45" Height="45" Margin="1230,0,9.6,95" Cursor="Hand">
+                <materialDesign:PackIcon  Kind="ExitToApp" Foreground="BlueViolet" Width="25" Height="25" Margin="-15 0 0 0" Cursor="Hand"></materialDesign:PackIcon>
             </Button>
-            <TextBlock Text="User Name Surname" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#606363" FontSize="18" Margin="200 0" />
+            <TextBlock Text="{Binding NameSurname}" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#606363" FontSize="18" Margin="200 0" />
         </Grid>
         <StackPanel Height="420" 
                     VerticalAlignment="Top" 
@@ -37,10 +43,18 @@
 
 
 
-            <Rectangle Fill="SteelBlue"
+            <Rectangle
                        HorizontalAlignment="Center" 
                        Height="5"  VerticalAlignment="Top"
-                       Margin="0 10 0 0" Width="800" Opacity="0.5" />
+                       Margin="0 10 0 0" Width="800" Opacity="0.5" >
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#9f40ff" Offset="0"></GradientStop>
+                        <GradientStop Color="#7f00ff" Offset="0.5"></GradientStop>
+                        <GradientStop Color="#6600cc" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+                </Rectangle>
             <Grid Margin="10" Height="380">
 
 
@@ -62,7 +76,17 @@
 
             </Grid>
 
-            <Rectangle Fill="SteelBlue" HorizontalAlignment="Center" Height="5"  VerticalAlignment="Bottom" Margin="0 0 0 10" Width="800" Opacity="0.5" />
+            <Rectangle
+                HorizontalAlignment="Center" Height="5" 
+                VerticalAlignment="Bottom" Margin="0 0 0 10" Width="800" Opacity="0.5" >
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#9f40ff" Offset="0"></GradientStop>
+                        <GradientStop Color="#7f00ff" Offset="0.5"></GradientStop>
+                        <GradientStop Color="#6600cc" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
         </StackPanel>
         <Grid Height="130" VerticalAlignment="Top" Background="#F5F5F5">
             <Grid.ColumnDefinitions>

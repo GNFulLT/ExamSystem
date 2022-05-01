@@ -138,3 +138,8 @@ C:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-window
 C:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\ExamSystem.WpfNetCore.pdb
 C:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\ExamSystem.WpfNetCore.genruntimeconfig.cache
 C:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\ref\ExamSystem.WpfNetCore.dll
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\EducatorPanel\EducatorPanelQuestionView.g.cs
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\EducatorPanel\EducatorPanelQuestionView.baml
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\SplashScreenView.g.cs
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\CustomControls\Themes\LoadingTheme.baml
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\SplashScreenView.baml

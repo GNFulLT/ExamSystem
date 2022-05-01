@@ -22,7 +22,12 @@
   "WrongAnswersHeaderText": "Wrong Answers",
   "CorrectAnswerHeaderText": "Correct Answer",
   "CountText": "Count",
-  "JumpText": ".to"
+  "JumpText": ".to",
+  "LessonText": "Lesson",
+  "UnitText": "Unit",
+  "SectionText": "Section",
+  "HardText": "Difficulty",
+  "SummaryText": "Summary"
 
 
 

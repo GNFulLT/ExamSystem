@@ -58,6 +58,10 @@
                 SelectedValue="{Binding Unit}"
                HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="180" Background="White" Foreground="#FF5F5859" BorderBrush="#FF5F5859"/>
                 <ComboBox 
+                    ItemsSource="{Binding SectionMap}"
+                    DisplayMemberPath="Key"
+                    SelectedValuePath="Value"
+                    SelectedValue="{Binding Section}"
          HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="180" Background="White" BorderBrush="#FF5F5859" Foreground="#FF5F5859"/>
             </Grid>
         </Grid>
@@ -79,7 +83,7 @@
                 </StackPanel>
             </Button>
             <Button 
-         Command="{Binding CreateQuestionClickedCommand}"
+         Command="{Binding QuestionCreateButtonClickedCommand}"
                 Height="45" Width="260" BorderThickness="0" materialDesign:ButtonAssist.CornerRadius="26" Margin="40 460 25 0">
                 <Button.Background>
                     <LinearGradientBrush>

@@ -1,5 +1,6 @@
 ﻿using ExamSystem.Core.SubModels;
 using ExamSystem.Core.Utilities.Localization;
+using ExamSystem.Core.Utilities.NavigationSource;
 using ExamSystem.Core.Utilities.Services.AuthenticationServices;
 using ExamSystem.Core.Utilities.ValidationRules;
 using System;
@@ -134,6 +135,10 @@ namespace ExamSystem.Core.ViewModels.LoginPanel
                 if (canLogin)
                 {
                     //When Loginned
+                    var viewModel = new SplashScreenViewModel(acc);
+                    var loadingForm = Activator.CreateInstance(SplashScreenViewModel.Parent,viewModel);
+                    Navigation.CurrentWindow = loadingForm;
+                    viewModel.Initialize();
                 }
             }
             IsCycleShow = false;

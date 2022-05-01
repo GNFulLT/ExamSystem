@@ -19,7 +19,7 @@ namespace ExamSystem.WpfNetCore
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-us");
             Bootstrapper strapper = new Bootstrapper(Assembly.GetExecutingAssembly(),typeof(Window));
 
-            Current.MainWindow = strapper.Resolve<EducatorScreenView>();
+            Current.MainWindow = strapper.Resolve<LoginScreenView>();
             
 
             Current.MainWindow.Show();

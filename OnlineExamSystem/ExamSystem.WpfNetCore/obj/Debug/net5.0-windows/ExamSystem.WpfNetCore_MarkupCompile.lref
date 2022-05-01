@@ -1,12 +1,15 @@
 ﻿
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\App.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\CustomControls\BindablePasswordBox.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\CustomControls\LoadingContentBar.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\CustomControls\Themes\PaginationTheme.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\Views\EducatorScreenView.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\Views\LoginPanel\LoginScreenForgotPanelView.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\Views\LoginPanel\LoginScreenLoginPanelView.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\Views\LoginPanel\LoginScreenRegisterPanelView.xaml;;
-FC:\Users\lenovo\Desktop\ExamSystem\ExamSystem.WpfNetCore\Views\LoginScreenView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\App.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\CustomControls\BindablePasswordBox.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\CustomControls\LoadingContentBar.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\CustomControls\Themes\LoadingTheme.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\CustomControls\Themes\PaginationTheme.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\EducatorPanel\EducatorPanelQuestionView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\EducatorScreenView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\LoginPanel\LoginScreenForgotPanelView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\LoginPanel\LoginScreenLoginPanelView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\LoginPanel\LoginScreenRegisterPanelView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\LoginScreenView.xaml;;
+FC:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\Views\SplashScreenView.xaml;;
 

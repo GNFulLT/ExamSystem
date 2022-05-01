@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fp7kZY/8lTXHsil4BhcOo/HDLv4p07AFlNzM1ZkmzOldvMkUP4fxWe/PMWGY67ORdChktMuZofSJdLASLU/lgg==",
+  "dgSpecHash": "RzVifkHSC3jBiXKpxF5sNmqZdHROwIuXrfojAShIM1VFFWDRqL4U89L1iszM18Ghc4XBC5p4dQLEB34WRPpScw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ugurbey\\Documents\\GitHub\\ExamSystem\\OnlineExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj",
+  "projectFilePath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ugurbey\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\ugurbey\\.nuget\\packages\\dnsclient\\1.6.0\\dnsclient.1.6.0.nupkg.sha512",

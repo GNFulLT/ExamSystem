@@ -16,7 +16,8 @@
             <ColumnDefinition Width="410*"/>
             <ColumnDefinition Width="765*"/>
         </Grid.ColumnDefinitions>
-        <Image  Grid.Column="1"  Source="/Images/loginScreenImage.jpg" Stretch="Fill"/>
+        <Image  Grid.Column="1"  Source="/Images/loginScreenImage.jpg" 
+                Stretch="Fill"/>
         <ContentControl Panel.ZIndex="2" 
                         Grid.Column="0"
                         Content="{Binding CurrentPanel}"

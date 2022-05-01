@@ -46,7 +46,7 @@ extern "C"	_declspec(dllexport) void SetCorrectAnswer0(QuestionInfo * info, cons
 extern "C"	_declspec(dllexport) int GetGlobalCount(QuestionInfo * info) {
 	return info->GetGlobalCount();
 }
-extern "C"	_declspec(dllexport) int GetGlobaRightlCount(QuestionInfo * info) {
+extern "C"	_declspec(dllexport) int GetGlobalRightCount(QuestionInfo * info) {
 	return info->GetGlobalRightCount();
 }extern "C"	_declspec(dllexport) int GetDifficulty(QuestionInfo * info) {
 	return info->GetDifficultyMultiplier();

@@ -1,4 +1,5 @@
-﻿using ExamSystem.Core.Utilities.Services;
+﻿using ExamSystem.Core.Utilities.Providers;
+using ExamSystem.Core.Utilities.Services;
 using ExamSystem.Core.Utilities.Services.SubServices.LessonServices;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
@@ -112,13 +113,21 @@ namespace ExamSystem.Core.Models
             {
                 BsonDocument d = BsonSerializer.Deserialize<BsonDocument>(context.Reader);
                 UnitService unitS = new UnitService();
+
                 ObjectId id = d["_unitId"].AsObjectId;
+
                 Task<Unit> t1 = unitS.Get(id);
                 Unit unit = t1.Result;
+
+                UnitSectionProvider.InitializeMaps();
+                var localLessonMap = UnitSectionProvider.LessonMap;
+                var localUnit = UnitSectionProvider.GetUnitDictionary(localLessonMap[unit.Lesson.LessonName])[unit.UnitName];
+
+                
                 var section = new Section
                 {
                     Id = d["_id"].AsObjectId,
-                    Unit = unit,
+                    Unit = localUnit,
                     SectionName = d["sectionName"].AsString,
                     GlobalCount = d["globalCount"].AsInt64,
                     GlobalRightCount = d["globalRightCount"].AsInt64

@@ -64,8 +64,8 @@ namespace ExamSystem.WpfNetCore.Views.LoginPanel {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;V1.0.0.0;component/views/loginpanel/loginscreenforgotpanel" +
-                    "view.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;component/views/loginpanel/loginscreenforgotpanelview.xaml" +
+                    "", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\LoginPanel\LoginScreenForgotPanelView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

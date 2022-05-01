@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace ExamSystem.Core
@@ -56,6 +57,8 @@ namespace ExamSystem.Core
                 if (!infos[i].Namespace.Contains("ExamSystem.Core.Utilities"))
                     continue;
                 if (infos[i].IsGenericType)
+                    continue;
+                if (infos[i].GetTypeInfo().GetCustomAttributes<CompilerGeneratedAttribute>().Any())
                     continue;
                 if (!infos[i].Name.StartsWith("I"))
                 {

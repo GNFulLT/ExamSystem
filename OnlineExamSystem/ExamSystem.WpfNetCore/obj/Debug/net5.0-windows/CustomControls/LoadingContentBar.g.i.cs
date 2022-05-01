@@ -61,7 +61,7 @@ namespace ExamSystem.WpfNetCore.CustomControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;V1.0.0.0;component/customcontrols/loadingcontentbar.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;component/customcontrols/loadingcontentbar.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\CustomControls\LoadingContentBar.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

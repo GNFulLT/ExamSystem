@@ -27,5 +27,41 @@ namespace ExamSystem.WpfNetCore.Views
             InitializeComponent();
             DataContext = viewModel;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private bool _isMouseDown = false;
+        private Point _lastLocation;
+        private void Window_MouseDownEvent(object sender, MouseButtonEventArgs e)
+        {
+            _isMouseDown = true;
+            this.Opacity = 0.7;
+            _lastLocation = e.GetPosition(this);
+        }
+        private void Window_MouseUpEvent(object sender, MouseEventArgs e)
+        {
+            _isMouseDown = false;
+            this.Opacity = 1;
+
+        }
+        private void Window_MouseMoveEvent(object sender, MouseEventArgs e)
+        {
+            if (_isMouseDown)
+            {
+                Point mousePosition = e.GetPosition(this);
+                Left += mousePosition.X - _lastLocation.X;
+                Top += mousePosition.Y - _lastLocation.Y;
+            }
+        }
+
+        
     }
 }

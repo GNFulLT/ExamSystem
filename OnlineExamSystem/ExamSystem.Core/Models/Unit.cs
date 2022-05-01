@@ -107,6 +107,7 @@ namespace ExamSystem.Core.Models
             {
                 BsonDocument d = BsonSerializer.Deserialize<BsonDocument>(context.Reader);
                 LessonService service = new LessonService();
+                UnitSectionProvider.InitializeMaps();
                 var lesDict = UnitSectionProvider.LessonMap;
                 ObjectId id = d["_lessonId"].AsObjectId;
                 //Gets just lesson name and pass it to dictionary and take the lesson that is already allocated in ram. 

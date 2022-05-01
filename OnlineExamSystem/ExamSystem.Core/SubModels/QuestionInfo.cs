@@ -6,7 +6,7 @@ namespace ExamSystem.Core.SubModels
 {
     public class QuestionInfo : QuestionInfoWrapper
     {
-        public enum Difficulty { VeryEasy = 1, Easy, Medium, Hard, Extreme }
+        public enum Difficulty { VeryEasy = 0, Easy, Medium, Hard, Extreme }
 
         public string QuestionText
         {
@@ -106,6 +106,9 @@ namespace ExamSystem.Core.SubModels
         public QuestionInfo()
         {
             _questionInfoPointer = CreateQuestionInfo();
+            DifficultyMultiplier = 0;
+            GlobalCount = 0;
+            GlobalRightCount = 0;
 
         }
 

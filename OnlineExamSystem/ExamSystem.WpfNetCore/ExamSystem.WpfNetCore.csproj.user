@@ -13,6 +13,9 @@
     <Compile Update="CustomControls\LoadingContentBar.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\EducatorPanel\EducatorPanelQuestionView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
     <Compile Update="Views\LoginScreenView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SplashScreenView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="CustomControls\BindablePasswordBox.xaml">
@@ -39,7 +45,13 @@
     <Page Update="CustomControls\LoadingContentBar.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="CustomControls\Themes\LoadingTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="CustomControls\Themes\PaginationTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\EducatorPanel\EducatorPanelQuestionView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml">
@@ -58,6 +70,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\LoginScreenView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SplashScreenView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
