@@ -47,7 +47,7 @@ namespace ExamSystem.MVVM.View.EducatorView {
     public partial class EducatorMainWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 90 "..\..\..\..\..\MVVM\View\EducatorView\EducatorMainWindow.xaml"
+        #line 47 "..\..\..\..\..\MVVM\View\EducatorView\EducatorMainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ListBox ListBox;
         
