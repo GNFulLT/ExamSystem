@@ -1,14 +1,19 @@
-﻿
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\App.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\Controls\Window1.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MainWindow.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\EducatorMainWindow.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\EducatorMessageboxWindow.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\EducatorQuestionWindow.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\QuestionPanel.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\LoadingContentBar.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\LoginScreenForgotEmailPanel.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\LoginScreenLoginPanel.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\MVVM\View\LoginScreenRegisterPanel.xaml;;
-FC:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\Themes\PaginationTheme.xaml;;
+﻿C:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\App.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\Controls\Window1.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MainWindow.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\EducatorMainWindow.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\EducatorMenuPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\EducatorMessageboxWindow.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\EducatorQuestionWindow.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\EducatorView\QuestionPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\LoadingContentBar.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\LoginScreenForgotEmailPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\LoginScreenLoginPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\LoginScreenRegisterPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\StudentView\DashboardPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\StudentView\ExamsPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\StudentView\MainWindow.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\MVVM\View\StudentView\OldExamsPanel.xaml;;
+FC:\Users\HP\Desktop\ExamSystem - Kopya\OnlineExamSystem\ExamSystem\Themes\PaginationTheme.xaml;;
 

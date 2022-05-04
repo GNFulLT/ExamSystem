@@ -241,6 +241,18 @@
     <Compile Include="MVVM\View\LoginScreenRegisterPanel.xaml.cs">
       <DependentUpon>LoginScreenRegisterPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\View\StudentView\DashboardPanel.xaml.cs">
+      <DependentUpon>DashboardPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\StudentView\ExamsPanel.xaml.cs">
+      <DependentUpon>ExamsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\StudentView\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\StudentView\OldExamsPanel.xaml.cs">
+      <DependentUpon>OldExamsPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -301,6 +313,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\StudentView\DashboardPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\StudentView\ExamsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\StudentView\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\StudentView\OldExamsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\GradientButtonTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -349,6 +377,11 @@
     <None Include="Core\Compression\Zstandard\lib\osx\libzstd.dylib" />
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
+    <Resource Include="Images\analyticsicon.png" />
+    <Resource Include="Images\examicon.png" />
+    <Resource Include="Images\homeicon.png" />
+    <Resource Include="Images\LogoIcon.png" />
+    <Resource Include="Images\profilicon.png" />
     <Content Include="Localization\English.locale.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

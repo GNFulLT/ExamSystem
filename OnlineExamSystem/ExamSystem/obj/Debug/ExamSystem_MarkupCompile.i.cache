@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\obj\Debug\
+C:\Users\HP\Desktop\ExamSystem\OnlineExamSystem\ExamSystem\obj\Debug\
 ExamSystem
 none
 false
 DEBUG;TRACE
-C:\Users\HP\Desktop\ExamSystem-UI-LUS\OnlineExamSystem\ExamSystem\App.xaml
-14-1658600070
-20929011637
-59-1422408005
-149-1974867069
-Controls\Window1.xaml;MainWindow.xaml;MVVM\View\EducatorView\EducatorMainWindow.xaml;MVVM\View\EducatorView\EducatorMenuPanel.xaml;MVVM\View\EducatorView\EducatorMessageboxWindow.xaml;MVVM\View\EducatorView\EducatorQuestionWindow.xaml;MVVM\View\EducatorView\QuestionPanel.xaml;MVVM\View\LoadingContentBar.xaml;MVVM\View\LoginScreenForgotEmailPanel.xaml;MVVM\View\LoginScreenLoginPanel.xaml;MVVM\View\LoginScreenRegisterPanel.xaml;Themes\GradientButtonTheme.xaml;Themes\HintStyle.xaml;Themes\PaginationTheme.xaml;
+C:\Users\HP\Desktop\ExamSystem\OnlineExamSystem\ExamSystem\App.xaml
+181442350912
+202089536129
+63-1938465086
+149756868869
+Controls\Window1.xaml;MainWindow.xaml;MVVM\View\EducatorView\EducatorMainWindow.xaml;MVVM\View\EducatorView\EducatorMenuPanel.xaml;MVVM\View\EducatorView\EducatorMessageboxWindow.xaml;MVVM\View\EducatorView\EducatorQuestionWindow.xaml;MVVM\View\EducatorView\QuestionPanel.xaml;MVVM\View\LoadingContentBar.xaml;MVVM\View\LoginScreenForgotEmailPanel.xaml;MVVM\View\LoginScreenLoginPanel.xaml;MVVM\View\LoginScreenRegisterPanel.xaml;MVVM\View\StudentView\DashboardPanel.xaml;MVVM\View\StudentView\ExamsPanel.xaml;MVVM\View\StudentView\MainWindow.xaml;MVVM\View\StudentView\OldExamsPanel.xaml;Themes\GradientButtonTheme.xaml;Themes\HintStyle.xaml;Themes\PaginationTheme.xaml;
 
 True
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {}
+    "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {
+    "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
         "projectName": "ExamSystemTDDTests",
-        "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystemTDDTests\\ExamSystemTDDTests.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystemTDDTests\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystemTDDTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net472": {
             "targetAlias": "net472",
             "projectReferences": {
-              "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
-                "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj"
+              "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
+                "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj"
               }
             }
           }
@@ -61,11 +61,11 @@
         }
       }
     },
-    "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
+    "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
         "projectName": "ExamSystem",
-        "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem-UI-LUS\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\ExamSystem - Kopya\\OnlineExamSystem\\ExamSystem\\ExamSystem.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
