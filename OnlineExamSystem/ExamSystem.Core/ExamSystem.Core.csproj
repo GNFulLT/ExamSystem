@@ -1,0 +1,222 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\English.locale.json" />
+    <None Remove="SubModels\Account.cs~RFc015996.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\English.locale.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.15.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.15.0" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.15.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libzstd.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libzstd.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libzstd.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libzstd.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libzstd.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libzstd.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libzstd.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\linux\native\libsnappy64.so" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\ugurbey\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\snappy32.dll" Link="Utilities\Services\Compression\snappy32.dll" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\LoginScreenBackGround.png" />
+    <None Remove="Images\loginScreenImage.jpg" />
+    <None Remove="Images\Logo.png" />
+    <None Remove="Images\PasswordTextBoxIcon.png" />
+    <None Remove="Images\UsernameTextBoxIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExamSystem.Core\ExamSystem.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\LoginScreenBackGround.png" />
+    <Resource Include="Images\loginScreenImage.jpg" />
+    <Resource Include="Images\Logo.png" />
+    <Resource Include="Images\PasswordTextBoxIcon.png" />
+    <Resource Include="Images\UsernameTextBoxIcon.png" />
+  </ItemGroup>
+
+</Project>

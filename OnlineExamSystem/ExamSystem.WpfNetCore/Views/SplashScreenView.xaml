@@ -1,0 +1,27 @@
+﻿<Window x:Class="ExamSystem.WpfNetCore.Views.SplashScreenView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExamSystem.WpfNetCore.Views"
+        xmlns:controls="clr-namespace:ExamSystem.WpfNetCore.CustomControls"
+        mc:Ignorable="d"
+        Title="SplashScreenView" Height="450" Width="600"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../CustomControls/Themes/LoadingTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Image Source="../Images/Logo.png" Margin="146,-61,168,194"></Image>
+        <controls:RollLoading Margin="206,225,206,114"/>
+        <TextBlock Text="{Binding InfoText}" FontSize="16"
+            VerticalAlignment="Top"    Margin="247,393,0,0" HorizontalAlignment="Left"></TextBlock>
+    </Grid>
+</Window>
