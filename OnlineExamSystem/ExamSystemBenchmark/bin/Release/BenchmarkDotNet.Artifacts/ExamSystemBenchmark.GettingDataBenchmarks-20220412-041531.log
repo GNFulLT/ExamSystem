@@ -1,0 +1,313 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+BuildScript: C:\Users\ugurbey\Desktop\lastExamSystyem\OnlineExamSystem\ExamSystemBenchmark\bin\Release\0784a78b-b3b0-4a1d-b325-305b78d2940e.bat
+// ***** Done, took 00:00:02 (2.28 sec)   *****
+// Found 3 benchmarks:
+//   GettingDataBenchmarks.GetAccountNullTask: DefaultJob
+//   GettingDataBenchmarks.GetAccountTask: DefaultJob
+//   GettingDataBenchmarks.GetAccountValueTask: DefaultJob
+
+// **************************
+// Benchmark: GettingDataBenchmarks.GetAccountNullTask: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: C:\Users\ugurbey\Desktop\lastExamSystyem\OnlineExamSystem\ExamSystemBenchmark\bin\Release\0784a78b-b3b0-4a1d-b325-305b78d2940e.exe --benchmarkName "ExamSystemBenchmark.GettingDataBenchmarks.GetAccountNullTask" --job "Default" --benchmarkId 0 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 172100.00 ns, 172.1000 us/op
+// Wrong assembly binding redirects for System.Buffers, loading it from disk anyway.
+// Wrong assembly binding redirects for MongoDB.Driver.Legacy.
+// Wrong assembly binding redirects for MongoDB.Driver.Legacy.
+WorkloadJitting  1: 1 op, 1855538200.00 ns, 1.8555 s/op
+
+WorkloadWarmup   1: 1 op, 60066200.00 ns, 60.0662 ms/op
+WorkloadWarmup   2: 1 op, 60122200.00 ns, 60.1222 ms/op
+WorkloadWarmup   3: 1 op, 58871200.00 ns, 58.8712 ms/op
+WorkloadWarmup   4: 1 op, 58473900.00 ns, 58.4739 ms/op
+WorkloadWarmup   5: 1 op, 58889600.00 ns, 58.8896 ms/op
+WorkloadWarmup   6: 1 op, 59308200.00 ns, 59.3082 ms/op
+WorkloadWarmup   7: 1 op, 58690900.00 ns, 58.6909 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 59252500.00 ns, 59.2525 ms/op
+WorkloadActual   2: 1 op, 58126200.00 ns, 58.1262 ms/op
+WorkloadActual   3: 1 op, 58600000.00 ns, 58.6000 ms/op
+WorkloadActual   4: 1 op, 58252900.00 ns, 58.2529 ms/op
+WorkloadActual   5: 1 op, 58740000.00 ns, 58.7400 ms/op
+WorkloadActual   6: 1 op, 58910900.00 ns, 58.9109 ms/op
+WorkloadActual   7: 1 op, 59062000.00 ns, 59.0620 ms/op
+WorkloadActual   8: 1 op, 59417300.00 ns, 59.4173 ms/op
+WorkloadActual   9: 1 op, 58772000.00 ns, 58.7720 ms/op
+WorkloadActual  10: 1 op, 58392300.00 ns, 58.3923 ms/op
+WorkloadActual  11: 1 op, 59771200.00 ns, 59.7712 ms/op
+WorkloadActual  12: 1 op, 58565500.00 ns, 58.5655 ms/op
+WorkloadActual  13: 1 op, 61036000.00 ns, 61.0360 ms/op
+WorkloadActual  14: 1 op, 58325100.00 ns, 58.3251 ms/op
+WorkloadActual  15: 1 op, 58453400.00 ns, 58.4534 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 59252500.00 ns, 59.2525 ms/op
+WorkloadResult   2: 1 op, 58126200.00 ns, 58.1262 ms/op
+WorkloadResult   3: 1 op, 58600000.00 ns, 58.6000 ms/op
+WorkloadResult   4: 1 op, 58252900.00 ns, 58.2529 ms/op
+WorkloadResult   5: 1 op, 58740000.00 ns, 58.7400 ms/op
+WorkloadResult   6: 1 op, 58910900.00 ns, 58.9109 ms/op
+WorkloadResult   7: 1 op, 59062000.00 ns, 59.0620 ms/op
+WorkloadResult   8: 1 op, 59417300.00 ns, 59.4173 ms/op
+WorkloadResult   9: 1 op, 58772000.00 ns, 58.7720 ms/op
+WorkloadResult  10: 1 op, 58392300.00 ns, 58.3923 ms/op
+WorkloadResult  11: 1 op, 59771200.00 ns, 59.7712 ms/op
+WorkloadResult  12: 1 op, 58565500.00 ns, 58.5655 ms/op
+WorkloadResult  13: 1 op, 58325100.00 ns, 58.3251 ms/op
+WorkloadResult  14: 1 op, 58453400.00 ns, 58.4534 ms/op
+GC:  0 0 0 33080 1
+Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 15844 has exited with code 0.
+
+Mean = 58.760 ms, StdErr = 0.127 ms (0.22%), N = 14, StdDev = 0.477 ms
+Min = 58.126 ms, Q1 = 58.408 ms, Median = 58.670 ms, Q3 = 59.024 ms, Max = 59.771 ms
+IQR = 0.617 ms, LowerFence = 57.483 ms, UpperFence = 59.949 ms
+ConfidenceInterval = [58.223 ms; 59.298 ms] (CI 99.9%), Margin = 0.538 ms (0.91% of Mean)
+Skewness = 0.6, Kurtosis = 2.2, MValue = 2
+
+// **************************
+// Benchmark: GettingDataBenchmarks.GetAccountTask: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: C:\Users\ugurbey\Desktop\lastExamSystyem\OnlineExamSystem\ExamSystemBenchmark\bin\Release\0784a78b-b3b0-4a1d-b325-305b78d2940e.exe --benchmarkName "ExamSystemBenchmark.GettingDataBenchmarks.GetAccountTask" --job "Default" --benchmarkId 1 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 173000.00 ns, 173.0000 us/op
+// Wrong assembly binding redirects for System.Buffers, loading it from disk anyway.
+// Wrong assembly binding redirects for MongoDB.Driver.Legacy.
+// Wrong assembly binding redirects for MongoDB.Driver.Legacy.
+// Wrong assembly binding redirects for System.Runtime.CompilerServices.Unsafe, loading it from disk anyway.
+WorkloadJitting  1: 1 op, 1298154500.00 ns, 1.2982 s/op
+
+WorkloadWarmup   1: 1 op, 62800300.00 ns, 62.8003 ms/op
+WorkloadWarmup   2: 1 op, 61645900.00 ns, 61.6459 ms/op
+WorkloadWarmup   3: 1 op, 61571200.00 ns, 61.5712 ms/op
+WorkloadWarmup   4: 1 op, 62212300.00 ns, 62.2123 ms/op
+WorkloadWarmup   5: 1 op, 64566600.00 ns, 64.5666 ms/op
+WorkloadWarmup   6: 1 op, 62262200.00 ns, 62.2622 ms/op
+WorkloadWarmup   7: 1 op, 62101900.00 ns, 62.1019 ms/op
+WorkloadWarmup   8: 1 op, 62178000.00 ns, 62.1780 ms/op
+WorkloadWarmup   9: 1 op, 62665700.00 ns, 62.6657 ms/op
+WorkloadWarmup  10: 1 op, 62745600.00 ns, 62.7456 ms/op
+WorkloadWarmup  11: 1 op, 63010600.00 ns, 63.0106 ms/op
+WorkloadWarmup  12: 1 op, 62762800.00 ns, 62.7628 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 62111100.00 ns, 62.1111 ms/op
+WorkloadActual   2: 1 op, 62484500.00 ns, 62.4845 ms/op
+WorkloadActual   3: 1 op, 61888200.00 ns, 61.8882 ms/op
+WorkloadActual   4: 1 op, 61901300.00 ns, 61.9013 ms/op
+WorkloadActual   5: 1 op, 62640500.00 ns, 62.6405 ms/op
+WorkloadActual   6: 1 op, 62138000.00 ns, 62.1380 ms/op
+WorkloadActual   7: 1 op, 62307900.00 ns, 62.3079 ms/op
+WorkloadActual   8: 1 op, 63557100.00 ns, 63.5571 ms/op
+WorkloadActual   9: 1 op, 61491700.00 ns, 61.4917 ms/op
+WorkloadActual  10: 1 op, 62004600.00 ns, 62.0046 ms/op
+WorkloadActual  11: 1 op, 61595800.00 ns, 61.5958 ms/op
+WorkloadActual  12: 1 op, 66347800.00 ns, 66.3478 ms/op
+WorkloadActual  13: 1 op, 61477100.00 ns, 61.4771 ms/op
+WorkloadActual  14: 1 op, 61617500.00 ns, 61.6175 ms/op
+WorkloadActual  15: 1 op, 61569000.00 ns, 61.5690 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 62111100.00 ns, 62.1111 ms/op
+WorkloadResult   2: 1 op, 62484500.00 ns, 62.4845 ms/op
+WorkloadResult   3: 1 op, 61888200.00 ns, 61.8882 ms/op
+WorkloadResult   4: 1 op, 61901300.00 ns, 61.9013 ms/op
+WorkloadResult   5: 1 op, 62640500.00 ns, 62.6405 ms/op
+WorkloadResult   6: 1 op, 62138000.00 ns, 62.1380 ms/op
+WorkloadResult   7: 1 op, 62307900.00 ns, 62.3079 ms/op
+WorkloadResult   8: 1 op, 63557100.00 ns, 63.5571 ms/op
+WorkloadResult   9: 1 op, 61491700.00 ns, 61.4917 ms/op
+WorkloadResult  10: 1 op, 62004600.00 ns, 62.0046 ms/op
+WorkloadResult  11: 1 op, 61595800.00 ns, 61.5958 ms/op
+WorkloadResult  12: 1 op, 61477100.00 ns, 61.4771 ms/op
+WorkloadResult  13: 1 op, 61617500.00 ns, 61.6175 ms/op
+WorkloadResult  14: 1 op, 61569000.00 ns, 61.5690 ms/op
+GC:  0 0 0 40960 1
+Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 18236 has exited with code 0.
+
+Mean = 62.056 ms, StdErr = 0.152 ms (0.24%), N = 14, StdDev = 0.568 ms
+Min = 61.477 ms, Q1 = 61.601 ms, Median = 61.953 ms, Q3 = 62.265 ms, Max = 63.557 ms
+IQR = 0.664 ms, LowerFence = 60.605 ms, UpperFence = 63.262 ms
+ConfidenceInterval = [61.415 ms; 62.697 ms] (CI 99.9%), Margin = 0.641 ms (1.03% of Mean)
+Skewness = 1.17, Kurtosis = 3.82, MValue = 2
+
+// **************************
+// Benchmark: GettingDataBenchmarks.GetAccountValueTask: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: C:\Users\ugurbey\Desktop\lastExamSystyem\OnlineExamSystem\ExamSystemBenchmark\bin\Release\0784a78b-b3b0-4a1d-b325-305b78d2940e.exe --benchmarkName "ExamSystemBenchmark.GettingDataBenchmarks.GetAccountValueTask" --job "Default" --benchmarkId 2 in 
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 160300.00 ns, 160.3000 us/op
+// Wrong assembly binding redirects for System.Buffers, loading it from disk anyway.
+// Wrong assembly binding redirects for MongoDB.Driver.Legacy.
+// Wrong assembly binding redirects for MongoDB.Driver.Legacy.
+// Wrong assembly binding redirects for System.Runtime.CompilerServices.Unsafe, loading it from disk anyway.
+WorkloadJitting  1: 1 op, 1287826200.00 ns, 1.2878 s/op
+
+WorkloadWarmup   1: 1 op, 59360400.00 ns, 59.3604 ms/op
+WorkloadWarmup   2: 1 op, 58210000.00 ns, 58.2100 ms/op
+WorkloadWarmup   3: 1 op, 58363100.00 ns, 58.3631 ms/op
+WorkloadWarmup   4: 1 op, 58189400.00 ns, 58.1894 ms/op
+WorkloadWarmup   5: 1 op, 58185100.00 ns, 58.1851 ms/op
+WorkloadWarmup   6: 1 op, 58765200.00 ns, 58.7652 ms/op
+WorkloadWarmup   7: 1 op, 58977700.00 ns, 58.9777 ms/op
+WorkloadWarmup   8: 1 op, 57927000.00 ns, 57.9270 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 58837900.00 ns, 58.8379 ms/op
+WorkloadActual   2: 1 op, 58652800.00 ns, 58.6528 ms/op
+WorkloadActual   3: 1 op, 58430800.00 ns, 58.4308 ms/op
+WorkloadActual   4: 1 op, 58158900.00 ns, 58.1589 ms/op
+WorkloadActual   5: 1 op, 59063900.00 ns, 59.0639 ms/op
+WorkloadActual   6: 1 op, 59174800.00 ns, 59.1748 ms/op
+WorkloadActual   7: 1 op, 59351000.00 ns, 59.3510 ms/op
+WorkloadActual   8: 1 op, 58999000.00 ns, 58.9990 ms/op
+WorkloadActual   9: 1 op, 57986900.00 ns, 57.9869 ms/op
+WorkloadActual  10: 1 op, 58463800.00 ns, 58.4638 ms/op
+WorkloadActual  11: 1 op, 59030800.00 ns, 59.0308 ms/op
+WorkloadActual  12: 1 op, 63178000.00 ns, 63.1780 ms/op
+WorkloadActual  13: 1 op, 58584300.00 ns, 58.5843 ms/op
+WorkloadActual  14: 1 op, 101131800.00 ns, 101.1318 ms/op
+WorkloadActual  15: 1 op, 71587300.00 ns, 71.5873 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 58837900.00 ns, 58.8379 ms/op
+WorkloadResult   2: 1 op, 58652800.00 ns, 58.6528 ms/op
+WorkloadResult   3: 1 op, 58430800.00 ns, 58.4308 ms/op
+WorkloadResult   4: 1 op, 58158900.00 ns, 58.1589 ms/op
+WorkloadResult   5: 1 op, 59063900.00 ns, 59.0639 ms/op
+WorkloadResult   6: 1 op, 59174800.00 ns, 59.1748 ms/op
+WorkloadResult   7: 1 op, 59351000.00 ns, 59.3510 ms/op
+WorkloadResult   8: 1 op, 58999000.00 ns, 58.9990 ms/op
+WorkloadResult   9: 1 op, 57986900.00 ns, 57.9869 ms/op
+WorkloadResult  10: 1 op, 58463800.00 ns, 58.4638 ms/op
+WorkloadResult  11: 1 op, 59030800.00 ns, 59.0308 ms/op
+WorkloadResult  12: 1 op, 58584300.00 ns, 58.5843 ms/op
+GC:  0 0 0 40960 1
+Threading:  0 0 1
+
+// AfterAll
+// Benchmark Process 20000 has exited with code 0.
+
+Mean = 58.728 ms, StdErr = 0.121 ms (0.21%), N = 12, StdDev = 0.419 ms
+Min = 57.987 ms, Q1 = 58.456 ms, Median = 58.745 ms, Q3 = 59.039 ms, Max = 59.351 ms
+IQR = 0.584 ms, LowerFence = 57.580 ms, UpperFence = 59.914 ms
+ConfidenceInterval = [58.191 ms; 59.265 ms] (CI 99.9%), Margin = 0.537 ms (0.91% of Mean)
+Skewness = -0.25, Kurtosis = 1.71, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\ExamSystemBenchmark.GettingDataBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\ExamSystemBenchmark.GettingDataBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\ExamSystemBenchmark.GettingDataBenchmarks-report.html
+
+// * Detailed results *
+GettingDataBenchmarks.GetAccountValueTask: DefaultJob
+Runtime = .NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT; GC = Concurrent Workstation
+Mean = 58.728 ms, StdErr = 0.121 ms (0.21%), N = 12, StdDev = 0.419 ms
+Min = 57.987 ms, Q1 = 58.456 ms, Median = 58.745 ms, Q3 = 59.039 ms, Max = 59.351 ms
+IQR = 0.584 ms, LowerFence = 57.580 ms, UpperFence = 59.914 ms
+ConfidenceInterval = [58.191 ms; 59.265 ms] (CI 99.9%), Margin = 0.537 ms (0.91% of Mean)
+Skewness = -0.25, Kurtosis = 1.71, MValue = 2
+-------------------- Histogram --------------------
+[57.746 ms ; 59.412 ms) | @@@@@@@@@@@@
+---------------------------------------------------
+
+GettingDataBenchmarks.GetAccountNullTask: DefaultJob
+Runtime = .NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT; GC = Concurrent Workstation
+Mean = 58.760 ms, StdErr = 0.127 ms (0.22%), N = 14, StdDev = 0.477 ms
+Min = 58.126 ms, Q1 = 58.408 ms, Median = 58.670 ms, Q3 = 59.024 ms, Max = 59.771 ms
+IQR = 0.617 ms, LowerFence = 57.483 ms, UpperFence = 59.949 ms
+ConfidenceInterval = [58.223 ms; 59.298 ms] (CI 99.9%), Margin = 0.538 ms (0.91% of Mean)
+Skewness = 0.6, Kurtosis = 2.2, MValue = 2
+-------------------- Histogram --------------------
+[57.963 ms ; 60.031 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+GettingDataBenchmarks.GetAccountTask: DefaultJob
+Runtime = .NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT; GC = Concurrent Workstation
+Mean = 62.056 ms, StdErr = 0.152 ms (0.24%), N = 14, StdDev = 0.568 ms
+Min = 61.477 ms, Q1 = 61.601 ms, Median = 61.953 ms, Q3 = 62.265 ms, Max = 63.557 ms
+IQR = 0.664 ms, LowerFence = 60.605 ms, UpperFence = 63.262 ms
+ConfidenceInterval = [61.415 ms; 62.697 ms] (CI 99.9%), Margin = 0.641 ms (1.03% of Mean)
+Skewness = 1.17, Kurtosis = 3.82, MValue = 2
+-------------------- Histogram --------------------
+[61.168 ms ; 63.867 ms) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.1586 (20H2/October2020Update)
+AMD Ryzen 5 3600, 1 CPU, 12 logical and 6 physical cores
+  [Host]     : .NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT  [AttachedDebugger]
+  DefaultJob : .NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT
+
+
+|              Method |     Mean |    Error |   StdDev | Rank | Allocated |
+|-------------------- |---------:|---------:|---------:|-----:|----------:|
+| GetAccountValueTask | 58.73 ms | 0.537 ms | 0.419 ms |    1 |     40 KB |
+|  GetAccountNullTask | 58.76 ms | 0.538 ms | 0.477 ms |    1 |     32 KB |
+|      GetAccountTask | 62.06 ms | 0.641 ms | 0.568 ms |    2 |     40 KB |
+
+// * Warnings *
+MinIterationTime
+  GettingDataBenchmarks.GetAccountValueTask: Default -> The minimum observed iteration time is 57.9869 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  GettingDataBenchmarks.GetAccountNullTask: Default  -> The minimum observed iteration time is 58.1262 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+  GettingDataBenchmarks.GetAccountTask: Default      -> The minimum observed iteration time is 61.4771 ms which is very small. It's recommended to increase it to at least 100.0000 ms using more operations.
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Hints *
+Outliers
+  GettingDataBenchmarks.GetAccountValueTask: Default -> 3 outliers were removed (63.18 ms..101.13 ms)
+  GettingDataBenchmarks.GetAccountNullTask: Default  -> 1 outlier  was  removed (61.04 ms)
+  GettingDataBenchmarks.GetAccountTask: Default      -> 1 outlier  was  removed (66.35 ms)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Rank      : Relative position of current benchmark mean among all benchmarks (Arabic style)
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms      : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:11 (11.25 sec), executed benchmarks: 3
+
+Global total time: 00:00:13 (13.53 sec), executed benchmarks: 3
+// * Artifacts cleanup *

@@ -1,0 +1,60 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// ***** Done, took 00:00:00 (0.2 sec)   *****
+// Found 3 benchmarks:
+//   GettingDataBenchmarks.GetAccountNullTask: DefaultJob
+//   GettingDataBenchmarks.GetAccountTask: DefaultJob
+//   GettingDataBenchmarks.GetAccountValueTask: DefaultJob
+
+// Generate Exception: async void is not supported by design
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in C:\Users\ugurbey\Desktop\lastExamSystyem\OnlineExamSystem\ExamSystemBenchmark\bin\Release
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\ExamSystemBenchmark.GettingDataBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\ExamSystemBenchmark.GettingDataBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\ExamSystemBenchmark.GettingDataBenchmarks-report.html
+
+// * Detailed results *
+GettingDataBenchmarks.GetAccountNullTask: DefaultJob
+Runtime = ; GC = 
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.1586 (20H2/October2020Update)
+AMD Ryzen 5 3600, 1 CPU, 12 logical and 6 physical cores
+  [Host] : .NET Framework 4.8 (4.8.4470.0), X86 LegacyJIT  [AttachedDebugger]
+
+
+|             Method | Mean | Error | Rank |
+|------------------- |-----:|------:|-----:|
+| GetAccountNullTask |   NA |    NA |    ? |
+
+Benchmarks with issues:
+  GettingDataBenchmarks.GetAccountNullTask: DefaultJob
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Legends *
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  Rank  : Relative position of current benchmark mean among all benchmarks (Arabic style)
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:01 (1.79 sec), executed benchmarks: 0
+
+Global total time: 00:00:01 (2 sec), executed benchmarks: 0
+// * Artifacts cleanup *
