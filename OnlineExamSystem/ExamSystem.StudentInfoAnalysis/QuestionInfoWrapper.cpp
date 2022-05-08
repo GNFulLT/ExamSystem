@@ -1,6 +1,6 @@
 #include "QuestionInfo.h"
 #include <comdef.h>
-
+#include "CasterHelper.h"
 extern "C"	_declspec(dllexport) QuestionInfo * CreateQuestionInfo() {
 	return new QuestionInfo();
 }
@@ -54,11 +54,11 @@ extern "C"	_declspec(dllexport) int GetGlobalRightCount(QuestionInfo * info) {
 }
 
 extern "C"	_declspec(dllexport) void SetGlobalCount(QuestionInfo * info, int value) {
-	info->SetGlobalCount(value);
+	info->SetGlobalCount(CasterHelper::IntTo(value));
 }
 extern "C"	_declspec(dllexport) void SetGlobalRightCount(QuestionInfo * info, int value) {
-	info->SetGlobalRightCount(value);
+	info->SetGlobalRightCount(CasterHelper::IntTo(value));
 }extern "C"	_declspec(dllexport) void SetDifficulty(QuestionInfo * info, int value) {
-	info->SetDifficultyMultiplier(value);
+	info->SetDifficultyMultiplier(CasterHelper::IntTo(value));
 }
 

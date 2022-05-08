@@ -1,0 +1,1 @@
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.StudentInfoAnalysis.Tests\x64\Debug\ExamSystem.StudentInfoAnalysis.Tests.vcxproj.CopyComplete

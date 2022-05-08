@@ -1,7 +1,1 @@
-﻿  QuestionInfo.cpp
-  QuestionInfoWrapper.cpp
-C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.StudentInfoAnalysis\QuestionInfoWrapper.cpp(48,29): warning C4244: 'return': conversion from 'uintmax_t' to 'int', possible loss of data
-C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.StudentInfoAnalysis\QuestionInfoWrapper.cpp(51,34): warning C4244: 'return': conversion from 'uintmax_t' to 'int', possible loss of data
-C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.StudentInfoAnalysis\QuestionInfoWrapper.cpp(53,38): warning C4244: 'return': conversion from 'uintmax_t' to 'int', possible loss of data
-  Generating Code...
-  ExamSystem.StudentInfoAnalysis.vcxproj -> C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\x64\Debug\ExamSystem.StudentInfoAnalysis.dll
+﻿  ExamSystem.StudentInfoAnalysis.vcxproj -> C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\x64\Debug\ExamSystem.StudentInfoAnalysis.dll

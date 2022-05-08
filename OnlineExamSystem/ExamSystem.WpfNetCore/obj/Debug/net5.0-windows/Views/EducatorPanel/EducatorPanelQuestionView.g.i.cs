@@ -53,8 +53,8 @@ namespace ExamSystem.WpfNetCore.Views.EducatorPanel {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;component/views/educatorpanel/educatorpanelquestionview.xa" +
-                    "ml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;V1.0.0.0;component/views/educatorpanel/educatorpanelquesti" +
+                    "onview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\EducatorPanel\EducatorPanelQuestionView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

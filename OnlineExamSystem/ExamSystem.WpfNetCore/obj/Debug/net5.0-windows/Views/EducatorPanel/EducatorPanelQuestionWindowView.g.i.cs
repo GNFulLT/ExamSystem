@@ -56,8 +56,8 @@ namespace ExamSystem.WpfNetCore.Views.EducatorPanel {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;component/views/educatorpanel/educatorpanelquestionwindowv" +
-                    "iew.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;V1.0.0.0;component/views/educatorpanel/educatorpanelquesti" +
+                    "onwindowview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -16,9 +16,36 @@
     <Filter Include="Models">
       <UniqueIdentifier>{ee1e2b8b-41bc-486c-ab45-d6a702d05908}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{f6c41713-a992-43be-abda-1dd23b782281}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QuestionInfo.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentQuestionSubInfo.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="CasterHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListBinderHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLLEXPORT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StudentQuestionSubInfoMeasureContainer.h">
+      <Filter>Models</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestionInfoMeasureContainer.h">
       <Filter>Models</Filter>
     </ClInclude>
   </ItemGroup>
@@ -28,6 +55,30 @@
     </ClCompile>
     <ClCompile Include="QuestionInfoWrapper.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentQuestionSubInfo.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentQuestionSubInfoWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CasterHelper.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisHelper.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="ListBinderHelper.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentQuestionSubInfoMeasureContainer.cpp">
+      <Filter>Models</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestionInfoMeasureContainer.cpp">
+      <Filter>Models</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

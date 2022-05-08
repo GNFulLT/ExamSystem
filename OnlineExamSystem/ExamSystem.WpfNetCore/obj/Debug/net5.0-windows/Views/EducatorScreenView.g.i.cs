@@ -65,7 +65,7 @@ namespace ExamSystem.WpfNetCore.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;component/views/educatorscreenview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ExamSystem.WpfNetCore;V1.0.0.0;component/views/educatorscreenview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\EducatorScreenView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

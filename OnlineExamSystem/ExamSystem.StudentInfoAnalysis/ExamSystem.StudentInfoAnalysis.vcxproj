@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,11 +19,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnalysisHelper.h" />
+    <ClInclude Include="AnalysisWrapper.h" />
+    <ClInclude Include="CasterHelper.h" />
+    <ClInclude Include="DLLEXPORT.h" />
+    <ClInclude Include="ListBinderHelper.h" />
     <ClInclude Include="QuestionInfo.h" />
+    <ClInclude Include="QuestionInfoMeasureContainer.h" />
+    <ClInclude Include="StudentQuestionSubInfo.h" />
+    <ClInclude Include="StudentQuestionSubInfoMeasureContainer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnalysisHelper.cpp" />
+    <ClCompile Include="AnalysisWrapper.cpp" />
+    <ClCompile Include="CasterHelper.cpp" />
+    <ClCompile Include="ListBinderHelper.cpp" />
     <ClCompile Include="QuestionInfo.cpp" />
+    <ClCompile Include="QuestionInfoMeasureContainer.cpp" />
     <ClCompile Include="QuestionInfoWrapper.cpp" />
+    <ClCompile Include="StudentQuestionSubInfo.cpp" />
+    <ClCompile Include="StudentQuestionSubInfoMeasureContainer.cpp" />
+    <ClCompile Include="StudentQuestionSubInfoWrapper.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -130,7 +146,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;ROOTERLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
