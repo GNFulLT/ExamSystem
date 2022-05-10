@@ -143,3 +143,11 @@ C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\SplashScreenView.g.cs
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\CustomControls\Themes\LoadingTheme.baml
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\SplashScreenView.baml
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentScreenView.g.cs
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentScreenView.baml
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentPanel\StudentScreenDashBoardPanelView.g.cs
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentPanel\StudentScreenDashBoardPanelView.baml
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentPanel\StudentScreenExamsPanelView.g.cs
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentPanel\StudentScreenExamsPanelView.baml
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentPanel\StudentScreenOldExamsPanelView.g.cs
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\Views\StudentPanel\StudentScreenOldExamsPanelView.baml

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExamSystem.Core;
+using ExamSystem.Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +19,18 @@ namespace ExamSystem.WpfNetCore.Views
     /// <summary>
     /// Interaction logic for StudentScreenView.xaml
     /// </summary>
+    [ViewFor(typeof(StudentScreenView), typeof(StudentScreenViewModel))]
     public partial class StudentScreenView : Window
     {
-        public StudentScreenView()
+        public StudentScreenView(StudentScreenViewModel viewModel)
         {
             InitializeComponent();
+            DataContext = viewModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

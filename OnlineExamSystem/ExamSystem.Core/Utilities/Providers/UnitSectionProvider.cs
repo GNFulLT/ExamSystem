@@ -71,6 +71,7 @@ namespace ExamSystem.Core.Utilities.Providers
 
             _isInitialized = true;
             //For executing unitmap and sectionmap
+            var c = _lessonMap.Value.Result;
             var a = UnitMap;
             var b = SectionMap;
 

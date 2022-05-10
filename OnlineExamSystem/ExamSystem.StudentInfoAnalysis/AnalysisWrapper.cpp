@@ -13,3 +13,8 @@
 	void AnalysisWrapper::Analysis() {
 		AnalysisHelper::Analysis();
 	}
+
+
+	extern "C"	_declspec(dllexport)  float MixRate(float value1, float value2) {
+		return AnalysisHelper::MixMeasureInfo(value1, value2).convert_to<float>();
+	}

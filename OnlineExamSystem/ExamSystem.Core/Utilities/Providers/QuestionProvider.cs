@@ -37,6 +37,10 @@ namespace ExamSystem.Core.Utilities.Providers
                 return s.GetAllQuestionsList();
             });
             _isInitialized = true;
+
+            List<Question> q = QuestionDateMap;
+
+            ReadOnlyDictionary<Section, List<Question>> t = _questionSectionMap.Value.Result;
         }
 
         private static void Checker()

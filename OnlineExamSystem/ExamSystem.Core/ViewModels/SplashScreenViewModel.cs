@@ -20,7 +20,7 @@ namespace ExamSystem.Core.ViewModels
         public SplashScreenViewModel(Account account)
         {
             acc = account;
-            AccountProvider.LoginedAccount = account;
+            AccountProvider.InitializeInfos(account);
         }
 
 
@@ -44,12 +44,35 @@ namespace ExamSystem.Core.ViewModels
 
                 Navigation.CurrentWindow = currentWindow;
             }
-           
+           else if (acc._AccountType == Account.AccountType.Student)
+            {
+                await InitializeStudent();
+
+                var currentWindow = Activator.CreateInstance(StudentScreenViewModel.Parent, new StudentScreenViewModel());
+
+                Navigation.CurrentWindow = currentWindow;
+            }
         }
 
-        private void InitializeStudent()
+        private Task InitializeStudent()
         {
+            return Task.Run(() =>
+            {
+                InfoText = "Loading Units";
 
+                UnitSectionProvider.InitializeMaps();
+
+                InfoText = "Loading Questions";
+
+                QuestionProvider.InitializeMaps();
+
+                InfoText = "Loading Student Infos";
+
+                StudentProvider.InitializeInfos();
+
+
+
+            });
         }
 
         private Task InitializeEducator()

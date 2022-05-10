@@ -51,4 +51,3 @@ C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.Core\ob
 C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.Core\obj\Debug\netstandard2.1\ExamSystem.Core.csproj.Fody.CopyLocal.cache
 C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.Core\obj\Debug\netstandard2.1\ExamSystem.Core.dll
 C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.Core\obj\Debug\netstandard2.1\ExamSystem.Core.pdb
-C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.Core\obj\Debug\netstandard2.1\ExamSystem.Core.csproj.AssemblyReference.cache

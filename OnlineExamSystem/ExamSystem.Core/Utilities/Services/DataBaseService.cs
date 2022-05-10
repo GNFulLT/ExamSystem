@@ -11,7 +11,7 @@ namespace ExamSystem.Core.Utilities.Services
     {
         public abstract string collectionName { get; set; }
 
-        public Task<T> Get(ObjectId id)
+        public virtual Task<T> Get(ObjectId id)
         {
             return Task.Run(() =>
             {
@@ -28,7 +28,7 @@ namespace ExamSystem.Core.Utilities.Services
             });
         }
 
-        public Task<T> Create(T entity)
+        public virtual Task<T> Create(T entity)
         {
             return Task.Run(() => {
                 var collection = GetCollection();
@@ -37,12 +37,12 @@ namespace ExamSystem.Core.Utilities.Services
             });
         }
 
-        public Task<T> Update(ObjectId id, T entity)
+        public virtual Task<T> Update(ObjectId id, T entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> Delete(ObjectId id)
+        public virtual Task<bool> Delete(ObjectId id)
         {
             return Task.Run(() =>
             {

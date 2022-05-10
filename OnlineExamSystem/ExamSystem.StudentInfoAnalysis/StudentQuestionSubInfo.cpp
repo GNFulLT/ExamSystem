@@ -5,6 +5,8 @@ StudentQuestionSubInfo::StudentQuestionSubInfo() {
 	rightSolveCountInARow = 0;
 	totalSolveCount = 0;
 
+	SetNowDateCurrent();
+
 	lastDate.reset(new boost::gregorian::date(boost::gregorian::date_from_iso_string("00000000")));
 }
 

@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="ExamSystem.WpfNetCore.Views.StudentPanel.StudentScreenDashBoardPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExamSystem.WpfNetCore.Views.StudentPanel"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="990"           
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="390"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Row="0" Grid.Column="0"  Width="235" Height="140" CornerRadius="20">
+
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                            <GradientStop Color="#0182FF" Offset="1"/>
+                            <GradientStop Color="#FF00365D" Offset="0"/>
+
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <StackPanel >
+                        <DockPanel>
+                            <TextBlock Foreground="White" Text="Total number of exam solved" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Foreground="WhiteSmoke" Text="Create Question" HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
+                        </DockPanel>
+                    </StackPanel>
+
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1" Width="235"  Height="140" CornerRadius="20">
+
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                            <GradientStop Color="#0182FF" Offset="1"/>
+                            <GradientStop Color="#FF00365D" Offset="0"/>
+
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <StackPanel >
+                        <DockPanel>
+                            <TextBlock Foreground="White" Text="Total number of questions solved" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"  HorizontalAlignment="Center"  FontSize="18" Margin="0 20 5 0"/>
+                        </DockPanel>
+                    </StackPanel>
+
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="2"  Width="235"  Height="140" CornerRadius="20">
+
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                            <GradientStop Color="#0182FF" Offset="1"/>
+                            <GradientStop Color="#FF00365D" Offset="0"/>
+
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <StackPanel >
+                        <DockPanel>
+                            <TextBlock Foreground="White" Text="Total number of correct" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"  HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
+                        </DockPanel>
+                    </StackPanel>
+
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="3"  Width="235"  Height="140" CornerRadius="20">
+
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                            <GradientStop Color="#0182FF" Offset="1"/>
+                            <GradientStop Color="#FF00365D" Offset="0"/>
+
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <StackPanel >
+                        <DockPanel>
+                            <TextBlock Foreground="White" Text="Percentage of correct answers" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
+                        </DockPanel>
+                        <DockPanel>
+                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"  HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
+                        </DockPanel>
+                    </StackPanel>
+
+                </Border>
+
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="2" Grid.Column="0">
+
+            <StackPanel Width="950" Height="300">
+                <Border Grid.Row="0" Grid.Column="0" Width="950" Height="300" CornerRadius="20">
+
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+                            <GradientStop Color="#0182FF" Offset="1"/>
+                            <GradientStop Color="#FF00365D" Offset="0"/>
+
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border Grid.Row="0" Grid.Column="0">
+                            <StackPanel Margin="10,50,0,0">
+                                <DockPanel Height="50">
+                                    <DockPanel  Width="100">
+                                        <TextBlock Foreground="WhiteSmoke" Text="Name:" HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" Margin="5,0,0,0"/>
+                                    </DockPanel>
+                                    <DockPanel>
+                                        <TextBlock Foreground="WhiteSmoke" Text="Create Question"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" />
+                                    </DockPanel>
+                                </DockPanel>
+                                <DockPanel Height="50">
+                                    <DockPanel>
+                                        <DockPanel Width="100">
+                                            <TextBlock Foreground="WhiteSmoke" Text="Surname:"  HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18"  Margin="5,0,0,0"/>
+                                        </DockPanel>
+                                        <DockPanel>
+                                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" />
+                                        </DockPanel>
+                                    </DockPanel>
+                                </DockPanel>
+                                <DockPanel Height="50">
+                                    <DockPanel>
+                                        <DockPanel  Width="100">
+                                            <TextBlock Foreground="WhiteSmoke" Text="Email:"  HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18"  Margin="5,0,0,0"/>
+                                        </DockPanel>
+                                        <DockPanel>
+                                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18"/>
+                                        </DockPanel>
+                                    </DockPanel>
+                                </DockPanel>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Row="0" Grid.Column="1" >
+                            <Image Source="/images/profilicon.png" 
+                                   Width="200" Height="200"/>
+                        </Border>
+                    </Grid>
+
+                </Border>
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</UserControl>

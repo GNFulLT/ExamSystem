@@ -9,15 +9,27 @@ namespace ExamSystem.Core.Utilities.Providers
     {
         private static Account _loginedAccount;
 
-        public static Account LoginedAccount { get => _loginedAccount; set => _loginedAccount = value; }
+        public static Account LoginedAccount { get { Checker(); return _loginedAccount; } set => _loginedAccount = value; }
 
         private static bool _isInitialized = false;
 
-        public static void InitializeInfos()
+        public static void InitializeInfos(Account account)
         {
             if (_isInitialized)
                 return;
+
+            LoginedAccount = account;
+
             _isInitialized = true;
+
+        }
+
+        private static void Checker()
+        {
+            if (!_isInitialized)
+            {
+                throw new Exception("Account doesn't initialized");
+            }
         }
     }
 }
