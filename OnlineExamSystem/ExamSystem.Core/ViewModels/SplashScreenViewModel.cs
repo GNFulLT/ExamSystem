@@ -1,4 +1,6 @@
-﻿using ExamSystem.Core.SubModels;
+﻿using ExamSystem.Core.Models;
+using ExamSystem.Core.SubModels;
+using ExamSystem.Core.Utilities.Builders.Exams;
 using ExamSystem.Core.Utilities.NavigationSource;
 using ExamSystem.Core.Utilities.Providers;
 using System;
@@ -70,8 +72,14 @@ namespace ExamSystem.Core.ViewModels
 
                 StudentProvider.InitializeInfos();
 
+                var eb = new StudentExamBuilder(10);
 
 
+                ExamDirector director = new ExamDirector(eb);
+
+                director.CreateExam();
+
+                Exam exam = eb.GetExam();
             });
         }
 

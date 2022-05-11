@@ -13,11 +13,13 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
             _eb = eb;
         }
 
-        public void CreateExam()
+        public async void CreateExam()
         {
-            _eb.CheckIfExamExists();
+           await _eb.PrepareQuestions();
 
-            _eb.SetQuestions();
+             _eb.CheckIfExamExists();
+
+             _eb.SetQuestions();
 
             _eb.SetUniqueKey();
         }
