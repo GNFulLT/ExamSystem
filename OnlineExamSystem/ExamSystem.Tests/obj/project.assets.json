@@ -4978,11 +4978,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ugurbey\\Documents\\GitHub\\ExamSystem\\OnlineExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
       "projectName": "ExamSystem.Tests",
-      "projectPath": "C:\\Users\\ugurbey\\Documents\\GitHub\\ExamSystem\\OnlineExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
+      "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Tests\\ExamSystem.Tests.csproj",
       "packagesPath": "C:\\Users\\ugurbey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ugurbey\\Documents\\GitHub\\ExamSystem\\OnlineExamSystem\\ExamSystem.Tests\\obj\\",
+      "outputPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5005,8 +5005,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\ugurbey\\Documents\\GitHub\\ExamSystem\\OnlineExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj": {
-              "projectPath": "C:\\Users\\ugurbey\\Documents\\GitHub\\ExamSystem\\OnlineExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj"
+            "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj": {
+              "projectPath": "C:\\Users\\ugurbey\\Desktop\\ExamSystemRefactoring\\ExamSystemRefactored2\\ExamSystem\\ExamSystem.Core\\ExamSystem.Core.csproj"
             }
           }
         }

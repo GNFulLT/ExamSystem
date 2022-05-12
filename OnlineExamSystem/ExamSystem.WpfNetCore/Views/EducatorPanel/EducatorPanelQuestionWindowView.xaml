@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamSystem.WpfNetCore.Views.EducatorPanel"
+        xmlns:customControls="clr-namespace:ExamSystem.WpfNetCore.CustomControls"
         mc:Ignorable="d"
        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="EducatorQuestionPanel" Height="600" Width="1400" 
@@ -13,32 +14,54 @@
         <Grid Width="675" Height="581" HorizontalAlignment="Left" Margin="10,10,0,10">
             <Border BorderThickness="1" Background="White" Margin="0,0,10,365" CornerRadius="10">
                 <RichTextBox
+                    x:Name="RichText"
+customControls:RichTextBoxHelper.DocumentXaml
+                    ="{Binding QuestionText,Mode=TwoWay}" 
+              
  HorizontalAlignment="Left" Height="210" Width="650" Margin="10" VerticalAlignment="Top" Background="White" FontFamily="Arial" FontSize="9" Foreground="#FF5F5859">
-                    <RichTextBox.Document>
-                        <FlowDocument>
-                            <Paragraph>
-                                <Run Text="{Binding QuestionText,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></Run>
-                            </Paragraph>
-                        </FlowDocument>
-
-                    </RichTextBox.Document>
+                    
 
                 </RichTextBox>
             </Border>
             <GroupBox Header="{Binding WrongAnswersHeaderText}" 
                       HorizontalAlignment="Left" Height="184" Margin="5,230,0,0" VerticalAlignment="Top" Width="665" Background="#FFE1E1E1" FontFamily="Arial" Foreground="White">
                 <Grid>
-                    <TextBox Text="{Binding WrongAnswer0,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="0,0,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <RichTextBox
+ customControls:RichTextBoxHelper.DocumentXaml=
+                "{Binding WrongAnswer0}" Height="25"
+               Margin="0,0,10,0" 
+                     x:Name="RichAnswer0"   
+            VerticalAlignment="Top" Width="568" 
+           Background="White" Foreground="#FF5F5859" 
+                  HorizontalAlignment="Right"/>
                     <Label Content="1)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,10,600,104" Foreground="#FF5F5859"/>
-                    <TextBox Text="{Binding WrongAnswer1,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="0,45,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <RichTextBox
+        customControls:RichTextBoxHelper.DocumentXaml="{Binding WrongAnswer1}" Height="25"
+            Margin="0,45,10,0"
+     VerticalAlignment="Top" Width="568" Background="White"
+          x:Name="RichAnswer1"              
+        Foreground="#FF5F5859" HorizontalAlignment="Right"/>
                     <Label Content="2)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,50,600,64" Foreground="#FF5F5859"/>
-                    <TextBox Height="25" Text="{Binding WrongAnswer2,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="0,85,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <RichTextBox Height="25" 
+     customControls:RichTextBoxHelper.DocumentXaml="{Binding WrongAnswer2}"
+          Margin="0,85,10,0"
+                                 x:Name="RichAnswer2"
+       VerticalAlignment="Top" Width="568" 
+        Background="White" Foreground="#FF5F5859"
+        HorizontalAlignment="Right"/>
+                    
                     <Label Content="3)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,90,600,24" Foreground="#FF5F5859"/>
                 </Grid>
             </GroupBox>
             <GroupBox Header="{Binding CorrectAnswerHeaderText}" HorizontalAlignment="Left" Height="110" Margin="5,465,10,0" VerticalAlignment="Top" Width="665" Background="#FFE1E1E1" FontFamily="ARİAL" Foreground="White">
                 <Grid>
-                    <TextBox Text="{Binding CorrectAnswer0,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Height="25" Margin="0,15,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="568" Background="White" Foreground="#FF5F5859" HorizontalAlignment="Right"/>
+                    <RichTextBox 
+      customControls:RichTextBoxHelper.DocumentXaml="{Binding CorrectAnswer0}" 
+           x:Name="RichAnswer3" 
+           Height="25" Margin="0,15,10,0"
+          VerticalAlignment="Top" Width="568"
+         Background="White" Foreground="#FF5F5859" 
+                  HorizontalAlignment="Right"/>
                     <Label Content="1)" Width="25" Height="20" HorizontalAlignment="Right" Margin="0,10,600,10" Foreground="#FF5F5859"/>
                 </Grid>
             </GroupBox>
@@ -83,6 +106,7 @@
                 </StackPanel>
             </Button>
             <Button 
+                Click="Button_Click"
          Command="{Binding QuestionCreateButtonClickedCommand}"
                 Height="45" Width="260" BorderThickness="0" materialDesign:ButtonAssist.CornerRadius="26" Margin="40 460 25 0">
                 <Button.Background>

@@ -322,3 +322,8 @@ C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.WpfNetC
 C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\ref\ExamSystem.WpfNetCore.dll
 C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\ExamSystem.WpfNetCore.pdb
 C:\Users\ugurbey\Documents\GitHub\ExamSystem\OnlineExamSystem\ExamSystem.WpfNetCore\obj\Debug\net5.0-windows\ExamSystem.WpfNetCore.genruntimeconfig.cache
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\bin\Debug\net5.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\bin\Debug\net5.0-windows\System.Drawing.Common.dll
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
