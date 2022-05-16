@@ -105,6 +105,9 @@ List<TypeInfo> infos = currentAssembly.DefinedTypes.ToList();
                     continue;
                 if (infos[i].GetTypeInfo().GetCustomAttributes<CompilerGeneratedAttribute>().Any())
                     continue;
+                if (infos[i].GetTypeInfo().DeclaringType is object) 
+                    if(infos[i].GetTypeInfo().DeclaringType.GetTypeInfo().GetCustomAttributes<CompilerGeneratedAttribute>().Any())
+                     continue;
                 if (!infos[i].Name.StartsWith("I"))
                 {
                     if(dict.ContainsKey("I" + infos[i].Name))
