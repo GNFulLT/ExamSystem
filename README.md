@@ -153,4 +153,5 @@ Inside of DatabaseServices or EtcServices that is derived from DatabaseService, 
 etc... and all variations of these(without { or } or use ' instead ").
 Passwords are hashing and saving to database.
 To hide question answer, Project is using cantor's function on question id and answer id.
+And all cruel informations are protecting with VirtualProtect with c++ studentinfo if defined win32.
 
