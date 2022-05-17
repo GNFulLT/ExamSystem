@@ -34,6 +34,7 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
                     _eb.SaveToDatabase();
                     StudentExamInfo info = await _eb.CreateSaveStudentExamInfo();
                     StudentProvider.TodayStudentExamInfo = info;
+                    _eb.SetInfo(info);
                 }
 
 

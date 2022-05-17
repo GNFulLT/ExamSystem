@@ -6,6 +6,7 @@
 #include<boost/range/algorithm/min_element.hpp>
 #include <boost/multiprecision/cpp_bin_float.hpp>
 
+
 bool AnalysisHelper::_isStarted = false;
 
 boost::movelib::unique_ptr<ListBinderHelper<QuestionInfo*>> AnalysisHelper::questInfo;
@@ -29,6 +30,9 @@ void  AnalysisHelper::Analysis() {
 	while (iterator1 != list1->end() && iterator2 != list2->end()) {
 		QuestionInfo* question = iterator1.get()->get_data();
 		StudentQuestionSubInfo* subInfo = iterator2.get()->get_data();
+
+		
+
 
 		//SET NEXT DAY
 		int rightSolveCount = subInfo->GetRightSolveCountInARow();
@@ -70,6 +74,9 @@ void  AnalysisHelper::Analysis() {
 		subInfo->CreateMeasureInfo(ceil(questionLocalRate.convert_to<float>()*100));
 
 		question->CreateMeasureInfo(ceil(questionGlobalRate.convert_to<float>()*100));
+
+
+
 
 		iterator1++;
 		iterator2++;

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ExamSystem.Core": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

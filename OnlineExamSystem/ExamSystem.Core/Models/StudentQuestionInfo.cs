@@ -88,7 +88,7 @@ namespace ExamSystem.Core.Models
 
                 BsonDocument d = BsonSerializer.Deserialize<BsonDocument>(context.Reader);
 
-                if (StudentProvider.LoginedStudent.Id.CompareTo(d["_id"].AsObjectId) != 0)
+                if (StudentProvider.LoginedStudent.Id.CompareTo(d["_studentId"].AsObjectId) != 0)
                     throw new Exception("Don't have access to student that is not logined");
 
                 List<Question> qList = QuestionProvider.QuestionDateMap;

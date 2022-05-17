@@ -1,12 +1,19 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ExamSystem.Core.SubModels
 {
+    [BsonIgnoreExtraElements]
     public class QuestionInfo : QuestionInfoWrapper
     {
         public enum Difficulty { VeryEasy = 0, Easy, Medium, Hard, Extreme }
+
+        public IntPtr AsPtr()
+        {
+            return _questionInfoPointer;
+        }
 
         public string QuestionText
         {

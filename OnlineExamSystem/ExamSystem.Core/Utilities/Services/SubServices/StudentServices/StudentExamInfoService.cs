@@ -1,5 +1,6 @@
 ﻿using ExamSystem.Core.Models;
 using ExamSystem.Core.SubModels;
+using ExamSystem.Core.Utilities.Providers;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,42 @@ namespace ExamSystem.Core.Utilities.Services.SubServices.StudentServices
 
         public override string collectionName { get => COLLECTION_NAME; set { } }
 
+        public Task<List<StudentExamInfo>> GetAllByStudent(Student student)
+        {
+            return Task.Run(() =>
+            {
+                var collection = GetCollection();
+                var filter = Builders<StudentExamInfo>.Filter.Eq("_studentId", student.Id);
+
+                var list = collection.Find(filter).ToList();
+
+                if (list == null)
+                    return default(List<StudentExamInfo>);
+                else
+                    return list;
+
+            });
+        }
+
+
+        public Task<int> CreateOrUpdate(StudentExamInfo info)
+        {
+            return Task.Run(async () =>
+            {
+                var collection = GetCollection();
+                if(info.Id.CompareTo(MongoDB.Bson.ObjectId.Empty) == 0)
+                {
+                    await Create(info);
+                    return 0;
+                }
+                else
+                {
+                    var filter = Builders<StudentExamInfo>.Filter.Eq(q => q.Id,info.Id);
+                    collection.ReplaceOne(filter, info);
+                    return 1;
+                }
+            });
+        }
 
         public Task<StudentExamInfo> GetDailyInfoIfExist(Student st)
         {
@@ -24,15 +61,12 @@ namespace ExamSystem.Core.Utilities.Services.SubServices.StudentServices
                 StudentExamInfo examinfo = null;
                 foreach(var item in list1)
                 {
+                    //Çözülmeyen sınav varmı kontrolü yapar
                     if(item.IsSolved == false && (item.Student.Id.CompareTo(st.Id) == 0))
                     {
                         examinfo = item;
                     }
                 }
-                //var list = collection.Find(q => ((q.Student.Id.CompareTo(st.Id) == 0) &&  q.IsSolved == false)).ToList();
-               /* if (list.Count == 0 && list.Count > 1)
-                    return default(StudentExamInfo);*/
-
                 return examinfo;
             });
         }

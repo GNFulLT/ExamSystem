@@ -77,17 +77,15 @@ namespace ExamSystem.Core.ViewModels
                 {
                     var eb = new StudentExamBuilder(10);
 
-
                     ExamDirector director = new ExamDirector(eb);
 
                     await director.CreateExam();
 
                     StudentProvider.TodayExam = eb.GetExam();
 
-                    
+                    StudentProvider.TodayExam.Info = StudentProvider.TodayStudentExamInfo;
+                         
                 }
-
-                
             });
         }
 
@@ -101,7 +99,7 @@ namespace ExamSystem.Core.ViewModels
 
                 InfoText = "Loading Questions";
 
-                QuestionProvider.InitializeMaps();
+                QuestionProvider.InitializeMaps(true);
 
                 Thread.Sleep(200);
 

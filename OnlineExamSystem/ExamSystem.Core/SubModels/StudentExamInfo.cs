@@ -118,10 +118,7 @@ namespace ExamSystem.Core.SubModels
             {
                 BsonDocument d = BsonSerializer.Deserialize<BsonDocument>(context.Reader);
 
-                if (d["_studentId"].AsObjectId.CompareTo(StudentProvider.LoginedStudent.Id) != 0)
-                {
-                    throw new Exception("Dont have to access exam info that is not loggined");
-                } 
+             
 
                 ExamService service = new ExamService();
                 Task<Exam> task = service.Get(d["_examId"].AsObjectId);

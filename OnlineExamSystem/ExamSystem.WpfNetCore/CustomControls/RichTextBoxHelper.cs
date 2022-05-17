@@ -71,13 +71,17 @@ namespace ExamSystem.WpfNetCore.CustomControls
                         
 
                         string docXaml = GetDocumentXaml(richTextBox);
-                        var stream = new MemoryStream(Convert.FromBase64String(docXaml));
-                        FlowDocument doc = new FlowDocument();
+                        FlowDocument doc;
+                       
                         if (!string.IsNullOrEmpty(docXaml))
                         {
-                            TextRange range = new TextRange(doc.ContentStart, doc.ContentEnd);
-                            range.Load(stream, DataFormats.XamlPackage);
-                            /*doc = (FlowDocument)XamlReader.Load(stream);*/
+                            using (var stream = new MemoryStream(Convert.FromBase64String(docXaml)))
+                            {
+                                doc = new FlowDocument();
+                                TextRange range = new TextRange(doc.ContentStart, doc.ContentEnd);
+                                range.Load(stream, DataFormats.XamlPackage);
+                            }
+                            
                         }
                         else
                         {

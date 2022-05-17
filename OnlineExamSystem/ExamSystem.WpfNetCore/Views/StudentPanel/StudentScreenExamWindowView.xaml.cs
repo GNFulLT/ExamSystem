@@ -29,12 +29,12 @@ namespace ExamSystem.WpfNetCore.Views.StudentPanel
         {
             InitializeComponent();
             DataContext = viewModel;
-            Timer = new DispatcherTimer();
+           /* Timer = new DispatcherTimer();
             Timer.Interval = new TimeSpan(0, 0, 1);
             Timer.Tick += Timer_Tick;
-            Timer.Start();
+            Timer.Start();*/
         }
-        void Timer_Tick(object sender, EventArgs e)
+       /* void Timer_Tick(object sender, EventArgs e)
         {
             if (time > 0)
             {
@@ -63,6 +63,6 @@ namespace ExamSystem.WpfNetCore.Views.StudentPanel
                 Timer.Stop();
                 MessageBox.Show("Time's up ! ");
             }
-        }
+        }*/
     }
 }

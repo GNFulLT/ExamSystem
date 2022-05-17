@@ -22,7 +22,14 @@ namespace ExamSystem.Core.Utilities.Providers
 
         public static List<StudentQuestionInfo> GetStudentQuestionInfos()
         {
-            return _loginedStudentQuestionInfos.Value.Result;
+            return _loginedStudentQuestionInfos.Value.Result is object ? _loginedStudentQuestionInfos.Value.Result : new List<StudentQuestionInfo>();
+        }
+
+        private static Lazy<Task<List<StudentExamInfo>>> _loginedStudentExamInfos;
+
+        public static List<StudentExamInfo> GetStudentExamInfos()
+        {
+            return _loginedStudentExamInfos.Value.Result is object ? _loginedStudentExamInfos.Value.Result : new List<StudentExamInfo>();
         }
 
         private static Exam _todayExam;
@@ -39,7 +46,8 @@ namespace ExamSystem.Core.Utilities.Providers
 
         public static StudentQuestionInfo GetStudentQuestionInfo(Question q)
         {
-            return _loginedStudentQuestionInfos.Value.Result.Where(q2 => q2.Question == q).First();
+            return _loginedStudentQuestionInfos.Value.Result is object ?
+                _loginedStudentQuestionInfos.Value.Result.Where(q2 => q2.Question == q).FirstOrDefault() : null;
         }
 
         private static bool _isInitialized = false;
@@ -62,11 +70,18 @@ namespace ExamSystem.Core.Utilities.Providers
                 return service.GetAllByStudent(LoginedStudent);
             });
 
+            _loginedStudentExamInfos = new Lazy<Task<List<StudentExamInfo>>>(() =>
+            {
+                StudentExamInfoService service = new StudentExamInfoService();
+                return service.GetAllByStudent(LoginedStudent);
+            });
+
             _isInitialized = true;
 
             Student std = LoginedStudent;
 
             List<StudentQuestionInfo> infos = GetStudentQuestionInfos();
+            List<StudentExamInfo> infos2 = GetStudentExamInfos();
         }
 
         private static void Checker()

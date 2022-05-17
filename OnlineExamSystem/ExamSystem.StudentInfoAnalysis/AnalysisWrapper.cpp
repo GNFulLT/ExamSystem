@@ -22,3 +22,19 @@ BSTR AnalysisWrapper::GetCurrent() {
 	extern "C"	_declspec(dllexport)  float MixRate(float value1, float value2) {
 		return AnalysisHelper::MixMeasureInfo(value1, value2).convert_to<float>();
 	}
+
+
+	extern "C"	_declspec(dllexport)  void StartAnalysis() {
+		AnalysisHelper::StartAnalysis();
+	}
+
+	extern "C"	_declspec(dllexport)  void EndAnalysis() {
+		AnalysisHelper::EndAnalysis();
+	}
+	extern "C"	_declspec(dllexport)  void Add(QuestionInfo * quest, StudentQuestionSubInfo * subQuest) {
+		AnalysisHelper::Add(quest, subQuest);
+	}
+	extern "C"	_declspec(dllexport)  void Analysis() {
+		AnalysisHelper::Analysis();
+	}
+	

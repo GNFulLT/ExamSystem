@@ -44,6 +44,15 @@ namespace ExamSystem.Core.Utilities.Providers
 
         }
 
+        private static Dictionary<string, Section> _allSections = new Dictionary<string, Section>();
+
+        public static void AddSection(Section section)
+        {
+            _allSections.Add(section.SectionName,section);
+        }
+
+        public static ReadOnlyDictionary<string, Section> AllSections => new ReadOnlyDictionary<string, Section>(_allSections);
+
         private static bool _isInitialized = false;
 
         public static void InitializeMaps()

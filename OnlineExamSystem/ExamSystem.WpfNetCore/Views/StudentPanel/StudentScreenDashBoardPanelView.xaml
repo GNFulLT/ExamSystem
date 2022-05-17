@@ -44,7 +44,8 @@
                             <TextBlock Foreground="White" Text="Total number of exam solved" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Foreground="WhiteSmoke" Text="Create Question" HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
+                            <TextBlock Foreground="WhiteSmoke" 
+                                       Text="{Binding SolvedExams}" HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
                         </DockPanel>
                     </StackPanel>
 
@@ -66,7 +67,10 @@
                             <TextBlock Foreground="White" Text="Total number of questions solved" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"  HorizontalAlignment="Center"  FontSize="18" Margin="0 20 5 0"/>
+                            <TextBlock 
+               Foreground="WhiteSmoke" 
+                Text="{Binding SolvedQuestions}" 
+                              HorizontalAlignment="Center"  FontSize="18" Margin="0 20 5 0"/>
                         </DockPanel>
                     </StackPanel>
 
@@ -88,7 +92,9 @@
                             <TextBlock Foreground="White" Text="Total number of correct" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"  HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
+                            <TextBlock 
+                               Foreground="WhiteSmoke"
+                               Text="{Binding SolvedCorrectQuestions}"  HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
                         </DockPanel>
                     </StackPanel>
 
@@ -110,7 +116,9 @@
                             <TextBlock Foreground="White" Text="Percentage of correct answers" FontSize="14" FontWeight="Bold"  HorizontalAlignment="Center" Margin="0,30,0,0"/>
                         </DockPanel>
                         <DockPanel>
-                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"  HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
+                            <TextBlock 
+                        Foreground="WhiteSmoke" 
+                           Text="{Binding SolvedQuestionRatioText}"  HorizontalAlignment="Center" FontSize="18" Margin="0 20 5 0"/>
                         </DockPanel>
                     </StackPanel>
 
@@ -149,7 +157,9 @@
                                         <TextBlock Foreground="WhiteSmoke" Text="Name:" HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" Margin="5,0,0,0"/>
                                     </DockPanel>
                                     <DockPanel>
-                                        <TextBlock Foreground="WhiteSmoke" Text="Create Question"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" />
+                                        <TextBlock 
+                                 Foreground="WhiteSmoke"
+                                  Text="{Binding Name}"  HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" />
                                     </DockPanel>
                                 </DockPanel>
                                 <DockPanel Height="50">
@@ -158,7 +168,8 @@
                                             <TextBlock Foreground="WhiteSmoke" Text="Surname:"  HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18"  Margin="5,0,0,0"/>
                                         </DockPanel>
                                         <DockPanel>
-                                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" />
+                                            <TextBlock 
+                 Foreground="WhiteSmoke" Text="{Binding Surname}"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18" />
                                         </DockPanel>
                                     </DockPanel>
                                 </DockPanel>
@@ -168,7 +179,8 @@
                                             <TextBlock Foreground="WhiteSmoke" Text="Email:"  HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18"  Margin="5,0,0,0"/>
                                         </DockPanel>
                                         <DockPanel>
-                                            <TextBlock Foreground="WhiteSmoke" Text="Create Question"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18"/>
+                                            <TextBlock
+                   Foreground="WhiteSmoke" Text="{Binding Email}"   HorizontalAlignment="left" VerticalAlignment="Center" FontSize="18"/>
                                         </DockPanel>
                                     </DockPanel>
                                 </DockPanel>

@@ -31,5 +31,6 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
         public abstract void SetUniqueKey();
 
         public abstract Exam GetExam();
+        internal abstract void SetInfo(StudentExamInfo info);
     }
 }

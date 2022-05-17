@@ -14,7 +14,7 @@ namespace ExamSystem.Core.Utilities.Services
 
         public Task<T> Create(T entity);
 
-        public Task<T> Update(ObjectId id, T entity);
+        public Task<T> Update(T entity);
 
         public Task<bool> Delete(ObjectId id);
 

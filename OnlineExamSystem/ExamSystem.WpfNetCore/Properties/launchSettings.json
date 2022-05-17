@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ExamSystem.WpfNetCore": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

@@ -8,6 +8,7 @@ StudentQuestionSubInfo::StudentQuestionSubInfo() {
 	SetNowDateCurrent();
 
 	lastDate.reset(new boost::gregorian::date(boost::gregorian::date_from_iso_string("20220512")));
+	nextDate.reset(new boost::gregorian::date(boost::gregorian::date_from_iso_string("20220512")));
 }
 
 //Getters

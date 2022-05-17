@@ -37,6 +37,7 @@ namespace ExamSystem.Core.Utilities.Services.SubServices.LessonServices
                 {
                     Dictionary<string, Section> dict2;
                     bool exist = dict.TryGetValue(item.Unit, out dict2);
+                    UnitSectionProvider.AddSection(item);
                     if (exist)
                     {
                         dict2.Add(item.SectionName, item);

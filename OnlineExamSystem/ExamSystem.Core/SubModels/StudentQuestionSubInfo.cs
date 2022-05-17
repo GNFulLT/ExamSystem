@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,13 +13,19 @@ namespace ExamSystem.Core.SubModels
             set => SetLastDate(_studentQuestionInfoPointer, value);
         }
 
-        public string NowDate
+        public string NextDate
         {
             get => GetNextDate(_studentQuestionInfoPointer);
             set => SetNextDate(_studentQuestionInfoPointer, value);
         }
 
-        public string NextDate
+        public IntPtr AsPtr()
+        {
+            return _studentQuestionInfoPointer;
+            
+        }
+
+        public string NowDate
         {
             get => GetNowDate(_studentQuestionInfoPointer);
             set => SetNowDate(_studentQuestionInfoPointer, value);
@@ -42,19 +49,31 @@ namespace ExamSystem.Core.SubModels
             set => SetRightSolveInARowCount(_studentQuestionInfoPointer, value);
         }
 
+
+        private bool _isMeasured;
+
+
+        public int GetLastMeasureInfo()
+        {
+            return _measureInfo;
+        }
+
         public bool IsMeasured
         {
             get => GetIsMeasured(_studentQuestionInfoPointer);
+            set => _isMeasured = value;
         }
 
+        private int _measureInfo;
         public int MeasureInfo
         {
             get
             {
                 if (!IsMeasured)
-                    throw new Exception("Info is not measured");
+                    return _measureInfo;
                 return GetMeasureInfo(_studentQuestionInfoPointer);
             }
+            set => _measureInfo = value;
         }
 
         public StudentQuestionSubInfo()

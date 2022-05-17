@@ -24,6 +24,8 @@ namespace ExamSystem.Core.ViewModels
             OldExamsPanel = Activator.CreateInstance(StudentScreenOldExamsPanelViewModel.Parent, OldExamsPanelViewModel);
 
             CurrentPanel = DashBoardPanel;
+
+            ExamsPanelViewModel.ExamSolvedAnalysedAndRemovedFromCollection += DashBoardPanelViewModel.OnExamSolved;
         }
 
 

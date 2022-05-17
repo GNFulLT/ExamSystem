@@ -21,7 +21,7 @@ namespace ExamSystem.Core.Utilities.Providers
             get => _questionDateMap.Value.Result;
         }
 
-        public static void InitializeMaps()
+        public static void InitializeMaps(bool isStudent = false)
         {
             if (_isInitialized)
                 return;
@@ -40,7 +40,14 @@ namespace ExamSystem.Core.Utilities.Providers
 
             List<Question> q = QuestionDateMap;
 
-            ReadOnlyDictionary<Section, List<Question>> t = _questionSectionMap.Value.Result;
+            if (!isStudent)
+            {
+                ReadOnlyDictionary<Section, List<Question>> t = _questionSectionMap.Value.Result;
+            }
+            else
+            {
+                
+            }
         }
 
         private static void Checker()

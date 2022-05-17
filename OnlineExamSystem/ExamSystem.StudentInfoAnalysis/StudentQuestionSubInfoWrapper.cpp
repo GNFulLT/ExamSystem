@@ -67,7 +67,7 @@ extern "C"	_declspec(dllexport)  void SetRightSolveCount(StudentQuestionSubInfo 
 	info->SetRightSolveCount(value);
 }
 
-extern "C"	_declspec(dllexport)  void SetRightSolveCountInARow(StudentQuestionSubInfo * info, int value) {
+extern "C"	_declspec(dllexport)  void SetRightSolveInARowCount(StudentQuestionSubInfo * info, int value) {
 	value = value % 100;
 	info->SetRightSolveCountInARow(value);
 }

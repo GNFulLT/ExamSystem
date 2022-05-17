@@ -11,9 +11,19 @@ namespace ExamSystem.Core.Utilities.Providers
 
 
 
+        [DllImport("StudentInfoAnalysis.dll")]
+        public static extern void StartAnalysis();
 
+        [DllImport("StudentInfoAnalysis.dll")]
+        public static extern void EndAnalysis();
 
+        [DllImport("StudentInfoAnalysis.dll")]
+        public static extern void Add(IntPtr questionInfo,IntPtr studentQuestionSubInfo);
 
+        [DllImport("StudentInfoAnalysis.dll")]
+        public static extern void Analysis();
+
+     
 
         //Wrapper
         [DllImport("StudentInfoAnalysis.dll")]

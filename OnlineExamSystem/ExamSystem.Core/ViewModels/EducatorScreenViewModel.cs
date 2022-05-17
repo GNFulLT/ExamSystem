@@ -22,8 +22,6 @@ namespace ExamSystem.Core.ViewModels
         {
             Localization.SetDefaultLocalization(this);
 
-            
-
             QuestionCollection = new ObservableCollection<object>();
 
             UnseenQuestions = new ObservableCollection<object>();

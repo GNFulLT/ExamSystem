@@ -37,7 +37,7 @@
                     </Grid.Background>
 
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Margin="-720 0 0 0">
-                        <TextBlock Text="Günün Sınavı" Foreground="WhiteSmoke" FontSize="10" Margin="0 0 10 0"/>
+                        <TextBlock Text="{Binding LeftText}" Foreground="WhiteSmoke" FontSize="10" Margin="0 0 10 0"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center"    HorizontalAlignment="Center" Width="200" Margin="-220 0 10 0">

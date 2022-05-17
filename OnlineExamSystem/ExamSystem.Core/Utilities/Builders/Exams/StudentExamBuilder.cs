@@ -31,16 +31,30 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
         {
             return Task.Run(async () =>{
                 StudentExamInfoService service = new StudentExamInfoService();
+                ExamService service2 = new ExamService();
                 StudentExamInfo info = await service.GetDailyInfoIfExist(StudentProvider.LoginedStudent);
                 if (info == null)
-                    return false;
+                {
+                    List<StudentExamInfo> infos = StudentProvider.GetStudentExamInfos().Where(inf => inf.CreatedDate.CompareTo(Analyser.GetCurrentDate()) == 0).ToList();
+                    if (infos.Count != 0)
+                    {
+                       
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                        
+                }
+                    
 
-                ExamService service2 = new ExamService();
 
                 StudentProvider.TodayExam = service2.GetByInfo(info).Result;
                 StudentProvider.TodayStudentExamInfo = info;
-
                 StudentProvider.TodayExam.Info = info;
+
+
                 return true;
             });
            
@@ -104,20 +118,50 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
                 {
                     foreach (var item in infos)
                     {
-                        int questStudentInfo = item.StudentSubQuestionInfo.MeasureInfo;
-                        float sectionBasicRate = (item.Question.Section.GlobalRightCount + 1) / (item.Question.Section.GlobalCount + 1);
+                        float questStudentInfo = ((float)item.StudentSubQuestionInfo.MeasureInfo) / 100;
+                        float sectionBasicRate = ((float)(item.Question.Section.GlobalRightCount + 1)) / ((float)(item.Question.Section.GlobalCount + 1));
                         float sectionGlobalRate = Analyser.MixRate((1 - sectionBasicRate), questStudentInfo);
+                        bool isExist = sectionRates.TryGetValue(item.Question.Section,out float val);
+                        if (isExist)
+                        {
+                            sectionRates[item.Question.Section] += sectionGlobalRate;
+                            sectionRates[item.Question.Section] /= 2;
+                        }
+                        else
+                        {
                         sectionRates.Add(item.Question.Section, 1 - sectionGlobalRate);
+                        }
 
                         float unitBasicRate = (item.Question.Unit.GlobalRightCount + 1) / (item.Question.Unit.GlobalCount + 1);
                         float unitGlobalRate = Analyser.MixRate(1 - unitBasicRate, sectionGlobalRate);
 
-                        unitRates.Add(item.Question.Unit, 1 - unitGlobalRate);
+                        isExist = unitRates.TryGetValue(item.Question.Unit, out val);
+                        if (isExist)
+                        {
+                            unitRates[item.Question.Unit] += unitGlobalRate;
+                            unitRates[item.Question.Unit] /= 2;
+                        }
+                        else
+                        {
+                            unitRates.Add(item.Question.Unit, 1 - unitGlobalRate);
+                        }
 
                         float lessonBasicRate = (item.Question.Lesson.GlobalRightCount + 1) / (item.Question.Lesson.GlobalRightCount + 1);
                         float lessonGlobalRate = Analyser.MixRate(1 - lessonBasicRate, unitGlobalRate);
 
-                        lessonRates.Add(item.Question.Lesson, 1 - lessonGlobalRate);
+                        isExist = lessonRates.TryGetValue(item.Question.Lesson, out val);
+
+
+                        if (isExist)
+                        {
+                            lessonRates[item.Question.Lesson] += val;
+                            lessonRates[item.Question.Lesson] /= 2;
+                        }
+                        else
+                        {
+                            lessonRates.Add(item.Question.Lesson, 1 - lessonGlobalRate);
+                        }
+
 
                         if (item.StudentSubQuestionInfo.NowDate.CompareTo(item.StudentSubQuestionInfo.NextDate) == 0)
                         {
@@ -129,6 +173,8 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
                 foreach(var item in lessonRates)
                 {
                     lessonRates[item.Key] = (item.Value * _questionCount);
+                    if (lessonRates[item.Key] < 0)
+                        lessonRates[item.Key] = 0;
                     totalCount += lessonRates[item.Key];
                 }
                 int totalCountLesson =  (int) totalCount;
@@ -207,6 +253,11 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
                 foreach(var item in unitRates)
                 {
                     unitRates[item.Key] = (item.Value * _questionCount);
+                    if (unitRates[item.Key] < 0)
+                    {
+
+                    }
+                        unitRates[item.Key] = 0;
                     totalCount2 += unitRates[item.Key];
                 }
 
@@ -364,6 +415,11 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
         public override void SetUniqueKey()
         {
             _exam.ExamUniqueKey = _uniqueKey;
+        }
+
+        internal override void SetInfo(StudentExamInfo info)
+        {
+            _exam.Info = info;
         }
     }
 }

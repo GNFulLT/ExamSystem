@@ -2,6 +2,7 @@
 using ExamSystem.Core.Utilities.Providers;
 using ExamSystem.Core.Utilities.Services;
 using ExamSystem.Core.Utilities.Services.SubServices.LessonServices;
+using ExamSystem.Core.Utilities.Services.SubServices.QuestionServices;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
@@ -33,6 +34,21 @@ namespace ExamSystem.Core.Models
             Unit = section.Unit;
             Lesson = Unit.Lesson;
             Section = section;
+            QuestionInfo = new QuestionInfo();
+        }
+
+        public Task LoadInfo()
+        {
+            return Task.Run(async() =>
+            {
+                QuestionService service = new QuestionService();
+                QuestionInfo info = await service.GetInfoByQuestion(this);
+                this.QuestionInfo = info;
+            });
+        }
+
+        public void ClearInfo()
+        {
             QuestionInfo = new QuestionInfo();
         }
 
@@ -86,25 +102,17 @@ namespace ExamSystem.Core.Models
 
                 UnitSectionProvider.InitializeMaps();
 
-                var lesMap = UnitSectionProvider.LessonMap;
-
-                var les = lesMap[section.Unit.Lesson.LessonName];
-
-                var unitMap = UnitSectionProvider.GetUnitDictionary(les);
-
-                var unit = unitMap[section.Unit.UnitName];
-
-                var sectionMap = UnitSectionProvider.GetSectionDictionary(unit);
+                var sectionMap = UnitSectionProvider.AllSections;
 
                 var localSection = sectionMap[section.SectionName];
 
-               /*var info = BsonSerializer.Deserialize<QuestionInfo>(d["questionInfo"].AsBsonDocument);*/
+               var info = BsonSerializer.Deserialize<QuestionInfo>(d["questionInfo"].AsBsonDocument);
                 
                 Question question = new Question(localSection)
                 {
                     Id = d["_id"].AsObjectId,
                     ImageUri = d["image"].AsString,
-                    QuestionInfo = new QuestionInfo()
+                    QuestionInfo = info
 
                 };
 
@@ -124,9 +132,9 @@ namespace ExamSystem.Core.Models
                     case ("ImageUri"):
                         serializationInfo = new BsonSerializationInfo("image", new BsonStringSerializer(), typeof(string));
                         return true;
-                    /*case ("QuestionInfo"):
+                    case ("QuestionInfo"):
                         serializationInfo = new BsonSerializationInfo("questionInfo", new RawBsonDocumentSerializer(), typeof(QuestionInfo));
-                        return true;*/
+                        return true;
                     default:
                         serializationInfo = null;
                         return false;

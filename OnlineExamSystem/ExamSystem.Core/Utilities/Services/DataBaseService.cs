@@ -37,9 +37,18 @@ namespace ExamSystem.Core.Utilities.Services
             });
         }
 
-        public virtual Task<T> Update(ObjectId id, T entity)
+        public virtual Task<T> Update(T entity)
         {
-            throw new NotImplementedException();
+            return Task.Run(() =>
+            {
+                var collection = GetCollection();
+
+                var filter = Builders<T>.Filter.Eq("_id", entity.Id);
+
+                collection.ReplaceOne(filter, entity);
+
+                return entity;
+            });
         }
 
         public virtual Task<bool> Delete(ObjectId id)
