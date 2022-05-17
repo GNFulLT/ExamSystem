@@ -7,7 +7,7 @@ StudentQuestionSubInfo::StudentQuestionSubInfo() {
 
 	SetNowDateCurrent();
 
-	lastDate.reset(new boost::gregorian::date(boost::gregorian::date_from_iso_string("00000000")));
+	lastDate.reset(new boost::gregorian::date(boost::gregorian::date_from_iso_string("20220512")));
 }
 
 //Getters
@@ -71,5 +71,12 @@ bool StudentQuestionSubInfo::IsMeasured() const {
 }
 
 void StudentQuestionSubInfo::SetNowDateCurrent() {
-	nowDate.reset(new boost::gregorian::date(boost::gregorian::day_clock::local_day()));
+	try {
+	auto currday =	new boost::gregorian::date(boost::gregorian::day_clock::local_day());
+	nowDate.reset(currday);
+
+	}
+	catch (boost::gregorian::bad_day_of_month e) {
+		auto e2 = e;
+	}
 }

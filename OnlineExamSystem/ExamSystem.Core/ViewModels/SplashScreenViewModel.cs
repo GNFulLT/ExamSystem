@@ -58,7 +58,7 @@ namespace ExamSystem.Core.ViewModels
 
         private Task InitializeStudent()
         {
-            return Task.Run(() =>
+            return Task.Run(async () =>
             {
                 InfoText = "Loading Units";
 
@@ -72,14 +72,22 @@ namespace ExamSystem.Core.ViewModels
 
                 StudentProvider.InitializeInfos();
 
-                var eb = new StudentExamBuilder(10);
+                bool isCreated = await StudentExamBuilder.CheckDailyExamCreated();
+                if (!isCreated)
+                {
+                    var eb = new StudentExamBuilder(10);
 
 
-                ExamDirector director = new ExamDirector(eb);
+                    ExamDirector director = new ExamDirector(eb);
 
-                director.CreateExam();
+                    await director.CreateExam();
 
-                Exam exam = eb.GetExam();
+                    StudentProvider.TodayExam = eb.GetExam();
+
+                    
+                }
+
+                
             });
         }
 

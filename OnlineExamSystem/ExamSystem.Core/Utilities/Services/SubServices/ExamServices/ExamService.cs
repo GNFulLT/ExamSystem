@@ -1,4 +1,5 @@
 ﻿using ExamSystem.Core.Models;
+using ExamSystem.Core.SubModels;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,22 @@ namespace ExamSystem.Core.Utilities.Services.SubServices.ExamServices
         private const string COLLECTION_NAME = "Exams";
 
         public override string collectionName { get => COLLECTION_NAME; set { } }
+
+        public Task<Exam> GetByInfo(StudentExamInfo info)
+        {
+            return Task.Run(() =>
+            {
+                var collection = GetCollection();
+
+                var list = collection.Find(q => (q.Id.CompareTo(info.Exam.Id) == 0)).ToList();
+
+                if (list.Count > 1 && list.Count == 0)
+                    return default(Exam);
+
+                return list[0];
+            });
+        }
+
 
         public Task<bool> CheckExamExist(string key)
         {

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using ExamSystem.Core.SubModels;
+using ExamSystem.Core.Utilities.Providers;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ExamSystem.Core.Utilities.Builders.Exams
 {
@@ -13,15 +16,30 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
             _eb = eb;
         }
 
-        public async void CreateExam()
+        public Task  CreateExam()
         {
-           await _eb.PrepareQuestions();
+            return Task.Run(async () => {
 
-             _eb.CheckIfExamExists();
 
-             _eb.SetQuestions();
+                await _eb.PrepareQuestions();
 
-            _eb.SetUniqueKey();
+               bool isExist = _eb.CheckIfExamExists();
+
+                _eb.SetQuestions();
+
+                _eb.SetUniqueKey();
+
+                if (!isExist)
+                {
+                    _eb.SaveToDatabase();
+                    StudentExamInfo info = await _eb.CreateSaveStudentExamInfo();
+                    StudentProvider.TodayStudentExamInfo = info;
+                }
+
+
+
+            });
+          
         }
     }
 }

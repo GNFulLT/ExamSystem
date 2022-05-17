@@ -47,7 +47,14 @@
 
             </Border.Background>
         </Border>
-        <Grid HorizontalAlignment="Left" Height="463" Margin="105,44.5,0,0" VerticalAlignment="Top" Width="834"/>
+        <Grid HorizontalAlignment="Left" Height="463"
+              Margin="105,44.5,0,0" VerticalAlignment="Top" Width="834">
+
+            <ListBox ItemsSource="{Binding ExamCollection}">
+               
+            </ListBox>
+        
+        </Grid>
 
 
     </Grid>

@@ -1,7 +1,9 @@
-﻿using ExamSystem.Core.Utilities.Providers;
+﻿using ExamSystem.Core.SubModels;
+using ExamSystem.Core.Utilities.Providers;
 using ExamSystem.Core.Utilities.Services;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.Serializers;
 using Newtonsoft.Json;
 using System;
@@ -13,11 +15,17 @@ using System.Text;
 
 namespace ExamSystem.Core.Models
 {
+    [BsonSerializer(typeof(ExamSerializer))]
+    [BsonIgnoreExtraElements]
     public class Exam : IDataBaseObject
     {
 
         private const string HASH_STR = "/X/";
 
+        public Exam()
+        {
+            _id = ObjectId.GenerateNewId();
+        }
 
         private ObjectId _id;
         public ObjectId Id
@@ -65,7 +73,7 @@ namespace ExamSystem.Core.Models
             return sb.ToString();
         }
 
-       
+        public StudentExamInfo Info { get; set; }
 
 
         public class ExamSerializer : SerializerBase<Exam>, IBsonSerializer, IBsonDocumentSerializer
@@ -89,15 +97,16 @@ namespace ExamSystem.Core.Models
                 context.Writer.WriteName("_questionIds");
                 List<ObjectId> ids = value.Questions.Select(q => q.Id).ToList();
 
-                var json = JsonConvert.SerializeObject(ids);
-                var serialized = BsonSerializer.Deserialize<BsonDocument>(json);
-                var bson = new RawBsonDocument(serialized.ToBson());
-
-                context.Writer.WriteRawBsonDocument(bson.Slice);
-
+                context.Writer.WriteStartArray();
+                foreach(var item in ids)
+                {
+                    context.Writer.WriteObjectId(item);
+                }
+                context.Writer.WriteEndArray();
 
                 context.Writer.WriteName("_uniqueKey");
                 context.Writer.WriteString(GetUniqueKey(ids));
+
 
                 context.Writer.WriteEndDocument();
 
@@ -105,8 +114,8 @@ namespace ExamSystem.Core.Models
             public override Exam Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
             {
                 BsonDocument d = BsonSerializer.Deserialize<BsonDocument>(context.Reader);
-                List<Question> questions = QuestionProvider.QuestionDateMap.Where(q => q.Id.CompareTo(d["_id"].AsObjectId) == 0).ToList();
-                if(questions.Count == 10)
+                List<Question> questions = QuestionProvider.QuestionDateMap.Where(q => d["_questionIds"].AsBsonArray.Contains(q.Id)).ToList();
+                if(questions.Count != d["_questionIds"].AsBsonArray.Count)
                 {
                     throw new Exception("Cant found questions");
                 }
@@ -115,6 +124,7 @@ namespace ExamSystem.Core.Models
                     Id = d["_id"].AsObjectId,
                     Questions = questions,
                     ExamUniqueKey = d["_uniqueKey"].AsString
+                    
                 };
             }
 
@@ -126,7 +136,7 @@ namespace ExamSystem.Core.Models
                         serializationInfo = new BsonSerializationInfo("_id", new ObjectIdSerializer(), typeof(ObjectId));
                         return true;
                     case ("Questions"):
-                        serializationInfo = new BsonSerializationInfo("_questionIds", new RawBsonDocumentSerializer(), typeof(List<Question>));
+                        serializationInfo = new BsonSerializationInfo("_questionIds", new BsonArraySerializer(), typeof(List<Question>));
                         return true;
                     case ("ExamUniqueKey"):
                         serializationInfo = new BsonSerializationInfo("_uniqueKey", new StringSerializer(), typeof(string));

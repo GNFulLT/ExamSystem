@@ -50,6 +50,8 @@ namespace ExamSystem.Core.Models
            
             public override void Serialize(BsonSerializationContext context, BsonSerializationArgs args, Question value)
             {
+                if (value.QuestionInfo == null)
+                    return;
                 context.Writer.WriteStartDocument();
                 context.Writer.WriteName("_id");
                 if (value.Id == ObjectId.Empty)
@@ -96,14 +98,14 @@ namespace ExamSystem.Core.Models
 
                 var localSection = sectionMap[section.SectionName];
 
-                var info = BsonSerializer.Deserialize<QuestionInfo>(d["questionInfo"].AsBsonDocument);
+               /*var info = BsonSerializer.Deserialize<QuestionInfo>(d["questionInfo"].AsBsonDocument);*/
                 
                 Question question = new Question(localSection)
                 {
                     Id = d["_id"].AsObjectId,
                     ImageUri = d["image"].AsString,
-                    QuestionInfo = info
-                    
+                    QuestionInfo = new QuestionInfo()
+
                 };
 
                 return question;
@@ -122,9 +124,9 @@ namespace ExamSystem.Core.Models
                     case ("ImageUri"):
                         serializationInfo = new BsonSerializationInfo("image", new BsonStringSerializer(), typeof(string));
                         return true;
-                    case ("QuestionInfo"):
+                    /*case ("QuestionInfo"):
                         serializationInfo = new BsonSerializationInfo("questionInfo", new RawBsonDocumentSerializer(), typeof(QuestionInfo));
-                        return true;
+                        return true;*/
                     default:
                         serializationInfo = null;
                         return false;

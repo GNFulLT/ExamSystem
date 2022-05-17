@@ -127,6 +127,7 @@ namespace ExamSystem.Core.ViewModels
         {
             _service.Create(question);
             AddQuestion(question);
+            question.QuestionInfo = new SubModels.QuestionInfo();
             OnQuestionWindowClosed();
         }
         #endregion

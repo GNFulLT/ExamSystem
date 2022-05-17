@@ -1,6 +1,7 @@
 #include "CasterHelper.h"
 
 #include <boost/numeric/conversion/cast.hpp>
+using namespace boost;
 
 uintmax_t CasterHelper::IntTo(int value) {
 	if (value < 0) {

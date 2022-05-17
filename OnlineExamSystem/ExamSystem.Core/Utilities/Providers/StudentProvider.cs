@@ -1,4 +1,5 @@
 ﻿using ExamSystem.Core.Models;
+using ExamSystem.Core.SubModels;
 using ExamSystem.Core.Utilities.Services.SubServices.StudentServices;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,18 @@ namespace ExamSystem.Core.Utilities.Providers
         public static List<StudentQuestionInfo> GetStudentQuestionInfos()
         {
             return _loginedStudentQuestionInfos.Value.Result;
+        }
+
+        private static Exam _todayExam;
+
+        public static Exam TodayExam { get => _todayExam; set => _todayExam = value; }
+
+        private static StudentExamInfo _todayStudentExamInfo;
+
+        public static StudentExamInfo TodayStudentExamInfo
+        {
+            get => _todayStudentExamInfo;
+            set => _todayStudentExamInfo = value;
         }
 
         public static StudentQuestionInfo GetStudentQuestionInfo(Question q)

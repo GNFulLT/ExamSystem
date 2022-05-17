@@ -18,5 +18,9 @@ namespace ExamSystem.Core.Utilities.Providers
         //Wrapper
         [DllImport("StudentInfoAnalysis.dll")]
         public static extern float MixRate(float value1, float value2);
+
+        [return: MarshalAs(UnmanagedType.BStr)]
+        [DllImport("StudentInfoAnalysis.dll")]
+        public static extern string GetCurrentDate();
     }
 }

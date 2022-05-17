@@ -1,4 +1,5 @@
 ﻿using ExamSystem.Core.Models;
+using ExamSystem.Core.SubModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,6 +22,9 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
 
         public abstract bool CheckIfExamExists();
 
+        public abstract Task<StudentExamInfo> CreateSaveStudentExamInfo();
+
+        public abstract void SaveToDatabase();
 
         public abstract void SetQuestions();
 

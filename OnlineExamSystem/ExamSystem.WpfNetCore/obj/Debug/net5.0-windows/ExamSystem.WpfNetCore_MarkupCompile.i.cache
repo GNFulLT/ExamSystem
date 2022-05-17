@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.WpfNetCore\App.xaml
-16-1704951641
+181032679011
 
-23572826143
+25534117486
 206-918510712
-CustomControls\BindablePasswordBox.xaml;CustomControls\LoadingContentBar.xaml;CustomControls\Themes\LoadingTheme.xaml;CustomControls\Themes\PaginationTheme.xaml;Views\EducatorPanel\EducatorPanelQuestionView.xaml;Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml;Views\EducatorScreenView.xaml;Views\LoginPanel\LoginScreenForgotPanelView.xaml;Views\LoginPanel\LoginScreenLoginPanelView.xaml;Views\LoginPanel\LoginScreenRegisterPanelView.xaml;Views\LoginScreenView.xaml;Views\SplashScreenView.xaml;Views\StudentPanel\StudentScreenDashBoardPanelView.xaml;Views\StudentPanel\StudentScreenExamsPanelView.xaml;Views\StudentPanel\StudentScreenOldExamsPanelView.xaml;Views\StudentScreenView.xaml;
+CustomControls\BindablePasswordBox.xaml;CustomControls\LoadingContentBar.xaml;CustomControls\Themes\LoadingTheme.xaml;CustomControls\Themes\PaginationTheme.xaml;Views\EducatorPanel\EducatorPanelQuestionView.xaml;Views\EducatorPanel\EducatorPanelQuestionWindowView.xaml;Views\EducatorScreenView.xaml;Views\LoginPanel\LoginScreenForgotPanelView.xaml;Views\LoginPanel\LoginScreenLoginPanelView.xaml;Views\LoginPanel\LoginScreenRegisterPanelView.xaml;Views\LoginScreenView.xaml;Views\SplashScreenView.xaml;Views\StudentPanel\StudentScreenDashBoardPanelView.xaml;Views\StudentPanel\StudentScreenExamPanelView.xaml;Views\StudentPanel\StudentScreenExamsPanelView.xaml;Views\StudentPanel\StudentScreenExamWindowView.xaml;Views\StudentPanel\StudentScreenOldExamsPanelView.xaml;Views\StudentScreenView.xaml;
 
 False
 

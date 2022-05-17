@@ -14,6 +14,10 @@
 		AnalysisHelper::Analysis();
 	}
 
+BSTR AnalysisWrapper::GetCurrent() {
+		return _com_util::ConvertStringToBSTR(boost::gregorian::to_iso_string(boost::gregorian::day_clock::local_day()).c_str());
+
+	}
 
 	extern "C"	_declspec(dllexport)  float MixRate(float value1, float value2) {
 		return AnalysisHelper::MixMeasureInfo(value1, value2).convert_to<float>();

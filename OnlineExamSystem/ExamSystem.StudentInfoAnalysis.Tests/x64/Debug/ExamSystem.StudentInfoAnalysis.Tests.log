@@ -1,5 +1,4 @@
-﻿  pch.cpp
-  test.cpp
+﻿  test.cpp
 C:\Users\ugurbey\Desktop\ExamSystemRefactoring\ExamSystemRefactored2\ExamSystem\ExamSystem.StudentInfoAnalysis\QuestionInfo.h(53,59): warning C4251: 'QuestionInfo::_measureInfos': class 'boost::movelib::unique_ptr<QuestionInfoMeasureContainer,boost::movelib::default_delete<T>>' needs to have dll-interface to be used by clients of class 'QuestionInfo'
           with
           [

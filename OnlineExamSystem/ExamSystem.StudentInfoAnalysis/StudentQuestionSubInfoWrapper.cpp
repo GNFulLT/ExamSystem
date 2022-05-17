@@ -19,6 +19,13 @@ extern "C"	_declspec(dllexport)  BSTR GetNowDate(StudentQuestionSubInfo * info) 
 	return _com_util::ConvertStringToBSTR(CasterHelper::DateToString(info->GetNowDate()).c_str());
 }
 
+extern "C"	_declspec(dllexport)  BSTR GetCurrentDate(StudentQuestionSubInfo * info) {
+
+
+	return _com_util::ConvertStringToBSTR(boost::gregorian::to_iso_string(boost::gregorian::day_clock::local_day()).c_str());
+}
+
+
 extern "C"	_declspec(dllexport)  BSTR GetNextDate(StudentQuestionSubInfo * info) {
 	return _com_util::ConvertStringToBSTR(CasterHelper::DateToString(info->GetNextDate()).c_str());
 }

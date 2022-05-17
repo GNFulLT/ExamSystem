@@ -1,7 +1,9 @@
 ﻿using ExamSystem.Core.Models;
+using ExamSystem.Core.SubModels;
 using ExamSystem.Core.Utilities.Providers;
 using ExamSystem.Core.Utilities.Services.SubServices.ExamServices;
 using ExamSystem.Core.Utilities.Services.SubServices.QuestionServices;
+using ExamSystem.Core.Utilities.Services.SubServices.StudentServices;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,28 +16,73 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
 {
     public class StudentExamBuilder : IExamBuilder
     {
-        private Exam _exam;
+        private Exam _exam = new Exam();
 
         private string _uniqueKey;
+        private ExamService service;
 
         public StudentExamBuilder(int questionCount) : base(questionCount)
         {
+            service = new ExamService();
+            
+        }
+
+        public static Task<bool> CheckDailyExamCreated()
+        {
+            return Task.Run(async () =>{
+                StudentExamInfoService service = new StudentExamInfoService();
+                StudentExamInfo info = await service.GetDailyInfoIfExist(StudentProvider.LoginedStudent);
+                if (info == null)
+                    return false;
+
+                ExamService service2 = new ExamService();
+
+                StudentProvider.TodayExam = service2.GetByInfo(info).Result;
+                StudentProvider.TodayStudentExamInfo = info;
+
+                StudentProvider.TodayExam.Info = info;
+                return true;
+            });
+           
         }
 
         public override bool CheckIfExamExists()
         {
-            ExamService service = new ExamService();
+       
 
             _uniqueKey = Exam.GetUniqueKey(_questions.Select(q => q.Id).ToList());
 
             Task<bool> t1 = service.CheckExamExist(_uniqueKey);
             bool res = t1.Result;
 
+            
+
             return res;
+        }
+
+        public override Task<StudentExamInfo> CreateSaveStudentExamInfo()
+        {
+            return Task.Run(async () =>
+            {
+                StudentExamInfo info = new StudentExamInfo();
+                info.Exam = _exam;
+                info.IsSolved = false;
+                info.Student = StudentProvider.LoginedStudent;
+
+                StudentExamInfoService service = new StudentExamInfoService();
+
+                info = await service.Create(info);
+
+
+
+                return info;
+            });
+            
         }
 
         public override Exam GetExam()
         {
+
             return _exam;
         }
 
@@ -196,7 +243,7 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
 
                     if(unitsToAdd.Count > 0)
                     {
-                        float add = needsAddUnitCount / unitsToAdd.Count;
+                        float add = (float)needsAddUnitCount / (float)unitsToAdd.Count;
                         foreach(var unit in unitsToAdd)
                         {
 
@@ -208,7 +255,7 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
                             unitRates.Add(unit, val);
                             needsAddUnitCount -= val;
                         }
-                        if (needsAddCount > 0)
+                        if (needsAddUnitCount > 0)
                         {
                             foreach (var unit in unitRates)
                             {
@@ -253,13 +300,21 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
 
                foreach(var unit in unitRates)
                 {
-                    List<Question> unitQuestion = QuestionProvider.QuestionDateMap.Where(q => q.Unit == unit.Key).ToList();
+                    List<Question> unitQuestion = QuestionProvider.QuestionDateMap.Where(q => q.Unit == unit.Key && !lastQuestions.Contains(q)).ToList();
                     if(unitQuestion.Count > unit.Value)
                     {
-                        int add = unitQuestion.Count - (int)unit.Value;
-                        for(int i = 0; i < add; i++)
+                        HashSet<int> prevIndexs = new HashSet<int>();
+                        Random rand = new Random();
+                        for (int i = 0; i < unit.Value; i++)
                         {
-                            _questions.Add(unitQuestion[i]);
+                            int val = rand.Next(0, unitQuestion.Count - 1);
+                            if (prevIndexs.Contains(val))
+                            {
+                                i--;
+                                continue;
+                            }
+                            prevIndexs.Add(val);
+                            _questions.Add(unitQuestion[val]);
                         }
                     }
                     else if (unitQuestion.Count == unit.Value)
@@ -294,6 +349,11 @@ namespace ExamSystem.Core.Utilities.Builders.Exams
 
             
       
+        }
+
+        public override void SaveToDatabase()
+        {
+            service.Create(_exam);
         }
 
         public override void SetQuestions()

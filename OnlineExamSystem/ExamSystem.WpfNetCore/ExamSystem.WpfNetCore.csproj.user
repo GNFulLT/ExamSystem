@@ -40,7 +40,13 @@
     <Compile Update="Views\StudentPanel\StudentScreenDashBoardPanelView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\StudentPanel\StudentScreenExamPanelView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\StudentPanel\StudentScreenExamsPanelView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\StudentPanel\StudentScreenExamWindowView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\StudentPanel\StudentScreenOldExamsPanelView.xaml.cs">
@@ -87,7 +93,13 @@
     <Page Update="Views\StudentPanel\StudentScreenDashBoardPanelView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\StudentPanel\StudentScreenExamPanelView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\StudentPanel\StudentScreenExamsPanelView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\StudentPanel\StudentScreenExamWindowView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\StudentPanel\StudentScreenOldExamsPanelView.xaml">
