@@ -105,6 +105,9 @@ List<TypeInfo> infos = currentAssembly.DefinedTypes.ToList();
                     continue;
                 if (infos[i].GetTypeInfo().GetCustomAttributes<CompilerGeneratedAttribute>().Any())
                     continue;
+                if (infos[i].GetTypeInfo().DeclaringType is object) 
+                    if(infos[i].GetTypeInfo().DeclaringType.GetTypeInfo().GetCustomAttributes<CompilerGeneratedAttribute>().Any())
+                     continue;
                 if (!infos[i].Name.StartsWith("I"))
                 {
                     if(dict.ContainsKey("I" + infos[i].Name))
@@ -139,13 +142,16 @@ And if we have a class that is not in ExamSystem.Core.Utilities namespace we can
 `                if (!infos[i].Namespace.Contains("ExamSystem.Core.Utilities") && !infos[i].Namespace.Contains("ExamSystem.Core.{NameSpace}"))
 `
 
-## Basic Login Security
-Inside of DatabaseServices or EtcServices that is derived from DatabaseService, don't used dynamic queries using string concatenation. So there is no chance to injection. In registration input handler prevents to write any special characters. In login side normally you can't write any special character to username textbox but copy paste can bypass that. These xss codes, injections are tried : 
-{'&ne':'1'}
-{"$ne": null}
-{"$ne": undefined}
-{"$gt": undefined}
-{"$gt": null}
-'; while(true){}'
-etc... and all variations of these(without { or } or use ' instead ")
+## Basic Security
+Inside of DatabaseServices or EtcServices that is derived from DatabaseService, don't used dynamic queries using string concatenation. So there is no chance to injection. In registration input handler prevents to write any special characters. In login side normally you can't write any special character to username textbox but copy paste can bypass that. These xss codes, injections are tried : \
+{'&ne':'1'}\
+{"$ne": null}\
+{"$ne": undefined}\
+{"$gt": undefined}\
+{"$gt": null}\
+'; while(true){}'\
+etc... and all variations of these(without { or } or use ' instead ").\
+Passwords are hashing and saving to database.\
+To hide question answer, Project is using cantor's function on question id and answer id.\
+And all cruel informations are protecting with VirtualProtect by c++ studentinfo.dll if defined win32.\
 
