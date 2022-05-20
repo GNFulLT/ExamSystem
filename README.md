@@ -10,7 +10,7 @@
 This application use MongoDB Atlas Database and use NoSql. Includes MVVM, TDD pattern and conform to the SOLID principles, Dependency Injection etc...
 ## Design Tools
 - [MaterialDesignInXaml](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
-- [WPFDevelepor](https://github.com/WPFDevelopersOrg/WPFDevelopers)
+- [WPFDevelopers](https://github.com/WPFDevelopersOrg/WPFDevelopers)
 
 ## Technical requirements
 To be able to debug or run in visual studio, you will need to have .NET Standart 2.1 and .NET 5.0 and this project created in Visual Studio 2019 Community Version. 
