@@ -43,23 +43,24 @@ With this attribute, project knows what should i get an instance for this viewmo
 
 Every ExamSystem.{Platform} have to write their own startup method and have a Bootstrapper class that is inherited from ExamSystem.Core.Bootstrapper after than it needs to send its current assembly and the TypeOfView that is type of startup screen as a paramater to the ctor. Example usage :
 
-`public class Bootstrapper : Core.Bootstrapper
+```public class Bootstrapper : Core.Bootstrapper
     {
         public Bootstrapper(Assembly assembly,Type viewType) : base(assembly,viewType)
         {
-        }}`
+        }}
+```
         
 And in startup method, create a Bootstrapper object. Initialization processes are used in the ctor so you don't need to use any method for initialization.
 
- `            Bootstrapper strapper = new Bootstrapper(Assembly.GetExecutingAssembly(),typeof(Window));
-`
+```            Bootstrapper strapper = new Bootstrapper(Assembly.GetExecutingAssembly(),typeof(Window));
+```
 
 And finally after creating strapper we need to Resolve startup view and show it
 
-`
+```
 Application.Current.MainWindow = strapper.Resolve<CurrentView>();
             Application.Current.MainWindow.Show();
-`
+```
 
 The final step is give the informations to Navigation static class and make it be able to change current window and make it responsive to ExamSystem.{Platform}. To achieve this we are implementing necessary property and event inside of application startup method. On Application_Startup
 ```
