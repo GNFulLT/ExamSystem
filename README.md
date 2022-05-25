@@ -43,7 +43,8 @@ With this attribute, project knows what should i get an instance for this viewmo
 
 Every ExamSystem.{Platform} have to write their own startup method and have a Bootstrapper class that is inherited from ExamSystem.Core.Bootstrapper after than it needs to send its current assembly and the TypeOfView that is type of startup screen as a paramater to the ctor. Example usage :
 
-```public class Bootstrapper : Core.Bootstrapper
+```
+public class Bootstrapper : Core.Bootstrapper
     {
         public Bootstrapper(Assembly assembly,Type viewType) : base(assembly,viewType)
         {
