@@ -98,7 +98,7 @@ We can achieve this with different approaches and i think it will be better(Crea
 ## Handling Localization
 With LocalableProperty Attribute, We specify a property that we want to use text that stands in {LANG}.localization.json with LocalableProperty Attribute. After that when we use generic methods that Localization.SetDefaultLocalization or Localization.SetLocalization(), its implement text to property which has LocalableProperty Attribute automatically. Lastly we can specify name of json key property by change the attribute ctor paramater.
 
-`[LocalableProperty($"{specifiedName}")]`
+`[LocalizableProperty($"{specifiedName}")]`
 
 ## Handling ExamSystem.Core Problems
 .NET Standarts doesn't have any Command, CommandManager, ValidationRules classess. So we need to implement them with own declarations. You can find custom these classes in ExamSystem.Core namespace.
