@@ -30,12 +30,12 @@ This is which holds views,custom controls and converters (if any view needs it).
 Every Page, Window or what equivalent is for these have to have ViewFor Attribute and must take its viewmodel as a paramater. Datacontext must be specified in ctor. An example:
 
 ```
-[ViewFor(typeof(CustomView),typeof(CustomViewModel))]
+   [ViewFor(typeof(CustomView),typeof(CustomViewModel))]
    public partial class CustomView : Window{
-   public CustomView(CustomViewModel viewModel){
+      public CustomView(CustomViewModel viewModel){
                InitializeComponent();
                DataContext = viewModel;
-   }
+       }
    }
 ```
 
@@ -43,17 +43,21 @@ With this attribute, project knows what should i get an instance for this viewmo
 
 Every ExamSystem.{Platform} have to write their own startup method and have a Bootstrapper class that is inherited from ExamSystem.Core.Bootstrapper after than it needs to send its current assembly and the TypeOfView that is type of startup screen as a paramater to the ctor. Example usage :
 
+
 ```
-public class Bootstrapper : Core.Bootstrapper
+     public class Bootstrapper : Core.Bootstrapper
     {
         public Bootstrapper(Assembly assembly,Type viewType) : base(assembly,viewType)
         {
-        }}
+        }
+     }
 ```
+
         
 And in startup method, create a Bootstrapper object. Initialization processes are used in the ctor so you don't need to use any method for initialization.
 
-```            Bootstrapper strapper = new Bootstrapper(Assembly.GetExecutingAssembly(),typeof(Window));
+```   
+Bootstrapper strapper = new Bootstrapper(Assembly.GetExecutingAssembly(),typeof(Window));
 ```
 
 And finally after creating strapper we need to Resolve startup view and show it
