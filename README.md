@@ -87,11 +87,11 @@ Current.MainWindow = strapper.Resolve<CurrentView>();
             dump.Close();
         }
 ```
-- Navigation.CurrentWindow
-- Navigation.CurrentWindowChangeRequested
-- Navigation.WindowStackPushed
-- Navigation.WindowStackPoped \
-
+- Navigation.CurrentWindow // Points to the current view
+- Navigation.CurrentWindowChangeRequested // If any viewModel wants to change current view, it will invoke.
+- Navigation.WindowStackPushed // If any viewmodel wants to show a view that top of the current view, it will invoke.
+- Navigation.WindowStackPoped // If any viewmodel wants to close a view that top of the current view, it will invoke.
+\
 \
 We can achieve this with different approaches and i think it will be better(Creating custom App class and linking them etc.) but this approach is very straightforward and is acceptable for this project. Below this line, The encountered problems while developing this project and approaches to solve these are described.
 
