@@ -13,7 +13,7 @@ This application use MongoDB Atlas Database and use NoSql. Includes MVVM, TDD pa
 - [WPFDevelopers](https://github.com/WPFDevelopersOrg/WPFDevelopers)
 
 ## Technical requirements
-To be able to debug or run in visual studio, you will need to have .NET Standart 2.1 and .NET 5.0 and this project created in Visual Studio 2019 Community Version. 
+To be able to debug or run in visual studio, you will need to have .NET Standart 2.1 and .NET 5.0 and this project created in Visual Studio 2019 Community Version. For the C++ DLL project(Which is StudentInfo.Analysis), you need the boost library, but it is already loaded in this solution.
 ### Packages That Should Be Emphasized
 - AutoFac
 - PropertyChanged.Fody
