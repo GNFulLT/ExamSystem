@@ -17,7 +17,7 @@ To be able to debug or run in visual studio, you will need to have .NET Standart
 ### Packages That Should Be Emphasized
 - AutoFac
 - PropertyChanged.Fody
-- Boost(c++ portable library for student.analysis dll)
+- Boost(c++ portable library used in student.analysis dll)
 ## Project overview
 ExamSystem is a project that can easily configure for other platforms or frameworks while protecting the supporting MVVM design pattern. ExamSystem mainly contains two seperate parts. These are : 
 ### ExamSystem.Core
