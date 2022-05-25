@@ -91,6 +91,8 @@ Current.MainWindow = strapper.Resolve<CurrentView>();
 - Navigation.CurrentWindowChangeRequested
 - Navigation.WindowStackPushed
 - Navigation.WindowStackPoped \
+- 
+\
 We can achieve this with different approaches and i think it will be better(Creating custom App class and linking them etc.) but this approach is very straightforward and is acceptable for this project. Below this line, The encountered problems while developing this project and approaches to solve these are described.
 
 ## Handling Localization
