@@ -14,9 +14,10 @@ This application use MongoDB Atlas Database and use NoSql. Includes MVVM, TDD pa
 
 ## Technical requirements
 To be able to debug or run in visual studio, you will need to have .NET Standart 2.1 and .NET 5.0 and this project created in Visual Studio 2019 Community Version. 
-### Nuget Packages That Should Be Emphasized
+### Packages That Should Be Emphasized
 - AutoFac
 - PropertyChanged.Fody
+- boost(c++ portable library for student.analysis dll)
 ## Project overview
 ExamSystem is a project that can easily configure for other platforms or frameworks while protecting the supporting MVVM design pattern. ExamSystem mainly contains two seperate parts. These are : 
 ### ExamSystem.Core
